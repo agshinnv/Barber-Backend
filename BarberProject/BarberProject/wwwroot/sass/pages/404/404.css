@@ -1,0 +1,106 @@
+@font-face {
+  font-family: MyFont;
+  src: url(../../../fonts/icomoon.ttf);
+}
+@font-face {
+  font-family: Outfit;
+  src: url(../../../fonts/Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Theimfy;
+  src: url(../../../fonts/themify.ttf);
+}
+.container-main {
+  width: 74%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: Theimfy;
+  font-family: OutFit, sans-serif;
+  background: #f5eee7;
+}
+
+#error {
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  background-blend-mode: overlay;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: url(../../../images/404.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+#error .content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  text-align: center;
+}
+#error .content h1 {
+  font-size: 180px;
+  margin-bottom: 0px;
+  position: relative;
+  color: #91765a;
+  font-weight: 700;
+}
+#error .content h2 {
+  font-size: 48px;
+  color: #fff;
+  position: relative;
+  margin-bottom: 5px;
+}
+#error .content h6 {
+  color: red;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+#error .content p {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 300;
+  font-family: OutFit, sans-serif;
+}
+#error .content a {
+  font-family: OutFit, sans-serif;
+  font-weight: 900;
+  color: #fff;
+}
+#error .content .btn {
+  font-family: OutFit, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+#error .content .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #91765a;
+  transition: all ease 0.4s;
+}
+#error .content .btn:hover::before {
+  width: 100%;
+}
+#error .content .btn span {
+  font-size: 12px;
+}
+#error .content .btn span i {
+  position: absolute;
+  top: 9px;
+  left: -6px;
+}/*# sourceMappingURL=404.css.map */
