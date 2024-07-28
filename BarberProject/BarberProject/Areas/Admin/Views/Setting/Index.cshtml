@@ -1,0 +1,43 @@
+﻿@model Dictionary<int,Dictionary<string,string>>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    
+    <div class="create-category">
+        <a asp-action="Create" class="btn btn-success text-white mb-3 mx-3">Create</a>
+    </div>
+
+    <div class="table-responsive table--no-card m-b-30">
+        <table class="table table-borderless table-striped table-earning">
+            <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (KeyValuePair<int, Dictionary<string, string>> item in Model)
+                {
+                    <tr>
+                        <td>@item.Value["Key"]</td>
+                        <td>@item.Value["Value"]</td>
+                        <td>
+                            <a class="btn btn-warning text-white" asp-action="Edit" asp-route-id="@item.Key">Edit</a>
+                           
+                                <form asp-action="Delete" asp-route-id="@item.Key" class="d-inline" method="post">
+                                    <button type="submit" class="btn btn-danger text-white">Delete</button>
+                                </form>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

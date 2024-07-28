@@ -13,6 +13,7 @@ namespace Repository.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<About> Abouts { get; set; }
+        public DbSet<AboutImage> AboutImages { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<BarberPricing> BarberPricings { get; set; }
         public DbSet<BarberService> BarberServices { get; set; }

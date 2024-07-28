@@ -41,7 +41,7 @@ namespace Repository.Repositories
 
         public async Task<IEnumerable<T>> GetAll()
         {
-            return await _entities.AsNoTracking().ToListAsync();
+            return await _entities.AsNoTracking().OrderByDescending(m=>m.Id).ToListAsync();
         }
 
         public async Task<T> GetById(int id)

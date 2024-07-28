@@ -2,6 +2,10 @@ using Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repository.Data;
+using Repository.Repositories;
+using Repository.Repositories.Interfaces;
+using Service.Services;
+using Service.Services.Interfaces;
 
 
 
@@ -40,10 +44,12 @@ builder.Services.Configure<IdentityOptions>(opt =>
 
 //builder.Services.AddScoped<ICategoryService, CategoryService>();
 //builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-//builder.Services.AddScoped<ISettingService, SettingService>();
-//builder.Services.AddScoped<ISettingRepository, SettingRepository>();
-//builder.Services.AddScoped<ISliderService, SliderService>();
-//builder.Services.AddScoped<ISliderRepository, SliderRepository>();
+builder.Services.AddScoped<ISettingService, SettingService>();
+builder.Services.AddScoped<ISettingRepository, SettingRepository>();
+builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddScoped<ISliderRepository, SliderRepository>();
+builder.Services.AddScoped<IAboutService, AboutService>();
+builder.Services.AddScoped<IAboutRepository, AboutRepsitory>();
 //builder.Services.AddScoped<ISliderInfoService, SliderInfoService>();
 //builder.Services.AddScoped<ISliderInfoRepository, SliderInfoRepository>();
 //builder.Services.AddScoped<IProductService, ProductService>();
@@ -66,6 +72,8 @@ builder.Services.Configure<IdentityOptions>(opt =>
 //builder.Services.AddScoped<ISubscriberService, SubscriberService>();
 //builder.Services.AddScoped<IAccountService, AccountService>();
 //builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+
+
 
 var app = builder.Build();
 

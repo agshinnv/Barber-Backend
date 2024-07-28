@@ -1,6 +1,16 @@
 
 
 $(function() {
+
+    $('.appointment').click(function(event) {
+        // Prevent the default action (e.g., following a link)
+        event.preventDefault();
+        
+        // Smooth scroll to the #booking section
+        $('html, body').animate({
+            scrollTop: $('#appointment').offset().top
+        }, 500); // 1000ms for the animation duration
+    });
     //#region Preloader
     $("#preloader").fadeOut(800);
     $(".preloader-bg").delay(800).fadeOut(800);

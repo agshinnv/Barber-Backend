@@ -33,9 +33,6 @@ namespace Repository.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FirstImage")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Pro1")
                         .HasColumnType("nvarchar(max)");
 
@@ -43,9 +40,6 @@ namespace Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Pro3")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SecondImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("SoftDeleted")
@@ -57,6 +51,30 @@ namespace Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Abouts");
+                });
+
+            modelBuilder.Entity("Domain.Models.AboutImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("AboutId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AboutId");
+
+                    b.ToTable("AboutImages");
                 });
 
             modelBuilder.Entity("Domain.Models.Appointment", b =>
@@ -825,6 +843,17 @@ namespace Repository.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Domain.Models.AboutImage", b =>
+                {
+                    b.HasOne("Domain.Models.About", "About")
+                        .WithMany("AboutImages")
+                        .HasForeignKey("AboutId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("About");
+                });
+
             modelBuilder.Entity("Domain.Models.Blog", b =>
                 {
                     b.HasOne("Domain.Models.Service", "Service")
@@ -957,6 +986,11 @@ namespace Repository.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Models.About", b =>
+                {
+                    b.Navigation("AboutImages");
                 });
 
             modelBuilder.Entity("Domain.Models.AppUser", b =>

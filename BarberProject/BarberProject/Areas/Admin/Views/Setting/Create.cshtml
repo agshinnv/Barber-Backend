@@ -1,0 +1,36 @@
+﻿@model SettingCreateVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <strong class="text-success">Create Setting</strong>
+        </div>
+        <div class="card-body card-block">
+            <form asp-action="Create" method="post" class="">
+                <div class="form-group">
+                    <label class=" form-control-label">Enter setting key</label>
+                    <input asp-for="Key" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100">
+                    <span class="text-danger" asp-validation-for="Key"></span>
+
+                    <label class=" form-control-label">Enter setting key value</label>
+                    <input asp-for="Value" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100">
+                    <span class="text-danger" asp-validation-for="Value"></span>
+
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">
+                     Submit
+                </button>
+                <a type="reset" asp-action="Index" class="btn btn-danger btn-sm">
+                     Back
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+

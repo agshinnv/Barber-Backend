@@ -2477,11 +2477,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Agshin\\Desktop\\Barber Project\\BarberProject\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\Agshin\\Desktop\\Barber Project\\BarberProject\\Repository\\Repository.csproj",
+      "projectPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\Agshin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Agshin\\Desktop\\Barber Project\\BarberProject\\Repository\\obj\\",
+      "outputPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Agshin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2499,8 +2499,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Agshin\\Desktop\\Barber Project\\BarberProject\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Agshin\\Desktop\\Barber Project\\BarberProject\\Domain\\Domain.csproj"
+            "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Domain\\Domain.csproj"
             }
           }
         }

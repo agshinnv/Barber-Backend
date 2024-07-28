@@ -2,6 +2,16 @@
 
 $(function() {
 
+    $('.appointment').click(function(event) {
+        // Prevent the default action (e.g., following a link)
+        event.preventDefault();
+        
+        // Smooth scroll to the #booking section
+        $('html, body').animate({
+            scrollTop: $('#appointment').offset().top
+        }, 500); // 1000ms for the animation duration
+    });
+
     $(".navbar-toggler").click(function(){
         $(".navbar-nav").removeClass("d-none")
         $("#navbarCollapse").toggleClass("show");

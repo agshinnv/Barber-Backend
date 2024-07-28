@@ -1,0 +1,38 @@
+﻿@model SliderDetailVM
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+    <div class="table-responsive table--no-card m-b-30">
+        <table class="table table-borderless table-striped table-earning">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.SliderTitle</td>
+                    <td>@Model.SliderDesc</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="product-images justify-content-center">
+        @foreach (var item in Model.SliderImages)
+        {
+            <div class="edit-image bg-light" style="width:400px;height:200px;">
+                <img src="~/images/@item.Image"  />
+            </div>
+            <br />
+        }
+    </div>
+
+    <a asp-action="Index" asp-controller="Slider" class="btn btn-danger">Back</a>
+
+</div>
+

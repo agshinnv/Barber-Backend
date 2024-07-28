@@ -1,0 +1,52 @@
+﻿@model AboutCreateVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <strong class="text-success">Create About</strong>
+        </div>
+        <div class="card-body card-block">
+            <form asp-action="Create" method="post" class="" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label class=" form-control-label">Enter about title</label>
+                    <input asp-for="AboutTitle" type="text" placeholder="Enter title..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="AboutTitle"></span>
+
+                    <label class=" form-control-label">Enter about description</label>
+                    <input asp-for="AboutDesc" type="text" placeholder="Enter description..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="AboutDesc"></span>
+
+                    <label class=" form-control-label">Enter about pro1</label>
+                    <input asp-for="AboutPro1" type="text" placeholder="Enter Pro1..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="AboutPro1"></span>
+
+                    <label class=" form-control-label">Enter about pro2</label>
+                    <input asp-for="AboutPro2" type="text" placeholder="Enter Pro2..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="AboutPro2"></span>
+
+                    <label class=" form-control-label">Enter about pro3</label>
+                    <input asp-for="AboutPro3" type="text" placeholder="Enter Pro3..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="AboutPro3"></span>
+
+                    <label class=" form-control-label">Enter about images (Max 2 images)</label>
+                    <input asp-for="AboutImages" type="file" class="form-control mb-2" multiple>
+                    <span class="text-danger" asp-validation-for="AboutImages"></span>
+
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">
+                    Submit
+                </button>
+                <a type="reset" asp-action="Index" class="btn btn-danger btn-sm">
+                    Back
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+

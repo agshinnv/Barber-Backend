@@ -14,7 +14,6 @@ namespace Domain.Models
         public string Pro1 { get; set; }
         public string Pro2 { get; set; }
         public string Pro3 { get; set; }
-        public string FirstImage { get; set; }
-        public string SecondImage { get; set; }
+        public ICollection<AboutImage> AboutImages { get; set; }
     }
 }
