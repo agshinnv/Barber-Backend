@@ -1,4 +1,5 @@
 ﻿using BarberProject.Helpers.Extentions;
+using BarberProject.ViewModels.Abouts;
 using BarberProject.ViewModels.Sliders;
 using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -179,16 +180,17 @@ namespace BarberProject.Areas.Admin.Controllers
         {
             var slider = await _sliderService.GetAllAsync();
 
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-
             if (id is null) return BadRequest();
 
             var existSlider = await _sliderService.GetByIdAsync((int)id);
 
             if (existSlider is null) return NotFound();
+
+            if (!ModelState.IsValid)
+            {
+                request.ExistImages = existSlider.SliderImages.Select(m => new SliderEditImageVM { Id = m.Id, Name = m.Image, SliderId = m.SliderId }).ToList();
+                return View(request);
+            }
 
             List<SliderImage> images = existSlider.SliderImages.ToList();
 

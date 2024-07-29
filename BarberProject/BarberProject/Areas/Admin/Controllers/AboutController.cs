@@ -48,7 +48,8 @@ namespace BarberProject.Areas.Admin.Controllers
             {
                 return View();
             }
-            
+
+                      
 
             foreach (var item in request.AboutImages)
             {
@@ -64,13 +65,13 @@ namespace BarberProject.Areas.Admin.Controllers
                     return View();
                 }
 
-                //if (item != null && item.Length > 2)
-                //{
-                //    ModelState.AddModelError("AboutImages", "You can upload a maximum of 2 images.");
-                //    return View();
-                //}
+                if (request.AboutImages.Count > 2)
+                {
+                    ModelState.AddModelError("AboutImages", "You can upload a maximum of 2 images.");
+                    return View();
+                }
 
-               
+
             }
 
             List<AboutImage> images = new();
@@ -175,6 +176,7 @@ namespace BarberProject.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
+            
             if (id is null) return BadRequest();
 
             var existAbout = await _aboutService.GetByIdAsync((int)id);
@@ -201,16 +203,17 @@ namespace BarberProject.Areas.Admin.Controllers
         {
             var about = await _aboutService.GetAllAsync();
 
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-
             if (id is null) return BadRequest();
 
             var existAbout = await _aboutService.GetByIdAsync((int)id);
 
             if (existAbout is null) return NotFound();
+
+            if (!ModelState.IsValid)
+            {
+                request.ExistImages = existAbout.AboutImages.Select(m=> new AboutEditImageVM { Id = m.Id,Name = m.Image,AboutId = m.AboutId}).ToList();
+                return View(request);
+            }
 
             List<AboutImage> images = existAbout.AboutImages.ToList();
 
@@ -225,16 +228,24 @@ namespace BarberProject.Areas.Admin.Controllers
                         return View(request);
                     }
 
-                    if (!item.CheckFileSize(2))
+                    if (!item.CheckFileSize(1))
                     {
-                        ModelState.AddModelError("NewAboutImages", "Image size must be less than 2 Mb");
+                        ModelState.AddModelError("NewAboutImages", "Image size must be less than 1 Mb");
                         request.ExistImages = existAbout.AboutImages.Select(m => new AboutEditImageVM { Id = m.Id, Name = m.Image, AboutId = m.AboutId }).ToList();
                         return View(request);
                     }
+
+                    //if (request.NewAboutImages.Count > 2)
+                    //{
+                    //    ModelState.AddModelError("AboutImages", "You can upload a maximum of 2 images.");
+                    //    return View();
+                    //}
+
+
                 }
 
                 foreach (var item in request.NewAboutImages)
-                {
+                {                    
                     string fileName = Guid.NewGuid().ToString() + "-" + item.FileName;
 
                     string path = Path.Combine(_env.WebRootPath, "images", fileName);
@@ -252,7 +263,7 @@ namespace BarberProject.Areas.Admin.Controllers
             About modelAbout = new()
             {
                 Title = request.AboutTitle,
-                Description = request.AboutTitle,
+                Description = request.AboutDesc,
                 Pro1 = request.AboutPro1,
                 Pro2 = request.AboutPro2,
                 Pro3 = request.AboutPro3,

@@ -1,0 +1,44 @@
+﻿@model HistoryEditVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <strong class="text-success">Edit History</strong>
+        </div>
+        <div class="card-body card-block">
+            <div>
+                <img src="~/images/@Model.ExistImage" alt="Alternate Text" style="width:200px" />
+            </div>
+            <form asp-action="Edit" method="post" class="mt-4" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class=" form-control-label">Enter history uptitle</label>
+                    <input asp-for="UpTitle" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="UpTitle"></span>
+
+                    <label class=" form-control-label">Enter history maintitle</label>
+                    <input asp-for="MainTitle" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="MainTitle"></span>
+
+                    <label class=" form-control-label">Enter history description</label>
+                    <input asp-for="Description" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+
+                    <label class=" form-control-label">Upload new history image</label>
+                    <input asp-for="NewImage" class="form-control  mb-2">
+                    <span class="text-danger" asp-validation-for="NewImage"></span>
+                </div>
+                <div class="form-group mt-3">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-action="Index" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

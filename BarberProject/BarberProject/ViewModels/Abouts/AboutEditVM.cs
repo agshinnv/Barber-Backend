@@ -6,7 +6,6 @@ namespace BarberProject.ViewModels.Abouts
     {
         [Required]
         public string AboutTitle { get; set; }
-        [Required]
         public string AboutDesc { get; set; }
         public string AboutPro1 { get; set; }
         public string AboutPro2 { get; set; }

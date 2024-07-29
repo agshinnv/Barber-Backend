@@ -1,0 +1,44 @@
+﻿@model HistoryCreateVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <strong class="text-success">Create About</strong>
+        </div>
+        <div class="card-body card-block">
+            <form asp-action="Create" method="post" class="" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label class=" form-control-label">Enter history uptitle</label>
+                    <input asp-for="UpTitle" type="text" placeholder="Enter uptitle..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="UpTitle"></span>
+
+                    <label class=" form-control-label">Enter history maintitle</label>
+                    <input asp-for="MainTitle" type="text" placeholder="Enter maintitle..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="MainTitle"></span>
+
+                    <label class=" form-control-label">Enter history description</label>
+                    <input asp-for="Description" type="text" placeholder="Enter description..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+
+                    <label class=" form-control-label">Enter history image</label>
+                    <input asp-for="Image" class="form-control mb-2">
+                    <span class="text-danger" asp-validation-for="Image"></span>
+
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">
+                    Submit
+                </button>
+                <a type="reset" asp-action="Index" class="btn btn-danger btn-sm">
+                    Back
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+

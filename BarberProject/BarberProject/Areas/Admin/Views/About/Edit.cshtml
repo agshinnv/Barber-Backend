@@ -38,7 +38,7 @@
                     <input asp-for="AboutPro2" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
                     <span class="text-danger" asp-validation-for="AboutPro2"></span>
 
-                    <label class=" form-control-label">Enter about pro3</label>
+                    <label class="form-control-label">Enter about pro3</label>
                     <input asp-for="AboutPro3" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
                     <span class="text-danger" asp-validation-for="AboutPro3"></span>
 
@@ -69,12 +69,12 @@
                     </div>
 
                 </div>
-                <button type="submit" class="btn btn-primary btn-sm">
-                    Submit
-                </button>
-                <a type="reset" asp-action="Index" class="btn btn-danger btn-sm">
-                    Back
-                </a>
+                <div class="form-group mt-3">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-action="Index" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

@@ -1,11 +1,13 @@
 using Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+//using Microsoft.EntityFrameworkCore.Migrations;
 using Repository.Data;
 using Repository.Repositories;
 using Repository.Repositories.Interfaces;
 using Service.Services;
 using Service.Services.Interfaces;
+
 
 
 
@@ -50,6 +52,8 @@ builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<ISliderRepository, SliderRepository>();
 builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<IAboutRepository, AboutRepsitory>();
+builder.Services.AddScoped<IHistoryService, HistoryService>();
+builder.Services.AddScoped<IHistoryRepository, HistoryRepository>();
 //builder.Services.AddScoped<ISliderInfoService, SliderInfoService>();
 //builder.Services.AddScoped<ISliderInfoRepository, SliderInfoRepository>();
 //builder.Services.AddScoped<IProductService, ProductService>();

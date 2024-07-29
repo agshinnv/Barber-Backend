@@ -6,12 +6,16 @@
 }
 
 
-<div class="conatiner mt-5 ml-5">
-    <div class="create-category" style="margin-left: 13px;">
-        <a asp-action="Create" class="btn btn-success text-white mb-3 mx-3"><i class="fa fa-plus-circle"></i></a>
+<div class="container">
+
+    <div class="create-category">
+        <a asp-action="Create" class="btn btn-success text-white mb-3 mx-3">Create</a>
     </div>
-    <div class="table-responsive">
-        <table class="table">
+
+
+
+    <div class="table-responsive table--no-card m-b-30">
+        <table class="table table-borderless table-striped table-earning">
             <thead>
                 <tr>
                     <th>Title</th>
@@ -23,23 +27,23 @@
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>
-                            <span>@item.Title</span>
-                        </td>
-                        <td>
-                            <span>@item.Description</span>
-                        </td>
+                        <td>@item.Title</td>
+                        <td>@item.Description</td>
                         <td>
                             <a class="btn btn-info text-white" asp-route-id="@item.Id" asp-action="Detail">Info</a>
                             <a class="btn btn-warning text-white" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+
                             <form asp-action="Delete" asp-route-id="@item.Id" class="d-inline" method="post">
                                 <button type="submit" class="btn btn-danger text-white">Delete</button>
                             </form>
+
                         </td>
                     </tr>
                 }
+
             </tbody>
         </table>
     </div>
 </div>
+
 
