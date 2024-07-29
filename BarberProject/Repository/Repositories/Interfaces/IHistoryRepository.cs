@@ -9,6 +9,5 @@ namespace Repository.Repositories.Interfaces
 {
     public interface IHistoryRepository : IBaseRepository<History>
     {
-        Task Edit(int id, History history);
     }
 }

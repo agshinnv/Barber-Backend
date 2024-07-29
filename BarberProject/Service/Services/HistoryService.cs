@@ -28,9 +28,14 @@ namespace Service.Services
             await _historyRepository.Delete(history);
         }
 
-        public async Task Edit(int id, History history)
+        public async Task Edit(int id,History history)
         {
-            await _historyRepository.Edit(id, history);
+            var existHistory = await _historyRepository.GetById(id);
+            existHistory.UpTitle = history.UpTitle;
+            existHistory.MainTitle = history.MainTitle;
+            existHistory.Description = history.Description;
+            existHistory.Image = history.Image;
+            await _historyRepository.Edit(existHistory);
         }
 
         public Task<IEnumerable<History>> GetAllAsync()
