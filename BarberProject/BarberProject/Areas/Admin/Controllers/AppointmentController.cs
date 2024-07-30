@@ -54,12 +54,9 @@ namespace BarberProject.Areas.Admin.Controllers
                 return View();
             }
 
-
-            
             string fileName = Guid.NewGuid().ToString() + "-" + request.IconImage.FileName;
             string path = Path.Combine(_env.WebRootPath, "images", fileName);
             await request.IconImage.SaveFileToLocalAsync(path);
-
 
             await _appointmentService.Create(new Appointment { Title = request.Title, IconImage = fileName });
 

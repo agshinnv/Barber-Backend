@@ -14,6 +14,5 @@ namespace Service.Services.Interfaces
         Task Delete(History history);
         Task Create(History history);
         Task Edit(int id, History history);
-
     }
 }

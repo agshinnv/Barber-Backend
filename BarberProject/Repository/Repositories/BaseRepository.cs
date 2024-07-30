@@ -41,12 +41,12 @@ namespace Repository.Repositories
 
         public async Task<IEnumerable<T>> GetAll()
         {
-            return await _entities.AsNoTracking().OrderByDescending(m=>m.Id).ToListAsync();
+            return await _entities.OrderByDescending(m=>m.Id).ToListAsync();
         }
 
         public async Task<T> GetById(int id)
         {
-            return await _entities.AsNoTracking().FirstOrDefaultAsync(m => m.Id == id);
+            return await _entities.FirstOrDefaultAsync(m => m.Id == id);
         }
     }
 }
