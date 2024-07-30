@@ -1,0 +1,40 @@
+﻿@model AppointmentEditVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <strong class="text-success">Edit Appointment</strong>
+        </div>
+        <div class="card-body card-block">
+            <div>
+                <img src="~/images/@Model.ExistIconImage" alt="Alternate Text" style="width:200px" />
+            </div>
+            <form asp-action="Edit" method="post" class="mt-4" enctype="multipart/form-data">
+                <div class="form-group">
+                    
+                    <label class=" form-control-label">Enter appointment title</label>
+                    <input asp-for="Title" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+
+                    <label class=" form-control-label">Upload new colleague image</label>
+                    <input asp-for="NewIconImage" class="form-control  mb-2">
+                    <span class="text-danger" asp-validation-for="NewIconImage"></span>
+
+                </div>
+                <div class="form-group mt-3">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-action="Index" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

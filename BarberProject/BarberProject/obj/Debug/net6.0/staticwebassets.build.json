@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Aq8QpzVFQZdsWI6crYye2JJicwp35wPwPVLZmCx6W0s=",
+  "Hash": "KfH8+ZVOl1vOw402zkRdWZVoCkjuVnDgmSr1u648X2k=",
   "Source": "BarberProject",
   "BasePath": "_content/BarberProject",
   "Mode": "Default",
@@ -6420,6 +6420,25 @@
       "OriginalItemSpec": "wwwroot\\icons\\washing.png"
     },
     {
+      "Identity": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\0f923038-8c7e-4b73-9a4d-e45106b5e7f4-6.png",
+      "SourceId": "BarberProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\",
+      "BasePath": "_content/BarberProject",
+      "RelativePath": "images/0f923038-8c7e-4b73-9a4d-e45106b5e7f4-6.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\0f923038-8c7e-4b73-9a4d-e45106b5e7f4-6.png"
+    },
+    {
       "Identity": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\1a07dfe2-da53-4c09-bf2e-14099431a35d-exmp3.jpg",
       "SourceId": "BarberProject",
       "SourceType": "Discovered",
@@ -6513,6 +6532,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\8655e313-330f-4bdf-8535-55b718a47410-exmp3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\95a34413-224c-4156-a374-78cdb5ca31b3-7.png",
+      "SourceId": "BarberProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\",
+      "BasePath": "_content/BarberProject",
+      "RelativePath": "images/95a34413-224c-4156-a374-78cdb5ca31b3-7.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\95a34413-224c-4156-a374-78cdb5ca31b3-7.png"
     },
     {
       "Identity": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\About\\1.jpg",
@@ -6817,6 +6855,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Contact\\bannerimage.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\ddff9427-d013-47e6-99eb-1b553d5c48ab-8.png",
+      "SourceId": "BarberProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\",
+      "BasePath": "_content/BarberProject",
+      "RelativePath": "images/ddff9427-d013-47e6-99eb-1b553d5c48ab-8.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ddff9427-d013-47e6-99eb-1b553d5c48ab-8.png"
     },
     {
       "Identity": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\e408d6b2-b83d-4f6d-92d2-da083c97e62c-exmp1.jpg",

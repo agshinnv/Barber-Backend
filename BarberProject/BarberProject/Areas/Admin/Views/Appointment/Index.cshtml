@@ -19,6 +19,7 @@
             <thead>
                 <tr>
                     <th>Title</th>
+                    <th>IconImage</th>
                     <th>Operations</th>
                 </tr>
             </thead>
@@ -27,6 +28,7 @@
                 {
                     <tr>
                         <td>@item.Title</td>
+                        <td><img src="~/images/@item.IconImage" style="width:50px; margin-left:18px" /></td>
                         <td>
                             <a class="btn btn-info text-white" asp-route-id="@item.Id" asp-action="Detail">Info</a>
                             <a class="btn btn-warning text-white" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
