@@ -1,0 +1,35 @@
+﻿@model AppointmentCreateVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <strong class="text-success">Create Appointment</strong>
+        </div>
+        <div class="card-body card-block">
+            <form asp-action="Create" method="post" class="" enctype="multipart/form-data">
+
+                <div class="form-group">
+
+                    <label class=" form-control-label">Enter appointment title</label>
+                    <input asp-for="Title" type="text" placeholder="Enter title..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+
+                    <label class=" form-control-label">Enter appointment iconimage</label>
+                    <input asp-for="IconImage" class="form-control mb-2">
+                    <span class="text-danger" asp-validation-for="IconImage"></span>
+
+                </div>
+                <div class="form-group mt-3">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-action="Index" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

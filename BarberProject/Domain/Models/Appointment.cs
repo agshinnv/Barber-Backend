@@ -10,7 +10,6 @@ namespace Domain.Models
     public class Appointment : BaseEntity
     {
         public string Title { get; set; }
-        public string BackgroundImage { get; set; }
         public string IconImage { get; set; }
     }
 }

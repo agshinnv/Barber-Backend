@@ -1349,8 +1349,24 @@
       "PackagePath": "staticwebassets\\icons\\washing.png"
     },
     {
+      "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\1a07dfe2-da53-4c09-bf2e-14099431a35d-exmp3.jpg",
+      "PackagePath": "staticwebassets\\images\\1a07dfe2-da53-4c09-bf2e-14099431a35d-exmp3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\2915c654-fe52-4816-9687-54e3785413b1-exmp5.jpg",
+      "PackagePath": "staticwebassets\\images\\2915c654-fe52-4816-9687-54e3785413b1-exmp5.jpg"
+    },
+    {
       "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\404.jpg",
       "PackagePath": "staticwebassets\\images\\404.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\722250e5-68ae-4497-a046-1b5ba78da7d3-exmp3.jpg",
+      "PackagePath": "staticwebassets\\images\\722250e5-68ae-4497-a046-1b5ba78da7d3-exmp3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\8655e313-330f-4bdf-8535-55b718a47410-exmp3.jpg",
+      "PackagePath": "staticwebassets\\images\\8655e313-330f-4bdf-8535-55b718a47410-exmp3.jpg"
     },
     {
       "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\About\\1.jpg",
@@ -1597,12 +1613,20 @@
       "PackagePath": "staticwebassets\\images\\Testimoials-Image\\3.jpg"
     },
     {
+      "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\b0726ade-2c76-4a72-ab9a-a38badaf22dc-exmp5.jpg",
+      "PackagePath": "staticwebassets\\images\\b0726ade-2c76-4a72-ab9a-a38badaf22dc-exmp5.jpg"
+    },
+    {
       "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\background-image-video.jpg",
       "PackagePath": "staticwebassets\\images\\background-image-video.jpg"
     },
     {
       "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\background-image.jpg",
       "PackagePath": "staticwebassets\\images\\background-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\e408d6b2-b83d-4f6d-92d2-da083c97e62c-exmp1.jpg",
+      "PackagePath": "staticwebassets\\images\\e408d6b2-b83d-4f6d-92d2-da083c97e62c-exmp1.jpg"
     },
     {
       "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\login.jpg",

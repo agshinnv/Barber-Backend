@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\areas\\admin\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\areas\\admin\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\areas\\admin\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\areas\\admin\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24B3A77B-E199-411C-A493-87394CDD3E29}|Domain\\Domain.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\domain\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24B3A77B-E199-411C-A493-87394CDD3E29}|Domain\\Domain.csproj|solutionrelative:domain\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\areas\\admin\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\areas\\admin\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\areas\\admin\\controllers\\colleaguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\areas\\admin\\controllers\\colleaguecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HistoryController.cs",
-              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\HistoryController.cs",
-              "RelativeDocumentMoniker": "BarberProject\\Areas\\Admin\\Controllers\\HistoryController.cs",
-              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\HistoryController.cs",
-              "RelativeToolTip": "BarberProject\\Areas\\Admin\\Controllers\\HistoryController.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAYwCcAAAAiAAAA",
+              "DocumentIndex": 1,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Domain\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Appointment.cs",
+              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Domain\\Models\\Appointment.cs",
+              "RelativeToolTip": "Domain\\Models\\Appointment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T09:47:56.496Z",
+              "WhenOpened": "2024-07-30T14:39:23.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AboutController.cs",
+              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\AboutController.cs",
+              "RelativeDocumentMoniker": "BarberProject\\Areas\\Admin\\Controllers\\AboutController.cs",
+              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\AboutController.cs",
+              "RelativeToolTip": "BarberProject\\Areas\\Admin\\Controllers\\AboutController.cs",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAowMIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T14:38:34.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "BarberProject\\Areas\\Admin\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "BarberProject\\Areas\\Admin\\Controllers\\AppointmentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAiwCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T14:08:23.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ColleagueController.cs",
+              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\ColleagueController.cs",
+              "RelativeDocumentMoniker": "BarberProject\\Areas\\Admin\\Controllers\\ColleagueController.cs",
+              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\ColleagueController.cs",
+              "RelativeToolTip": "BarberProject\\Areas\\Admin\\Controllers\\ColleagueController.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwDgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T08:27:24.619Z",
               "EditorCaption": ""
             }
           ]

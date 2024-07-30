@@ -1,0 +1,30 @@
+﻿@model ColleagueDetailVM
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+
+<div class="container">
+
+
+    <div class="table-responsive table--no-card m-b-30">
+        <table class="table table-borderless table-striped table-earning">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="~/images/@Model.Image" style="width:200px" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a asp-action="Index" class="btn btn-danger">Back</a>
+
+</div>
+
