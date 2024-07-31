@@ -148,6 +148,7 @@ namespace BarberProject.Areas.Admin.Controllers
 
 
 
+
             await _aboutService.DeleteAsync(existAbout);
             return RedirectToAction(nameof(Index));
         }

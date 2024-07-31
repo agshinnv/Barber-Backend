@@ -92,6 +92,9 @@ namespace BarberProject.Areas.Admin.Controllers
             var existHistory = await _historyService.GetById((int)id);
             if (existHistory is null) return NotFound();
 
+            string existImage = Path.Combine(_env.WebRootPath, "images", existHistory.Image);
+            existImage.DeleteFileFromLocal();
+
             await _historyService.Delete(existHistory);
             return RedirectToAction(nameof(Index));
         }

@@ -64,6 +64,8 @@ builder.Services.AddScoped<ISubscriberService, SubscriberService>();
 builder.Services.AddScoped<ISubscriberRepository, SubscriberRepository>();
 builder.Services.AddScoped<IFeatureService, FeatureService>();
 builder.Services.AddScoped<IFeatureRepository, FeatureRepository>();
+builder.Services.AddScoped<IBarberPricingService, BarberPricingService>();
+builder.Services.AddScoped<IBarberPricingRepository, BarberPricingRepository>();
 //builder.Services.AddScoped<ISliderInfoService, SliderInfoService>();
 //builder.Services.AddScoped<ISliderInfoRepository, SliderInfoRepository>();
 //builder.Services.AddScoped<IProductService, ProductService>();

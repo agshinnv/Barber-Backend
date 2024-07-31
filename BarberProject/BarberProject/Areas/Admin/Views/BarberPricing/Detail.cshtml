@@ -1,0 +1,33 @@
+﻿@model BarberPricingDetailVM
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+
+<div class="container">
+
+
+    <div class="table-responsive table--no-card m-b-30">
+        <table class="table table-borderless table-striped table-earning">
+            <thead>
+                <tr>
+                    <th>ServiceName</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.ServiceName</td>
+                    <td>@Model.ServiceDescription</td>
+                    <td>@Model.ServicePrice$</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a asp-action="Index" class="btn btn-danger">Back</a>
+
+</div>

@@ -88,6 +88,9 @@ namespace BarberProject.Areas.Admin.Controllers
             var existAppointment = await _appointmentService.GetById((int)id);
             if (existAppointment is null) return NotFound();
 
+            string existImage = Path.Combine(_env.WebRootPath, "images", existAppointment.IconImage);
+            existImage.DeleteFileFromLocal();
+
             await _appointmentService.Delete(existAppointment);
             return RedirectToAction(nameof(Index));
 

@@ -91,6 +91,9 @@ namespace BarberProject.Areas.Admin.Controllers
             var existColleague = await _colleagueService.GetById((int)id);
             if (existColleague is null) return NotFound();
 
+            string existImage = Path.Combine(_env.WebRootPath, "images", existColleague.Image);
+            existImage.DeleteFileFromLocal();
+
             await _colleagueService.Delete(existColleague);
             return RedirectToAction(nameof(Index));
         }
