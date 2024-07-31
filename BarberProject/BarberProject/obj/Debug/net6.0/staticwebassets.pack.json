@@ -1605,6 +1605,14 @@
       "PackagePath": "staticwebassets\\images\\background-image.jpg"
     },
     {
+      "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\cbf448f7-cde6-4fd5-b434-b2eb8b732dc7-5.jpg",
+      "PackagePath": "staticwebassets\\images\\cbf448f7-cde6-4fd5-b434-b2eb8b732dc7-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\f76ce0aa-8826-4d36-850b-4c1c6c44a173-5.jpg",
+      "PackagePath": "staticwebassets\\images\\f76ce0aa-8826-4d36-850b-4c1c6c44a173-5.jpg"
+    },
+    {
       "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\images\\login.jpg",
       "PackagePath": "staticwebassets\\images\\login.jpg"
     },

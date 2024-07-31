@@ -1,0 +1,84 @@
+﻿@model EmployeeDetailVM
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+
+<div class="container">
+
+
+    <div class="table-responsive table--no-card m-b-30">
+        <table class="table table-borderless table-striped table-earning">
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>@Model.Name</td>
+                </tr>
+                <tr>
+                    <td>Position</td>
+                    <td>@Model.Position</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>@Model.Description</td>
+                </tr>
+                <tr>
+                    <td>Specialty</td>
+                    <td>@Model.Specialty</td>
+                </tr>
+                <tr>
+                    <td>Social Icon</td>
+                    <td>@Model.SocialIcon</td>
+                </tr>
+                <tr>
+                    <td>Skill 1</td>
+                    <td>@Model.Skill1</td>
+                </tr>
+                <tr>
+                    <td>Skill 2</td>
+                    <td>@Model.Skill2</td>
+                </tr>
+                <tr>
+                    <td>Biography</td>
+                    <td>@Model.Biography</td>
+                </tr>
+                <tr>
+                    <td>Education</td>
+                    <td>@Model.Education</td>
+                </tr>
+                <tr>
+                    <td>Awards</td>
+                    <td>@Model.Awards</td>
+                </tr>
+                <tr>
+                    <td>Contact Description</td>
+                    <td>@Model.ContactDescription</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>@Model.Email</td>
+                </tr>
+                <tr>
+                    <td>Number</td>
+                    <td>@Model.Number</td>
+                </tr>
+                <tr>
+                    <td>Image</td>
+                    <td><img src="~/images/@Model.EmployeeImage" style="width:100px" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <a asp-action="Index" class="btn btn-danger">Back</a>
+
+</div>

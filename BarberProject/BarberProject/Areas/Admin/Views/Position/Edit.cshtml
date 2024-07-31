@@ -1,0 +1,33 @@
+﻿@model PositionEditVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <strong class="text-success">Edit Position</strong>
+        </div>
+        <div class="card-body card-block">
+
+            <form asp-action="Edit" method="post" class="mt-4" enctype="multipart/form-data">
+                <div class="form-group">
+
+                    <input asp-for="PositionName" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="PositionName"></span>
+
+                </div>
+                <div class="form-group mt-3">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-action="Index" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,88 @@
+﻿@model EmployeeEditVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <strong class="text-success">Edit Employee</strong>
+        </div>
+        <div class="card-body card-block">
+            <div>
+                <img src="~/images/@Model.ExistImage" alt="Alternate Text" style="width:200px" />
+            </div>
+            <form asp-action="Edit" method="post" class="mt-4" enctype="multipart/form-data">
+                <div class="form-group">
+
+                    <label>Name</label>
+                    <input asp-for="Name" type="text" placeholder="Enter employee fullname..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Name"></span>
+
+                    <label>Position</label>
+                    <select class="form-control mb-3" asp-for="PositionId" asp-items="@ViewBag.positions">
+                    </select>
+
+                    <label>Description</label>
+                    <input asp-for="Description" type="text" placeholder="Enter description..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+
+                    <label>Specialty</label>
+                    <input asp-for="Specialty" type="text" placeholder="Enter specialty..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Specialty"></span>
+
+                    <label>Social Icon</label>
+                    <input asp-for="SocialIcon" type="text" placeholder="Enter social icon..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="SocialIcon"></span>
+
+                    <label>Skill1</label>
+                    <input asp-for="Skill1" type="text" placeholder="Enter skill1..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Skill1"></span>
+
+                    <label>Skill2</label>
+                    <input asp-for="Skill2" type="text" placeholder="Enter skill2..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Skill2"></span>
+
+                    <label>Biography</label>
+                    <input asp-for="Biography" type="text" placeholder="Enter biography..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Biography"></span>
+
+                    <label>Education</label>
+                    <input asp-for="Education" type="text" placeholder="Enter education..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Education"></span>
+
+                    <label>Awards</label>
+                    <input asp-for="Awards" type="text" placeholder="Enter awards..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Awards"></span>
+
+                    <label>Contact Description</label>
+                    <input asp-for="ContactDescription" type="text" placeholder="Enter contact description..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="ContactDescription"></span>
+
+                    <label>Email</label>
+                    <input asp-for="Email" type="email" placeholder="Enter email..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Email"></span>
+
+                    <label>Number</label>
+                    <input asp-for="Number" type="text" placeholder="Enter number..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Number"></span>
+
+                    <label class=" form-control-label">Upload new employee image</label>
+                    <input asp-for="NewImage" class="form-control  mb-2">
+                    <span class="text-danger" asp-validation-for="NewImage"></span>
+
+                </div>
+                <div class="form-group mt-3">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-action="Index" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
