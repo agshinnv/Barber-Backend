@@ -9,5 +9,6 @@ namespace Repository.Repositories.Interfaces
 {
     public interface IBarberPricingRepository : IBaseRepository<BarberPricing>
     {
+        Task<BarberPricing> GetByIdWithPricingCategories(int id);
     }
 }

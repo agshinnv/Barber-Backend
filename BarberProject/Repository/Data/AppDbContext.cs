@@ -26,7 +26,7 @@ namespace Repository.Data
         public DbSet<Feature> Features { get; set; }
         public DbSet<History> Histories { get; set; }
         public DbSet<Position> Positions { get; set; }
-        public DbSet<PricingImage> PricingImages { get; set; }
+        public DbSet<PricingCategory> PricingCategories { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<ServiceImage> ServiceImages { get; set; }
         public DbSet<Setting> Settings { get; set; }
@@ -36,7 +36,7 @@ namespace Repository.Data
         public DbSet<SubService> SubServices { get; set; }
         public DbSet<WorkTime> WorkTimes { get; set; }
 
-       
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

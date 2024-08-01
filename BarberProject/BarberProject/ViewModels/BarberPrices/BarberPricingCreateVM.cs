@@ -5,5 +5,6 @@
         public string ServiceName { get; set; }
         public string ServiceDescription { get; set; }
         public int ServicePrice { get; set; }
+        public int PricingCategoryId { get; set; }
     }
 }

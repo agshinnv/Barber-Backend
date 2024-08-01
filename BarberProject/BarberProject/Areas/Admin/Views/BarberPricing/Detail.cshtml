@@ -13,9 +13,10 @@
         <table class="table table-borderless table-striped table-earning">
             <thead>
                 <tr>
-                    <th>ServiceName</th>
+                    <th>Service Name</th>
                     <th>Description</th>
                     <th>Price</th>
+                    <th>Pricing Category</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,7 @@
                     <td>@Model.ServiceName</td>
                     <td>@Model.ServiceDescription</td>
                     <td>@Model.ServicePrice$</td>
+                    <td>@Model.PricingCategory</td>
                 </tr>
             </tbody>
         </table>

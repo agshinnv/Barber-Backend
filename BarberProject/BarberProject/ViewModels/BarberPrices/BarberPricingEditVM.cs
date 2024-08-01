@@ -9,5 +9,6 @@ namespace BarberProject.ViewModels.BarberPrices
         public string ServiceDescription { get; set; }
         [Required]
         public int ServicePrice { get; set; }
+        public int PricingCategoryId { get; set; }
     }
 }

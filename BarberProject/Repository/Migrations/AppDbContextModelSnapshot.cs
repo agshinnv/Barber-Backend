@@ -85,9 +85,6 @@ namespace Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("BackgroundImage")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("IconImage")
                         .HasColumnType("nvarchar(max)");
 
@@ -184,6 +181,9 @@ namespace Repository.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
+                    b.Property<int>("PricingCategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ServiceName")
                         .HasColumnType("nvarchar(max)");
 
@@ -191,6 +191,8 @@ namespace Repository.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PricingCategoryId");
 
                     b.ToTable("BarberPricings");
                 });
@@ -500,7 +502,7 @@ namespace Repository.Migrations
                     b.ToTable("Positions");
                 });
 
-            modelBuilder.Entity("Domain.Models.PricingImage", b =>
+            modelBuilder.Entity("Domain.Models.PricingCategory", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -511,7 +513,7 @@ namespace Repository.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageName")
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("SoftDeleted")
@@ -519,7 +521,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PricingImages");
+                    b.ToTable("PricingCategories");
                 });
 
             modelBuilder.Entity("Domain.Models.Service", b =>
@@ -693,9 +695,6 @@ namespace Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<bool>("Closed")
-                        .HasColumnType("bit");
-
                     b.Property<bool>("SoftDeleted")
                         .HasColumnType("bit");
 
@@ -854,6 +853,17 @@ namespace Repository.Migrations
                     b.Navigation("About");
                 });
 
+            modelBuilder.Entity("Domain.Models.BarberPricing", b =>
+                {
+                    b.HasOne("Domain.Models.PricingCategory", "PricingCategory")
+                        .WithMany("BarberPricings")
+                        .HasForeignKey("PricingCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("PricingCategory");
+                });
+
             modelBuilder.Entity("Domain.Models.Blog", b =>
                 {
                     b.HasOne("Domain.Models.Service", "Service")
@@ -1008,6 +1018,11 @@ namespace Repository.Migrations
             modelBuilder.Entity("Domain.Models.Position", b =>
                 {
                     b.Navigation("Employees");
+                });
+
+            modelBuilder.Entity("Domain.Models.PricingCategory", b =>
+                {
+                    b.Navigation("BarberPricings");
                 });
 
             modelBuilder.Entity("Domain.Models.Service", b =>

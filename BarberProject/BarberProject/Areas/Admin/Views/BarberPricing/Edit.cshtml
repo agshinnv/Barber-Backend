@@ -19,6 +19,10 @@
                     <input asp-for="ServiceName" type="text" placeholder="Enter service name..." class="form-control  mb-2" maxlength="100" autocomplete="off">
                     <span class="text-danger" asp-validation-for="ServiceName"></span>
 
+                    <label>Pricing Category</label>
+                    <select class="form-control mb-3" asp-for="PricingCategoryId" asp-items="@ViewBag.pricingCategories">
+                    </select>
+
 
                     <input asp-for="ServiceDescription" type="text" placeholder="Enter description..." class="form-control  mb-2" maxlength="100" autocomplete="off">
                     <span class="text-danger" asp-validation-for="ServiceDescription"></span>

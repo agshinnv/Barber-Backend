@@ -70,6 +70,8 @@ builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IWorkTimeService, WorkTimeService>();
 builder.Services.AddScoped<IWorkTimeRepository, WorkTimeRepository>();
+builder.Services.AddScoped<IPricingCategoryService, PricingCategoryService>();
+builder.Services.AddScoped<IPricingCategoryRepository, PricingCategoryRepository>();
 //builder.Services.AddScoped<ISliderInfoService, SliderInfoService>();
 //builder.Services.AddScoped<ISliderInfoRepository, SliderInfoRepository>();
 //builder.Services.AddScoped<IProductService, ProductService>();

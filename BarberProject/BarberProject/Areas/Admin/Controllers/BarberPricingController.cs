@@ -1,6 +1,8 @@
 ﻿using BarberProject.ViewModels.BarberPrices;
 using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Service.Services;
 using Service.Services.Interfaces;
 
 namespace BarberProject.Areas.Admin.Controllers
@@ -9,10 +11,12 @@ namespace BarberProject.Areas.Admin.Controllers
     public class BarberPricingController : Controller
     {
         private readonly IBarberPricingService _barberPricingService;
-
-        public BarberPricingController(IBarberPricingService barberPricingService)
+        private readonly IPricingCategoryService _priceCategoryService;
+        public BarberPricingController(IBarberPricingService barberPricingService, 
+                                       IPricingCategoryService priceCategoryService)
         {
             _barberPricingService = barberPricingService;
+            _priceCategoryService = priceCategoryService;
         }
 
         [HttpGet]
@@ -28,6 +32,10 @@ namespace BarberProject.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
+            var pricingCategories = await _priceCategoryService.GetAll();
+
+            ViewBag.pricingCategories = new SelectList(pricingCategories, "Id", "Name");
+
             return View();
         }
 
@@ -35,9 +43,13 @@ namespace BarberProject.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(BarberPricingCreateVM request)
         {
-            if(!ModelState.IsValid) return View();
+            var pricingCategories = await _priceCategoryService.GetAll();
 
-            await _barberPricingService.Create(new BarberPricing { ServiceName = request.ServiceName, Description = request.ServiceDescription, Price = request.ServicePrice });
+            ViewBag.pricingCategories = new SelectList(pricingCategories, "Id", "Name");
+
+            if (!ModelState.IsValid) return View();
+
+            await _barberPricingService.Create(new BarberPricing { ServiceName = request.ServiceName, Description = request.ServiceDescription, Price = request.ServicePrice, PricingCategoryId = request.PricingCategoryId });
 
             return RedirectToAction(nameof(Index));
             
@@ -66,7 +78,8 @@ namespace BarberProject.Areas.Admin.Controllers
             {
                 ServiceName = existBarberPricing.ServiceName,
                 ServiceDescription = existBarberPricing.Description,
-                ServicePrice = existBarberPricing.Price
+                ServicePrice = existBarberPricing.Price,
+                PricingCategory = existBarberPricing.PricingCategory.Name
             };
 
             return View(model);
@@ -76,6 +89,10 @@ namespace BarberProject.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
+            var pricingCategories = await _priceCategoryService.GetAll();
+
+            ViewBag.pricingCategories = new SelectList(pricingCategories, "Id", "Name");
+
             if (id is null) return BadRequest();
             var existBarberPricing = await _barberPricingService.GetById((int)id);
             if (existBarberPricing is null) return NotFound();
@@ -84,7 +101,8 @@ namespace BarberProject.Areas.Admin.Controllers
             {
                 ServiceName = existBarberPricing.ServiceName,
                 ServiceDescription = existBarberPricing.Description,
-                ServicePrice = existBarberPricing.Price
+                ServicePrice = existBarberPricing.Price,
+                PricingCategoryId = existBarberPricing.PricingCategoryId,
             };
             
             return View(model);
@@ -95,13 +113,17 @@ namespace BarberProject.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, BarberPricingEditVM request)
         {
-            if(!ModelState.IsValid) return View();
+            var pricingCategories = await _priceCategoryService.GetAll();
+
+            ViewBag.pricingCategories = new SelectList(pricingCategories, "Id", "Name");
+
+            if (!ModelState.IsValid) return View();
 
             if (id is null) return BadRequest();
             var existBarberPricing = await _barberPricingService.GetById((int)id);
             if (existBarberPricing is null) return NotFound();
 
-            await _barberPricingService.Edit((int)id, new BarberPricing { ServiceName = request.ServiceName, Description = request.ServiceDescription, Price = request.ServicePrice });
+            await _barberPricingService.Edit((int)id, new BarberPricing { ServiceName = request.ServiceName, Description = request.ServiceDescription, Price = request.ServicePrice, PricingCategoryId = request.PricingCategoryId });
 
             return RedirectToAction(nameof(Index));
 

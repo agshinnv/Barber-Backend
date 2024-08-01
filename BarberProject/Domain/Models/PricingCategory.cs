@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Domain.Models
 {
-    public class PricingImage : BaseEntity
+    public class PricingCategory : BaseEntity
     {
+        public string Name { get; set; }
         public string Image { get; set; }
-        public string ImageName { get; set; }
+        public ICollection<BarberPricing> BarberPricings { get; set; }
     }
 }

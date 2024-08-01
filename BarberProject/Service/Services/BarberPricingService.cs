@@ -34,6 +34,7 @@ namespace Service.Services
             existBarberPricing.ServiceName = barberPricing.ServiceName;
             existBarberPricing.Description = barberPricing.Description;
             existBarberPricing.Price = barberPricing.Price;
+            existBarberPricing.PricingCategoryId = barberPricing.PricingCategoryId;
 
             await _barberPricingRepository.Edit(existBarberPricing);
         }
@@ -45,7 +46,7 @@ namespace Service.Services
 
         public async Task<BarberPricing> GetById(int id)
         {
-            return await _barberPricingRepository.GetById(id);
+            return await _barberPricingRepository.GetByIdWithPricingCategories(id);
         }
     }
 }
