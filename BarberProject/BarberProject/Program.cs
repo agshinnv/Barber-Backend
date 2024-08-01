@@ -1,7 +1,6 @@
 using Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-//using Microsoft.EntityFrameworkCore.Migrations;
 using Repository.Data;
 using Repository.Repositories;
 using Repository.Repositories.Interfaces;
@@ -44,8 +43,7 @@ builder.Services.Configure<IdentityOptions>(opt =>
 
 //builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("Smtp"));
 
-//builder.Services.AddScoped<ICategoryService, CategoryService>();
-//builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
 builder.Services.AddScoped<ISettingService, SettingService>();
 builder.Services.AddScoped<ISettingRepository, SettingRepository>();
 builder.Services.AddScoped<ISliderService, SliderService>();
@@ -70,6 +68,8 @@ builder.Services.AddScoped<IPositionService, PositionService>();
 builder.Services.AddScoped<IPositionRepository, PositionRepository>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<IWorkTimeService, WorkTimeService>();
+builder.Services.AddScoped<IWorkTimeRepository, WorkTimeRepository>();
 //builder.Services.AddScoped<ISliderInfoService, SliderInfoService>();
 //builder.Services.AddScoped<ISliderInfoRepository, SliderInfoRepository>();
 //builder.Services.AddScoped<IProductService, ProductService>();

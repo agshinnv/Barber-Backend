@@ -11,6 +11,5 @@ namespace Domain.Models
     {
         public string WorkDay { get; set; }
         public string WorkHour { get; set; }
-        public bool Closed { get; set; } = false;
     }
 }
