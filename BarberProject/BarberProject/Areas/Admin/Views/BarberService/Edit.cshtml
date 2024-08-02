@@ -1,0 +1,53 @@
+﻿@model BarberServiceEditVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <strong class="text-success">Edit Feature</strong>
+        </div>
+        <div class="card-body card-block">
+            <div>
+                <img src="~/images/@Model.ExistServiceImage" alt="Alternate Text" style="width:200px" />
+                <img src="~/images/@Model.ExistIconImage" alt="Alternate Text" style="width:85px" />
+            </div>
+            <form asp-action="Edit" method="post" class="mt-4" enctype="multipart/form-data">
+                <div class="form-group">
+
+                    <label class=" form-control-label">Enter service name</label>
+                    <input asp-for="ServiceName" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="ServiceName"></span>
+
+                    <label class=" form-control-label">Upload new service image</label>
+                    <input asp-for="NewServiceImage" class="form-control  mb-2">
+                    <span class="text-danger" asp-validation-for="NewServiceImage"></span>
+
+                    <label class=" form-control-label">Enter service description</label>
+                    <input asp-for="ServiceDescription" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="ServiceDescription"></span>
+
+                    <label class=" form-control-label">Enter service price</label>
+                    <input asp-for="Price" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Price"></span>
+
+                    <label class=" form-control-label">Upload new icon image</label>
+                    <input asp-for="NewIconImage" class="form-control  mb-2">
+                    <span class="text-danger" asp-validation-for="NewIconImage"></span>
+
+                </div>
+                <div class="form-group mt-3">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-action="Index" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

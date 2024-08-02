@@ -6,6 +6,7 @@ using Repository.Repositories;
 using Repository.Repositories.Interfaces;
 using Service.Services;
 using Service.Services.Interfaces;
+using BarberService = Service.Services.BarberService;
 
 
 
@@ -72,6 +73,8 @@ builder.Services.AddScoped<IWorkTimeService, WorkTimeService>();
 builder.Services.AddScoped<IWorkTimeRepository, WorkTimeRepository>();
 builder.Services.AddScoped<IPricingCategoryService, PricingCategoryService>();
 builder.Services.AddScoped<IPricingCategoryRepository, PricingCategoryRepository>();
+builder.Services.AddScoped<IBarberService, BarberService>();
+builder.Services.AddScoped<IBarberServiceRepository, BarberServiceRepository>();
 //builder.Services.AddScoped<ISliderInfoService, SliderInfoService>();
 //builder.Services.AddScoped<ISliderInfoRepository, SliderInfoRepository>();
 //builder.Services.AddScoped<IProductService, ProductService>();

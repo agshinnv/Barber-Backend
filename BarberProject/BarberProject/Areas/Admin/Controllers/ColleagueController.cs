@@ -152,6 +152,8 @@ namespace BarberProject.Areas.Admin.Controllers
             {
                 await _colleagueService.Edit((int)id, new Colleague { Image = existColleague.Image });
             }
+
+
             return RedirectToAction(nameof(Index));
         }
     }
