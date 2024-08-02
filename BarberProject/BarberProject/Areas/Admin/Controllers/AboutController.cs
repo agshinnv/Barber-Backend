@@ -236,12 +236,6 @@ namespace BarberProject.Areas.Admin.Controllers
                         return View(request);
                     }
 
-                    //if (request.NewAboutImages.Count > 2)
-                    //{
-                    //    ModelState.AddModelError("AboutImages", "You can upload a maximum of 2 images.");
-                    //    return View();
-                    //}
-
 
                 }
 

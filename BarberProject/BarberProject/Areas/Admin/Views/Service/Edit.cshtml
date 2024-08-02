@@ -1,0 +1,80 @@
+﻿@model ServiceEditVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+@section js {
+    <script src="~/admin/js/ServiceEdit.js"></script>
+    <script src="https://kit.fontawesome.com/83dcd321a4.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}
+
+@section css {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+}
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <strong class="text-success">Edit Service</strong>
+        </div>
+        <div class="card-body card-block">
+            <form asp-action="Edit" method="post" class="mt-4" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class=" form-control-label">Enter service title</label>
+                    <input asp-for="Title" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+
+                    <label class=" form-control-label">Enter service description</label>
+                    <input asp-for="Description" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+
+                    <label class=" form-control-label">Upload new icon image</label>
+                    <div>
+                        <img src="~/images/@Model.ExistIconImage" alt="Alternate Text" style="width:85px" />
+                    </div>
+                    <input asp-for="NewIconImage" class="form-control  mb-2">
+                    <span class="text-danger" asp-validation-for="NewIconImage"></span>
+
+
+                    <label>Service Images</label>
+                    <div class="service-images" style="display:flex; gap:40px">
+                        @foreach (var item in Model.ExistServiceImages)
+                        {
+                            <div class="edit-image" data-id="@item.Id" data-service-id="@item.ServiceId" style="width:200px">
+                                <img src="~/images/@item.Name" />
+                                <div class="service-action">
+                                    <ul style="list-style:none">
+                                        <li>
+                                            <a class="remove-image" style="cursor:pointer">
+                                                <i class="fa-solid fa-trash text-danger"></i>
+                                                <span class="tooltip-text">Remove image</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        }
+                        <div class="upload-container">
+                            <label class="upload-button">
+                                <input asp-for="NewServiceImages">
+                            </label>
+                        </div>
+                        <span class="text-danger d-block" asp-validation-for="NewServiceImages"></span>
+                    </div>
+
+                </div>
+                <div class="form-group mt-3">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-action="Index" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

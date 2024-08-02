@@ -1,0 +1,44 @@
+﻿@model ServiceCreateVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <strong class="text-success">Create Service</strong>
+        </div>
+        <div class="card-body card-block">
+            <form asp-action="Create" method="post" class="" enctype="multipart/form-data">
+
+                <div class="form-group">
+
+                    <input asp-for="Title" type="text" placeholder="Enter title..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+
+                    <label class=" form-control-label">Upload service icon image</label>
+                    <input asp-for="IconImage" type="file" class="form-control mb-2" multiple>
+                    <span class="text-danger" asp-validation-for="IconImage"></span>
+
+                    <input asp-for="Description" type="text" placeholder="Enter description..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+
+                    <label class=" form-control-label">Upload service images</label>
+                    <input asp-for="ServiceImages" type="file" class="form-control mb-2" multiple>
+                    <span class="text-danger" asp-validation-for="ServiceImages"></span>
+
+                </div>
+                <div class="form-group mt-3">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-action="Index" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

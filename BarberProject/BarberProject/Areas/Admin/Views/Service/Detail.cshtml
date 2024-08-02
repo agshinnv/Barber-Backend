@@ -1,0 +1,45 @@
+﻿@model ServiceDetailVM
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+
+<div class="container">
+
+
+    <div class="table-responsive table--no-card m-b-30">
+        <table class="table table-borderless table-striped table-earning">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Icon Image</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Title</td>
+                    <td><img src="~/images/@Model.IconImage" style="width:85px" /></td>
+                    <td>@Model.Description</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h3 style="display:flex; align-items:center; justify-content:center; margin-bottom:20px">Service Images</h3>
+    <div class="service-images" style="display:flex; align-items:center; justify-content:center; gap:62px; background-color:white">
+        @foreach (var item in Model.ServiceImages)
+        {
+            <div class="edit-image bg-light">
+                <img src="~/images/@item.Image" style="width:150px" />
+            </div>
+            <br />
+        }
+    </div>
+
+
+    <a asp-action="Index" asp-controller="Service" class="btn btn-danger">Back</a>
+
+</div>
+

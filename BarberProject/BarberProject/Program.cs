@@ -75,6 +75,8 @@ builder.Services.AddScoped<IPricingCategoryService, PricingCategoryService>();
 builder.Services.AddScoped<IPricingCategoryRepository, PricingCategoryRepository>();
 builder.Services.AddScoped<IBarberService, BarberService>();
 builder.Services.AddScoped<IBarberServiceRepository, BarberServiceRepository>();
+builder.Services.AddScoped<IServiceService, ServiceService>();
+builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 //builder.Services.AddScoped<ISliderInfoService, SliderInfoService>();
 //builder.Services.AddScoped<ISliderInfoRepository, SliderInfoRepository>();
 //builder.Services.AddScoped<IProductService, ProductService>();
