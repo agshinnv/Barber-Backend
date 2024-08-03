@@ -54,7 +54,7 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="#">
+                            <a asp-controller="Dashboard" asp-action="Index">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard
                             </a>
                         </li>
@@ -114,6 +114,9 @@
                                 </li>
                                 <li>
                                     <a asp-area="Admin" asp-controller="Service" asp-action="Index">Services</a>
+                                </li>
+                                <li>
+                                    <a asp-area="Admin" asp-controller="Blog" asp-action="Index">Blog</a>
                                 </li>
                             </ul>
                         </li>

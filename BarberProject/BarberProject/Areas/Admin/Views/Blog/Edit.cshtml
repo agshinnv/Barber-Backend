@@ -1,0 +1,195 @@
+﻿@model BlogEditVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+@section js {
+    <script src="~/admin/js/BlogEdit.js"></script>
+    <script src="https://kit.fontawesome.com/83dcd321a4.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}
+
+@section css {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+}
+
+<style>
+    .edit-image {
+        position: relative;
+        width: 200px;
+        height: 200px;
+    }
+
+        .edit-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .blog-images {
+        display: flex;
+        gap: 10px;
+    }
+
+
+    .blog-action {
+        position: absolute;
+        right: -20px;
+        transition: all .3s 0s ease-out;
+        opacity: 0;
+        z-index: 1;
+        visibility: hidden;
+        bottom: 25px;
+    }
+
+        .blog-action ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+            .blog-action ul li a {
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 1px 3px #010f1c24;
+                background-color: white;
+                transition: 0.5s;
+                position: relative;
+                border-radius: 15px;
+            }
+
+                .blog-action ul li a img {
+                    width: auto;
+                }
+
+                .blog-action ul li a .tooltip-text {
+                    position: absolute;
+                    visibility: hidden;
+                    opacity: 0;
+                    width: max-content;
+                    font-size: 12px;
+                    background-color: black;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 4px;
+                    padding: 4px 6px;
+                    z-index: 1;
+                    top: 50%;
+                    right: 100%;
+                    line-height: 1;
+                    transform: translateY(-50%);
+                    transition: opacity .3s ease, visibility .3s ease, transform .3s cubic-bezier(.71,1.7,.77,1.24);
+                }
+
+                    .blog-action ul li a .tooltip-text::after {
+                        content: " ";
+                        position: absolute;
+                        top: 50%;
+                        left: 100%;
+                        margin-top: -5px;
+                        border-width: 5px;
+                        border-style: solid;
+                        border-color: transparent transparent transparent black;
+                    }
+
+                .blog-action ul li a:hover img {
+                    filter: invert(100%);
+                }
+
+                .blog-action ul li a:hover .tooltip-text {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translate(-8px) translateY(-50%);
+                }
+
+
+    .edit-image:hover .blog-action {
+        right: 20px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    .main-image {
+        border: 3px solid red;
+    }
+</style>
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header text-success">
+            <strong>Edit blog</strong>
+        </div>
+        <div class="card-body card-block">
+            <form asp-action="Edit" method="post" class="" enctype="multipart/form-data">
+                <div class="form-group">
+
+                    <label>Title</label>
+                    <input asp-for="Title" class="form-control mb-4" placeholder="Blog title...">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+
+                    <label>Description</label>
+                    <input asp-for="Description" class="form-control mb-4" placeholder="Blog description...">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+
+                    <label>Content</label>
+                    <input asp-for="Content" class="form-control mb-4" placeholder="Blog description...">
+                    <span class="text-danger" asp-validation-for="Content"></span>
+
+                    <label>Blog service</label>
+                    <select class="form-control mb-3" asp-for="ServiceId" asp-items="@ViewBag.services">
+                    </select>
+
+
+                    <label>Blog Images</label>
+                    <div class="blog-images">
+                        @foreach (var item in Model.ExistBlogImages)
+                        {
+                            <div class="edit-image @(item.IsMain ? "main-image" : "")" data-id="@item.Id" data-blog-id="@item.BlogId">
+                                <img src="~/images/@item.Name" />
+                                <div class="blog-action">
+                                    <ul style="list-style:none">
+                                        <li>
+                                            <a href="" class="make-main">
+                                                <i class="fa-solid fa-house text-success"></i>
+                                                <span class="tooltip-text">Make image main</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="remove-image">
+                                                <i class="fa-solid fa-trash text-danger"></i>
+                                                <span class="tooltip-text">Remove image</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        }
+                        <div class="upload-container">
+                            <label class="upload-button">
+                                <input asp-for="NewBlogImages">
+                            </label>
+                        </div>
+                        <span class="text-danger d-block" asp-validation-for="NewBlogImages"></span>
+                    </div>
+
+                </div>
+                <div class="form-group mt-3">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-action="Index" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

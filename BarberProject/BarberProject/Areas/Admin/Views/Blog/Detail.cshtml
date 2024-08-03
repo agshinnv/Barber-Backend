@@ -1,0 +1,48 @@
+﻿@model BlogDetailVM
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+
+<div class="container">
+    <div class="create-category">
+        <a asp-action="Create" class="btn btn-success text-white mb-3 mx-3">Create</a>
+    </div>
+    <div class="table-responsive table--no-card m-b-30">
+        <table class="table table-borderless table-striped table-earning">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Content</th>
+                    <th>Service</th>
+                    <th>Date time</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Title</td>
+                    <td>@Model.Description</td>
+                    <td>@Model.Content</td>
+                    <td>@Model.Service</td>
+                    <td>@Model.CreateDate.ToString("dd/MM/yyyy")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="blog-images">
+        @foreach (var item in Model.BlogImages)
+        {
+            <div class="edit-image bg-light" style="@(item.IsMain ? "border: 3px solid red" : ""); width:250px; margin-top:20px">
+                <img src="~/images/@item.Image" />
+            </div>
+        }
+    </div>
+    <a asp-action="Index" class="btn btn-danger" style="margin-top:50px">Back</a>
+</div>
+
