@@ -79,6 +79,8 @@ builder.Services.AddScoped<IServiceService, ServiceService>();
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
+builder.Services.AddScoped<ISubServiceService, SubServiceService>();
+builder.Services.AddScoped<ISubServiceRepository, SubServiceRepository>();
 //builder.Services.AddScoped<ISliderInfoService, SliderInfoService>();
 //builder.Services.AddScoped<ISliderInfoRepository, SliderInfoRepository>();
 //builder.Services.AddScoped<IProductService, ProductService>();

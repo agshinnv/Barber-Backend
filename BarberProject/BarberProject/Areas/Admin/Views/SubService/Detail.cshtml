@@ -1,0 +1,35 @@
+﻿@model SubServiceDetailVM
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+
+<div class="container">
+    <div class="create-category">
+        <a asp-action="Create" class="btn btn-success text-white mb-3 mx-3">Create</a>
+    </div>
+    <div class="table-responsive table--no-card m-b-30">
+        <table class="table table-borderless table-striped table-earning">
+            <thead>
+                <tr>
+                    <th>Sub service name</th>
+                    <th>Price</th>
+                    <th>Subservice's Service</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Name</td>
+                    <td>@Model.Price</td>
+                    <td>@Model.Service</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a asp-action="Index" class="btn btn-danger" style="margin-top:50px">Back</a>
+</div>
+
