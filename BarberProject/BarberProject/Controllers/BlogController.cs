@@ -28,51 +28,11 @@ namespace BarberProject.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> Index(int? id)
+        public async Task<IActionResult> Index()
         {
-            if (id is null) return BadRequest();
+            IEnumerable<Blog> blogs = await _blogService.GetAllWithServices();
+            List<BlogVM> model = blogs.Select(m=> new BlogVM { Id = m.Id, Title = m.BlogTitle, Service = m.Service.Title, CreateDate = m.CreatedDate.ToString("dd/MM/yyyy"), Content = m.Content}).ToList();
 
-            var existBlog = await _blogService.GetByIdAsync((int)id);
-
-            if (existBlog is null) return NotFound();
-
-            BlogDetailVM blog = new()
-            {
-                Id = existBlog.Id,
-                Title = existBlog.BlogTitle,
-                Description = existBlog.Description,
-                Content = existBlog.Content,
-                CreateDate = existBlog.CreatedDate,
-                Service = existBlog.Service.Title,
-                BlogImages = existBlog.BlogImages.Select(m => new BlogImageVM { Image = m.Image, IsMain = m.IsMain }).ToList(),
-            };
-
-            IEnumerable<Domain.Models.Service> services = await _serviceService.GetAll();
-            IEnumerable<Blog> blogs = await _blogService.GetAllAsync();
-            IEnumerable<Comment> comments = await _commentService.GetCommentsByBlog(existBlog.Id);
-
-            AppUser user = new();
-            if (User.Identity.IsAuthenticated)
-            {
-                user = await _userManager.FindByNameAsync(User.Identity.Name);
-            }
-
-            CommentVM commentData = new()
-            {
-                UserId = user.Id,
-                UserEmail = user.Email,
-                UserName = user.FullName,
-                ServiceId = existBlog.Id,
-            };
-
-            BlogDetailPageVM model = new()
-            {
-                Blog = blog,
-                Blogs = blogs,
-                Services = services,
-                CommentData = commentData,
-                BlogComments = comments
-            };
 
             return View(model);
         }

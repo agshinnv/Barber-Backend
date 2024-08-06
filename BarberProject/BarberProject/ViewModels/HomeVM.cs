@@ -7,5 +7,6 @@ namespace BarberProject.ViewModels
         public IEnumerable<Slider> Sliders { get; set; }
         public IEnumerable<About> Abouts { get; set; }
         public History History { get; set; }
+        public IEnumerable<Blog> Blogs { get; set; }
     }
 }

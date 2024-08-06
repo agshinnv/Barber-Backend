@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class AccountRepository : IAccountRepository
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        public UserRepository(UserManager<AppUser> userManager,
+        public AccountRepository(UserManager<AppUser> userManager,
                               RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;

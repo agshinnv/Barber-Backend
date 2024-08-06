@@ -13,5 +13,6 @@ namespace Repository.Repositories.Interfaces
         Task<IEnumerable<Blog>> GetAll();
         Task DeleteImage(BlogImage image);
         Task ChangeMainImage(Blog blog, int id);
+        Task<IEnumerable<Blog>> GetAllWithServices();
     }
 }

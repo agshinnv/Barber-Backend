@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service.Services.Interfaces
+namespace Repository.Repositories.Interfaces
 {
-    public interface IUserService
+    public interface IAccountRepository
     {
         Task<List<AppUser>> GetAll();
         Task<IList<string>> GetRoles(AppUser user);

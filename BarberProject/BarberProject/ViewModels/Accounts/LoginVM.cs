@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BarberProject.ViewModels.Users
+namespace BarberProject.ViewModels.Accounts
 {
     public class LoginVM
     {

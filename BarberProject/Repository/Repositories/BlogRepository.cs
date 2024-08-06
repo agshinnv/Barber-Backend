@@ -46,5 +46,11 @@ namespace Repository.Repositories
             await _context.SaveChangesAsync();
 
         }
+
+        public async Task<IEnumerable<Blog>> GetAllWithServices()
+        {
+            return await _context.Blogs.Include(m => m.Service)
+                                       .Include(m => m.BlogImages).ToListAsync();
+        }
     }
 }

@@ -16,5 +16,6 @@ namespace Service.Services.Interfaces
         Task DeleteAsync(Blog blog);
         Task DeleteImage(BlogImage image);
         Task ChangeMainImage(Blog blog, int id);
+        Task<IEnumerable<Blog>> GetAllWithServices();
     }
 }

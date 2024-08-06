@@ -32,7 +32,7 @@ namespace BarberProject.Areas.Admin.Controllers
         {
             var datas = await _blogService.GetAllAsync();
 
-            List<BlogVM> model = datas.Select(m=> new BlogVM { Id = m.Id, Title = m.BlogTitle, CreateDate = m.CreatedDate}).ToList();
+            List<BlogVM> model = datas.Select(m=> new BlogVM { Id = m.Id, Title = m.BlogTitle, CreateDate = m.CreatedDate.ToString("dd/MM/yyyy")}).ToList();
 
             return View(model);
         }

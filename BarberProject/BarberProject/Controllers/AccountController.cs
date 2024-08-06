@@ -1,6 +1,6 @@
 ﻿using BarberProject.Helpers;
 using BarberProject.Helpers.Enums;
-using BarberProject.ViewModels.Users;
+using BarberProject.ViewModels.Accounts;
 using Domain.Models;
 using MailKit.Security;
 using Microsoft.AspNetCore.Identity;
@@ -12,14 +12,14 @@ using MailKit.Net.Smtp;
 
 namespace BarberProject.Controllers
 {
-    public class UserController : Controller
+    public class AccountController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly AppSettings _appSettings;
 
-        public UserController(UserManager<AppUser> userManager,
+        public AccountController(UserManager<AppUser> userManager,
                                  SignInManager<AppUser> signInManager,
                                  RoleManager<IdentityRole> roleManager,
                                  IOptions<AppSettings> appSettings)
@@ -29,18 +29,6 @@ namespace BarberProject.Controllers
             _roleManager = roleManager;
             _appSettings = appSettings.Value;
         }
-
-        public async Task<IActionResult> Auth()
-        {
-            var model = new UserVM
-            {
-                Login = new LoginVM(),
-                Register = new RegisterVM(),
-            };
-
-            return View(model);
-        }
-
 
         [HttpGet]
         public IActionResult SignIn()
@@ -77,7 +65,7 @@ namespace BarberProject.Controllers
                 return View(request);
             }
 
-            await _userManager.AddToRoleAsync(newUser, nameof(Roles.SuperAdmin));
+            await _userManager.AddToRoleAsync(newUser, nameof(Roles.Member));
 
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
             string url = Url.Action(nameof(ConfirmEmail), "Account", new { userId = newUser.Id, token }, Request.Scheme, Request.Host.ToString());
@@ -136,7 +124,7 @@ namespace BarberProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> SignIn(LoginVM request)
         {
-            if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid) return View(request);
 
             var existUser = await _userManager.FindByEmailAsync(request.EmailOrUsername);
 

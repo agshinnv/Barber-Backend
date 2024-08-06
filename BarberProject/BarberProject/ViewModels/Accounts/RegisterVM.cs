@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BarberProject.ViewModels.Users
+namespace BarberProject.ViewModels.Accounts
 {
     public class RegisterVM
     {
@@ -13,5 +13,8 @@ namespace BarberProject.ViewModels.Users
         public string Email { get; set; }
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        [DataType(DataType.Password)]
+        [Compare(nameof(Password))]
+        public string ConfirmPassword { get; set; }
     }
 }

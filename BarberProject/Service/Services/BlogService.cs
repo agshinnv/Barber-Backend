@@ -60,5 +60,10 @@ namespace Service.Services
         {
             await _blogRepository.ChangeMainImage(blog, id);
         }
+
+        public async Task<IEnumerable<Blog>> GetAllWithServices()
+        {
+            return await _blogRepository.GetAllWithServices();
+        }
     }
 }

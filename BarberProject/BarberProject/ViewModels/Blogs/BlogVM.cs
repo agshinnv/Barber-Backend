@@ -5,6 +5,8 @@
         public int Id { get; set; }
         public string Title { get; set; }
         public string Service { get; set; }
-        public DateTime CreateDate { get; set; } = DateTime.Now;
+        public string CreateDate { get; set; }
+        public string Content { get; set; }
+        public string Image { get; set; }
     }
 }

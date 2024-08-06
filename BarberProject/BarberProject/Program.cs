@@ -37,7 +37,8 @@ builder.Services.Configure<IdentityOptions>(opt =>
     opt.Password.RequireLowercase = true;
     opt.Password.RequireDigit = true;
     opt.Password.RequireNonAlphanumeric = true;
-    opt.User.RequireUniqueEmail = true;
+	opt.Password.RequiredLength = 6;
+	opt.User.RequireUniqueEmail = true;
     opt.SignIn.RequireConfirmedEmail = true;
 });
 
