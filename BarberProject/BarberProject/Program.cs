@@ -1,3 +1,4 @@
+using BarberProject.Helpers;
 using Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -36,13 +37,11 @@ builder.Services.Configure<IdentityOptions>(opt =>
     opt.Password.RequireLowercase = true;
     opt.Password.RequireDigit = true;
     opt.Password.RequireNonAlphanumeric = true;
-
     opt.User.RequireUniqueEmail = true;
-
     opt.SignIn.RequireConfirmedEmail = true;
 });
 
-//builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("Smtp"));
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("Smtp"));
 
 
 builder.Services.AddScoped<ISettingService, SettingService>();
@@ -81,28 +80,9 @@ builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 builder.Services.AddScoped<ISubServiceService, SubServiceService>();
 builder.Services.AddScoped<ISubServiceRepository, SubServiceRepository>();
-//builder.Services.AddScoped<ISliderInfoService, SliderInfoService>();
-//builder.Services.AddScoped<ISliderInfoRepository, SliderInfoRepository>();
-//builder.Services.AddScoped<IProductService, ProductService>();
-//builder.Services.AddScoped<IProductRepository, ProductRepository>();
-//builder.Services.AddScoped<IFeatureService, FeatureService>();
-//builder.Services.AddScoped<IFeatureRepository, FeatureRepository>();
-//builder.Services.AddScoped<IBannerService, BannerService>();
-//builder.Services.AddScoped<IBannerRepository, BannerRepository>();
-//builder.Services.AddScoped<IAdService, AdService>();
-//builder.Services.AddScoped<IAdvertisementRepository, AdvertisementRepository>();
-//builder.Services.AddScoped<IBasketService, BasketService>();
-//builder.Services.AddScoped<IBasketRepository, BasketRepository>();
-//builder.Services.AddScoped<ICommentRepository, CommentRepository>();
-//builder.Services.AddScoped<ICommentService, CommentService>();
-//builder.Services.AddScoped<IComplaintService, ComplaintService>();
-//builder.Services.AddScoped<IComplaintRepository, ComplaintRepository>();
-//builder.Services.AddScoped<IStatisticService, StatisticService>();
-//builder.Services.AddScoped<IStatisticRepository, StatisticRepository>();
-//builder.Services.AddScoped<ISubscriberRepository, SubscriberRepository>();
-//builder.Services.AddScoped<ISubscriberService, SubscriberService>();
-//builder.Services.AddScoped<IAccountService, AccountService>();
-//builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<ICommentService, CommentService>();
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+
 
 
 

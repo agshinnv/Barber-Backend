@@ -31,5 +31,10 @@ namespace Repository.Repositories
             await _context.SaveChangesAsync();
         }
 
+        public async Task<bool> ServiceIsExist(string name)
+        {
+            return await _context.Services.AnyAsync(m => m.Title.Trim() == name.Trim());
+        }
+
     }
 }

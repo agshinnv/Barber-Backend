@@ -53,5 +53,10 @@ namespace Service.Services
         {
             return await _serviceRepository.GetByIdWithImages(id);
         }
+
+        public async Task<bool> ServiceIsExist(string serviceName)
+        {
+            return await _serviceRepository.ServiceIsExist(serviceName.Trim());
+        }
     }
 }

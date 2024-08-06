@@ -9,5 +9,6 @@ namespace Repository.Repositories.Interfaces
 {
     public interface IBarberServiceRepository : IBaseRepository<BarberService>
     {
+        Task<bool> ServiceIsExist(string name);
     }
 }

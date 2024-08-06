@@ -14,5 +14,6 @@ namespace Service.Services.Interfaces
         Task Delete(Domain.Models.BarberService barberService);
         Task Create(Domain.Models.BarberService barberService);
         Task Edit(int id, Domain.Models.BarberService barberService);
+        Task<bool> ServiceIsExist(string serviceName);
     }
 }

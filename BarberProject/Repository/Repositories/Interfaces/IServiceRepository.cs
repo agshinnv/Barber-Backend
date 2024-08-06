@@ -12,5 +12,6 @@ namespace Repository.Repositories.Interfaces
         Task<Service> GetByIdWithImages(int id);
         Task<IEnumerable<Service>> GetAllWithImages();
         Task DeleteImage(ServiceImage image);
+        Task<bool> ServiceIsExist(string name);
     }
 }

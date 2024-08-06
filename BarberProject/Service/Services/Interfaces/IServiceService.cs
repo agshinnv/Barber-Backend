@@ -15,6 +15,6 @@ namespace Service.Services.Interfaces
         Task Edit(int id, Domain.Models.Service service);
         Task Delete(Domain.Models.Service service);
         Task DeleteImage(ServiceImage image);
-
+        Task<bool> ServiceIsExist(string serviceName);
     }
 }

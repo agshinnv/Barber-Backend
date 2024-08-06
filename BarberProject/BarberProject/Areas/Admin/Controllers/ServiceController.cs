@@ -44,6 +44,14 @@ namespace BarberProject.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid) return View();
 
+            bool isExist = await _serviceService.ServiceIsExist(request.Title.Trim());
+
+            if (isExist)
+            {
+                ModelState.AddModelError("Title", "This service has already been created");
+                return View();
+            }
+
             foreach (var item in request.ServiceImages)
             {
                 if (!item.CheckFileType("image/"))

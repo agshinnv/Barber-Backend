@@ -45,6 +45,14 @@ namespace BarberProject.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid) return View();
 
+            bool isExist = await _barberService.ServiceIsExist(request.ServiceName);
+
+            if (isExist)
+            {
+                ModelState.AddModelError("ServiceName", "This service has already been created");
+                return View();
+            }
+
             if (!request.ServiceImage.CheckFileType("image/"))
             {
                 ModelState.AddModelError("ServiceImage", "File type must be image");
@@ -131,6 +139,7 @@ namespace BarberProject.Areas.Admin.Controllers
             if (id is null) return BadRequest();
             var existBarberService = await _barberService.GetById((int)id);
             if (existBarberService is null) return NotFound();
+
 
             BarberServiceEditVM model = new()
             {

@@ -49,5 +49,10 @@ namespace Service.Services
         {
             return await _barberServiceRepository.GetById(id);
         }
+
+        public Task<bool> ServiceIsExist(string serviceName)
+        {
+            return _barberServiceRepository.ServiceIsExist(serviceName);
+        }
     }
 }
