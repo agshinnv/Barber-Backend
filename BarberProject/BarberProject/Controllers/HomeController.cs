@@ -33,7 +33,7 @@ namespace BarberProject.Controllers
             _subscriberService = subscriberService;
             _blogService = blogService;
         }
-
+        
         public async Task<IActionResult> Index()
         {
             var sliders = await _sliderService.GetAllAsync();

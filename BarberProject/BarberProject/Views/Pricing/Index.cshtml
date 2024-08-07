@@ -1,0 +1,271 @@
+﻿@model List<BarberPricingVM>
+
+@{
+    ViewData["Title"] = "Pricing";
+}
+
+
+@section css {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="~/sass/pages/pricing/pricing.css" rel="stylesheet" />
+    <link href="~/css/themify-icons.css" rel="stylesheet" />
+}
+
+
+
+@section js {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/pricing.js"></script>
+}
+
+
+<section id="banner-header" style="background-image: url('/images/Pricing/1.jpg')">
+    <div class="container-main">
+        <div class="row">
+            <div class="cover"></div>
+            <div class="col-md-12 caption">
+                <h5>Our Price List</h5>
+                <h1>Pricing Plan</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="barber-pricing">
+    <div class="container-main">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="image">
+                    <a>
+                        <img src="~/images/Pricing/haircut.jpg" alt="">
+                        <div class="name">
+                            <h2>Haircut</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="content">
+                    <div class="content-list">
+                        <div class="item">
+                            <div class="title">
+                                <h2>Perukar HairCut</h2>
+                                <div class="dots"></div>
+                                <p>$30</p>
+                            </div>
+                            <p><i>Haircut, shampoo, scalp massage, hot towel face treatment.</i></p>
+                        </div>
+                    </div>
+                    <div class="content-list">
+                        <div class="item">
+                            <div class="title">
+                                <h2>Haircut with Skin Fade</h2>
+                                <div class="dots"></div>
+                                <p>$20</p>
+                            </div>
+                            <p><i>Haircut with a flat top or skin fade using a zero guard.</i></p>
+                        </div>
+                    </div>
+                    <div class="content-list">
+                        <div class="item">
+                            <div class="title">
+                                <h2>Haircut Razor skin fade</h2>
+                                <div class="dots"></div>
+                                <p>$15</p>
+                            </div>
+                            <p><i>Perukar Haircut with a razor skin fade.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="content">
+                    <div class="content-list">
+                        <div class="item">
+                            <div class="title">
+                                <h2>Basic Beard Trim</h2>
+                                <div class="dots"></div>
+                                <p>$25</p>
+                            </div>
+                            <p><i>A beard trim done with trimmers or clippers & guards only.</i></p>
+                        </div>
+                    </div>
+                    <div class="content-list">
+                        <div class="item">
+                            <div class="title">
+                                <h2>Beard Trim & Line Up</h2>
+                                <div class="dots"></div>
+                                <p>$20</p>
+                            </div>
+                            <p><i>A beard trim done with scissors, clippers, or trimmers.</i></p>
+                        </div>
+                    </div>
+                    <div class="content-list">
+                        <div class="item">
+                            <div class="title">
+                                <h2>Electric Razor</h2>
+                                <div class="dots"></div>
+                                <p>$15</p>
+                            </div>
+                            <p><i>A line-up or edge-up with trimmers or electric razor.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <a>
+                        <img src="~/images/Pricing/beard.jpg" alt="">
+                        <div class="name">
+                            <h2>Beard</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="image">
+                    <a>
+                        <img src="~/images/Pricing/shaves.jpg" alt="">
+                        <div class="name">
+                            <h2>Shaves</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="content">
+                    <div class="content-list">
+                        <div class="item">
+                            <div class="title">
+                                <h2>Full Face Shave</h2>
+                                <div class="dots"></div>
+                                <p>$20</p>
+                            </div>
+                            <p><i>Slick up your face with our smooth hot lather full face shave.</i></p>
+                        </div>
+                    </div>
+                    <div class="content-list">
+                        <div class="item">
+                            <div class="title">
+                                <h2>Partial Face Shave</h2>
+                                <div class="dots"></div>
+                                <p>$15</p>
+                            </div>
+                            <p><i>Partial shaving of the face, cheeks and neck. Includes a beard trim.</i></p>
+                        </div>
+                    </div>
+                    <div class="content-list">
+                        <div class="item">
+                            <div class="title">
+                                <h2>Head Shave</h2>
+                                <div class="dots"></div>
+                                <p>$25</p>
+                            </div>
+                            <p><i>Make your dome shine with our awesome, hot lather head shave.</i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="appointment" style="background-image: url('/images/AppointmentImage.jpg');">
+    <div class="container-main">
+        <div class="row">
+            <div class="cover"></div>
+            <div class="col-md-5">
+                <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </p>
+                <h5>We Are Best Barbers & Hair Cutting Salon at NYC.</h5>
+                <div class="reservation">
+                    <div class="icon">
+                        <img src="~/icons/service-razor.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Appointment</p>
+                        <a href="">855 100 4444</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 offset-md-2">
+                <div class="booking-box">
+                    <div class="booking-box-title">
+                        <h1>Make An Appointment</h1>
+                    </div>
+                    <div class="booking-area">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-area">
+                                        <input type="text" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-area">
+                                        <input type="text" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="date-input-area">
+                                        <input type="date" placeholder="Date">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="select-area">
+                                        <select name="" id="">
+                                            <option value="">Time</option>
+                                            <option value="">10:00 am</option>
+                                            <option value="">11:00 am</option>
+                                            <option value="">12:00 am</option>
+                                            <option value="">14:00 am</option>
+                                            <option value="">16:00 am</option>
+                                            <option value="">18:00 am</option>
+                                            <option value="">20:00 am</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="select-area">
+                                        <select name="" id="">
+                                            <option value="">Services</option>
+                                            <option value="">Hair Styling</option>
+                                            <option value="">Face Mask</option>
+                                            <option value="">Shaving</option>
+                                            <option value="">Beard Triming</option>
+                                            <option value="">Hair Wash</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="select-area">
+                                        <select name="" id="">
+                                            <option value="">Choose Barber</option>
+                                            <option value="">Philip</option>
+                                            <option value="">Stephen</option>
+                                            <option value="">Dennis</option>
+                                            <option value="">Helen</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="make-appoint">
+                                        Make appointment
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

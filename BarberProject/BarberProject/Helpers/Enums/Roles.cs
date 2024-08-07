@@ -2,8 +2,8 @@
 {
     public enum Roles
     {
-        Member = 1,
-        Admin = 2,
-        SuperAdmin
-    }
+		SuperAdmin = 1,
+		Admin = 2,
+		Member
+	}
 }

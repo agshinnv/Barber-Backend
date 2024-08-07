@@ -1,0 +1,351 @@
+﻿@model List<ServiceVM>
+
+@{
+    ViewData["Title"] = "Services";
+}
+
+@section css {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="~/sass/pages/services/services.css" rel="stylesheet" />
+    <link href="~/css/themify-icons.css" rel="stylesheet" />
+}
+
+
+
+@section js {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/services.js"></script>
+}
+
+
+
+<section id="banner-header" style="background-image: url('/images/Services/1.jpg')">
+    <div class="container-main">
+        <div class="row">
+            <div class="cover"></div>
+            <div class="col-md-12 caption">
+                <h5>What we do</h5>
+                <h1>Our Services</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="offering">
+    <div class="container-main">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="cart">
+                    <a href="services-page.html">
+                        <div class="image">
+                            <img src="~/icons/service-razor.png" alt="">
+                        </div>
+                        <h5>Moustache Trim</h5>
+                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
+                        <div class="shape">
+                            <div class="image">
+                                <img src="~/icons/service-razor.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart">
+                    <a href="services-page.html">
+                        <div class="image">
+                            <img src="~/icons/shaving-brush.png" alt="">
+                        </div>
+                        <h5>Face Shave</h5>
+                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
+                        <div class="shape">
+                            <div class="image">
+                                <img src="~/icons/shaving-brush.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart">
+                    <a href="services-page.html">
+                        <div class="image">
+                            <img src="~/icons/service-trimmer.png" alt="">
+                        </div>
+                        <h5>Beard Trim</h5>
+                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
+                        <div class="shape">
+                            <div class="image">
+                                <img src="~/icons/service-trimmer.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart">
+                    <a href="services-page.html">
+                        <div class="image">
+                            <img src="~/icons/hair-cut.png" alt="">
+                        </div>
+                        <h5>Hair Cut</h5>
+                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
+                        <div class="shape">
+                            <div class="image">
+                                <img src="~/icons/hair-cut.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart">
+                    <a href="services-page.html">
+                        <div class="image">
+                            <img src="~/icons/service-scissors.png" alt="">
+                        </div>
+                        <h5>Clipper Cut</h5>
+                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
+                        <div class="shape">
+                            <div class="image">
+                                <img src="~/icons/service-scissors.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart">
+                    <a href="services-page.html">
+                        <div class="image">
+                            <img src="~/icons/soap.png" alt="">
+                        </div>
+                        <h5>Facial Massage</h5>
+                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
+                        <div class="shape">
+                            <div class="image">
+                                <img src="~/icons/soap.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart">
+                    <a href="services-page.html">
+                        <div class="image">
+                            <img src="~/icons/washing.png" alt="">
+                        </div>
+                        <h5>Hair Washing</h5>
+                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
+                        <div class="shape">
+                            <div class="image">
+                                <img src="~/icons/washing.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart">
+                    <a href="services-page.html">
+                        <div class="image">
+                            <img src="~/icons/hair-dryer.png" alt="">
+                        </div>
+                        <h5>Hair Dryer</h5>
+                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
+                        <div class="shape">
+                            <div class="image">
+                                <img src="~/icons/hair-dryer.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart">
+                    <a href="services-page.html">
+                        <div class="image">
+                            <img src="~/icons/hairdresser.png" alt="">
+                        </div>
+                        <h5>Coloring</h5>
+                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
+                        <div class="shape">
+                            <div class="image">
+                                <img src="~/icons/hairdresser.png" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container-main">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <p>First-class</p>
+                    <h1>Our Features</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="cart">
+                    <div class="cart-front" style="background-image: url('/images/Features/1.jpg');">
+                        <div class="front-content">
+                            <div class="cart-title">
+                                <h4>Groom's Shave</h4>
+                            </div>
+                        </div>
+                        <div class="flip-overlay"></div>
+                    </div>
+                    <div class="cart-back">
+                        <div class="back-content ">
+                            <h4>Groom's Shave</h4>
+                            <p><i>Lorem nisl miss nestibulum nec odio duru the aucan ula orci varius natoque enatau manis dis arturient monte.</i></p> <a href="#0" class="appointment mt-15">Appointment<span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart">
+                    <div class="cart-front" style="background-image: url('/images/Features/2.jpg');">
+                        <div class="front-content">
+                            <div class="cart-title">
+                                <h4>Kids Cuts</h4>
+                            </div>
+                        </div>
+                        <div class="flip-overlay"></div>
+                    </div>
+                    <div class="cart-back">
+                        <div class="back-content">
+                            <h4>Kids Cuts</h4>
+                            <p><i>Lorem nisl miss nestibulum nec odio duru the aucan ula orci varius natoque enatau manis dis arturient monte.</i></p> <a href="#0" class="appointment mt-15">Appointment<span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cart">
+                    <div class="cart-front" style="background-image: url('/images/Features/3.jpg');">
+                        <div class="front-content">
+                            <div class="cart-title">
+                                <h4>Creative Barbers</h4>
+                            </div>
+                        </div>
+                        <div class="flip-overlay"></div>
+                    </div>
+                    <div class="cart-back">
+                        <div class="back-content">
+                            <h4>Creative Barbers</h4>
+                            <p><i>Lorem nisl miss nestibulum nec odio duru the aucan ula orci varius natoque enatau manis dis arturient monte.</i></p> <a href="team.html" class="appointment mt-15">Our Team<span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="appointment" style="background-image: url('/images/AppointmentImage.jpg');">
+    <div class="container-main">
+        <div class="row">
+            <div class="cover"></div>
+            <div class="col-md-5">
+                <p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </p>
+                <h5>We Are Best Barbers & Hair Cutting Salon at NYC.</h5>
+                <div class="reservation">
+                    <div class="icon">
+                        <img src="~/icons/service-razor.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Appointment</p>
+                        <a href="">855 100 4444</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 offset-md-2">
+                <div class="booking-box">
+                    <div class="booking-box-title">
+                        <h1>Make An Appointment</h1>
+                    </div>
+                    <div class="booking-area">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="input-area">
+                                        <input type="text" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-area">
+                                        <input type="text" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="date-input-area">
+                                        <input type="date" placeholder="Date">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="select-area">
+                                        <select name="" id="">
+                                            <option value="">Time</option>
+                                            <option value="">10:00 am</option>
+                                            <option value="">11:00 am</option>
+                                            <option value="">12:00 am</option>
+                                            <option value="">14:00 am</option>
+                                            <option value="">16:00 am</option>
+                                            <option value="">18:00 am</option>
+                                            <option value="">20:00 am</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="select-area">
+                                        <select name="" id="">
+                                            <option value="">Services</option>
+                                            <option value="">Hair Styling</option>
+                                            <option value="">Face Mask</option>
+                                            <option value="">Shaving</option>
+                                            <option value="">Beard Triming</option>
+                                            <option value="">Hair Wash</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="select-area">
+                                        <select name="" id="">
+                                            <option value="">Choose Barber</option>
+                                            <option value="">Philip</option>
+                                            <option value="">Stephen</option>
+                                            <option value="">Dennis</option>
+                                            <option value="">Helen</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="make-appoint">
+                                        Make appointment
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
