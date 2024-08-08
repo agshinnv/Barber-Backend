@@ -67,60 +67,59 @@ namespace BarberProject.Controllers
 
             await _userManager.AddToRoleAsync(newUser, nameof(Roles.SuperAdmin));
 
-			//string token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
-			//string url = Url.Action(nameof(ConfirmEmail), "Account", new { userId = newUser.Id, token }, Request.Scheme, Request.Host.ToString());
+            string token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
+            string url = Url.Action(nameof(ConfirmEmail), "Account", new { userId = newUser.Id, token }, Request.Scheme, Request.Host.ToString());
 
-			//string html = string.Empty;
+            string html = string.Empty;
 
-			//using (StreamReader reader = new("wwwroot/templates/emailconfirmation.html"))
-			//{
-			//    html = await reader.ReadToEndAsync();
-			//}
+            using (StreamReader reader = new("wwwroot/templates/emailconfirmation.html"))
+            {
+                html = await reader.ReadToEndAsync();
+            }
 
-			//html = html.Replace("{link}", url);
-			//html = html.Replace("{Username}", newUser.FullName);
+            html = html.Replace("{link}", url);
+            html = html.Replace("{Username}", newUser.FullName);
 
-			//string subject = "Email confirmation";
+            string subject = "Email confirmation";
 
-			//SendEmail(newUser.Email, subject, html);
+            SendEmail(newUser.Email, subject, html);
 
 
-			//return RedirectToAction(nameof(VerifyEmail));
+            return RedirectToAction(nameof(VerifyEmail));
 
-			return RedirectToAction("SignIn", "Account");
 		}
 
-        //[HttpGet]
-        //public IActionResult VerifyEmail()
-        //{
-        //    return View();
-        //}
+        [HttpGet]
+        public IActionResult VerifyEmail()
+        {
+            return View();
+        }
 
-        //[HttpGet]
-        //public async Task<IActionResult> ConfirmEmail(string userId, string token)
-        //{
-        //    var user = await _userManager.FindByIdAsync(userId);
-        //    await _userManager.ConfirmEmailAsync(user, token);
-        //    return RedirectToAction(nameof(SignIn));
-        //}
+        [HttpGet]
+        public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            await _userManager.ConfirmEmailAsync(user, token);
+            return RedirectToAction(nameof(SignIn));
+        }
 
 
-        //public void SendEmail(string to, string subject, string html, string from = null)
-        //{
-        //    // create message
-        //    var email = new MimeMessage();
-        //    email.From.Add(MailboxAddress.Parse(from ?? _appSettings.From));
-        //    email.To.Add(MailboxAddress.Parse(to));
-        //    email.Subject = subject;
-        //    email.Body = new TextPart(TextFormat.Html) { Text = html };
+        public void SendEmail(string to, string subject, string html, string from = null)
+        {
+            // create email message
+            var email = new MimeMessage();
+            email.From.Add(MailboxAddress.Parse(from ?? _appSettings.From));
+            email.To.Add(MailboxAddress.Parse(to));
+            email.Subject = subject;
+            email.Body = new TextPart(TextFormat.Html) { Text = html };
 
-        //    // send email
-        //    using var smtp = new SmtpClient();
-        //    smtp.Connect(_appSettings.Server, _appSettings.Port, SecureSocketOptions.StartTls);
-        //    smtp.Authenticate(_appSettings.Username, _appSettings.Password);
-        //    smtp.Send(email);
-        //    smtp.Disconnect(true);
-        //}
+            // send email
+            using var smtp = new SmtpClient();
+            smtp.Connect(_appSettings.Server, _appSettings.Port, SecureSocketOptions.StartTls);
+            smtp.Authenticate(_appSettings.Username, _appSettings.Password);
+            smtp.Send(email);
+            smtp.Disconnect(true);
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]

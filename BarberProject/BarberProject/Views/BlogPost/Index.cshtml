@@ -55,22 +55,32 @@
         <div class="post-comment">
             <div class="row">
                 <div class="col-md-6">
-                    @foreach (var item in Model.BlogComments)
+                    @if (Model.BlogComments.ToList().Count() == 0)
                     {
-                        <div class="comment">
-                        <div class="user-image">
-                            <img src="~/images/Post-single/customer-photo.jpg" alt="">
+                        <div class="alert alert-primary" role="alert">
+                            There is no comment for this blog, please give us a feedback
                         </div>
-                        <div class="user-content">
-                            <h3>
-                                @item.User.FullName
-                                <span>@item.CreateDate</span>
-                            </h3>
-                            <p>@item.CommentText</p>
-                        </div>
-                    </div>
                     }
-                    
+                    else
+                    {
+                        @foreach (var item in Model.BlogComments)
+                        {
+                            <div class="comment">
+                                <div class="user-image">
+                                    <img src="~/images/Post-single/customer-photo.jpg" alt="">
+                                </div>
+                                <div class="user-content">
+                                    <h3>
+                                        @item.User.FullName
+                                        <span>@item.CreateDate</span>
+                                    </h3>
+                                    <p>@item.CommentText</p>
+                                </div>
+                            </div>
+                        }
+                    }
+
+
                 </div>
                 <div class="col-md-5 offset-md-1">
                     <div class="booking-box">
@@ -78,7 +88,7 @@
                             <h1>Leave a reply</h1>
                         </div>
                         <div class="booking-area">
-                            <form action="">
+                            <form>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="input-area">

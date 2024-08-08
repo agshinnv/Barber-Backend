@@ -39,7 +39,7 @@ builder.Services.Configure<IdentityOptions>(opt =>
     opt.Password.RequireNonAlphanumeric = true;
 	opt.Password.RequiredLength = 6;
 	opt.User.RequireUniqueEmail = true;
-    //opt.SignIn.RequireConfirmedEmail = true;
+    opt.SignIn.RequireConfirmedEmail = true;
 });
 
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("Smtp"));

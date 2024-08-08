@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XoeL5TjutbJf3qsomErSPo9H4U0HMUoltlVVOe1kYZE=",
+  "Hash": "REN+OodRLjbR9Q5QYMdzYtK3Jg10TP7s5pfdeGbKVHU=",
   "Source": "BarberProject",
   "BasePath": "_content/BarberProject",
   "Mode": "Default",
@@ -9781,6 +9781,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\sass\\pages\\Team-details\\team-details.scss"
+    },
+    {
+      "Identity": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\templates\\emailconfirmation.html",
+      "SourceId": "BarberProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\",
+      "BasePath": "_content/BarberProject",
+      "RelativePath": "templates/emailconfirmation.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templates\\emailconfirmation.html"
     }
   ]
 }

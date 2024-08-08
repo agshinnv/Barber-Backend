@@ -55,16 +55,16 @@ namespace BarberProject.Controllers
             return View(model);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddComment(string userId, int blogId, string comment)
-        {
-            if (!User.Identity.IsAuthenticated)
-            {
-                return Problem();
-            }
+        //[HttpPost]
+        //public async Task<IActionResult> AddComment(string userId, int blogId, string comment)
+        //{
+        //    if (!User.Identity.IsAuthenticated)
+        //    {
+        //        return Problem();
+        //    }
 
-            await _commentService.Create(new Comment { BlogId = blogId, UserId = userId, CommentText = comment });
-            return Ok();
-        }
+        //    await _commentService.Create(new Comment { BlogId = blogId, UserId = userId, CommentText = comment });
+        //    return Ok();
+        //}
     }
 }
