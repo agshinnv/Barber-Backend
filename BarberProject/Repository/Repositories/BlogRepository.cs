@@ -52,5 +52,19 @@ namespace Repository.Repositories
             return await _context.Blogs.Include(m => m.Service)
                                        .Include(m => m.BlogImages).ToListAsync();
         }
+
+        public async Task<List<Blog>> GetAllPaginatedDatas(int page, int take = 2)
+        {
+            return await _context.Blogs.Include(m => m.BlogImages)
+                                          .Include(m => m.Service)
+                                          .Skip((page - 1) * take)
+                                          .Take(take)
+                                          .ToListAsync();
+        }
+
+        public async Task<int> GetCount()
+        {
+            return await _context.Blogs.CountAsync();
+        }
     }
 }

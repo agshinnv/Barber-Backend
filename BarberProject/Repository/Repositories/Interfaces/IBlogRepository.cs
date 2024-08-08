@@ -14,5 +14,7 @@ namespace Repository.Repositories.Interfaces
         Task DeleteImage(BlogImage image);
         Task ChangeMainImage(Blog blog, int id);
         Task<IEnumerable<Blog>> GetAllWithServices();
+        Task<List<Blog>> GetAllPaginatedDatas(int page, int take = 2);
+        Task<int> GetCount();
     }
 }

@@ -1,0 +1,111 @@
+﻿@model BlogDetailPageVM
+
+@{
+    ViewData["Title"] = "Blog Posts";
+}
+
+@section css {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="~/sass/pages/post-single/post-single.css" rel="stylesheet" />
+    <link href="~/css/themify-icons.css" rel="stylesheet" />
+}
+
+
+
+@section js {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/post-single.js"></script>
+}
+
+
+
+<section id="banner-header" style="background-image: url('/images/Post-single/bannerimage.jpg')">
+    <div class="container-main">
+        <div class="row centering">
+            <div class="cover"></div>
+            <div class="col-md-8 caption">
+                <h2>Women's Hair Care Routine for Any Hair Type</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="post">
+    <div class="container-main">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="~/images/@Model.Blog.BlogImages.FirstOrDefault(m=>m.IsMain).Image" alt="">
+                <h3>@Model.Blog.Title</h3>
+                <p>@Model.Blog.Description</p>
+                <p>@Model.Blog.Content</p>
+                <div class="row">
+                    @foreach (var item in Model.Blog.BlogImages.Where(m => !m.IsMain))
+                    {
+                        <div class="col-md-6">
+                            <img src="~/images/@item.Image" alt="">
+                        </div>
+                    }
+
+                    @*                     <div class="col-md-6">
+                    <img src="~/images/Post-single/post2.jpg" alt="">
+                    </div> *@
+                </div>
+            </div>
+        </div>
+        <div class="post-comment">
+            <div class="row">
+                <div class="col-md-6">
+                    @foreach (var item in Model.BlogComments)
+                    {
+                        <div class="comment">
+                        <div class="user-image">
+                            <img src="~/images/Post-single/customer-photo.jpg" alt="">
+                        </div>
+                        <div class="user-content">
+                            <h3>
+                                @item.User.FullName
+                                <span>@item.CreateDate</span>
+                            </h3>
+                            <p>@item.CommentText</p>
+                        </div>
+                    </div>
+                    }
+                    
+                </div>
+                <div class="col-md-5 offset-md-1">
+                    <div class="booking-box">
+                        <div class="booking-box-title">
+                            <h1>Leave a reply</h1>
+                        </div>
+                        <div class="booking-area">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input-area">
+                                            <input value="@Model.CommentData.UserName" type="text" placeholder="Name *">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-area">
+                                            <input value="@Model.CommentData.UserEmail" type="text" placeholder="E-mail *">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <textarea name="message" id="message" cols="30" rows="4" placeholder="Comment *" required=""></textarea>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button data-blogId="@Model.CommentData.BlogId" data-userId="@Model.CommentData.UserId" type="submit" class="make-appoint">
+                                            Send Comment
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

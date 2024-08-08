@@ -7,5 +7,6 @@
         public string UserEmail { get; set; }
         public string Comment { get; set; }
         public int ServiceId { get; set; }
+        public int BlogId { get; set; }
     }
 }

@@ -24,5 +24,6 @@ namespace Repository.Repositories
             return await _context.Comments.Include(m => m.User).Include(m=>m.Blogs).ToListAsync();
         }
 
+
     }
 }

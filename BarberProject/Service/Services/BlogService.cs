@@ -65,5 +65,20 @@ namespace Service.Services
         {
             return await _blogRepository.GetAllWithServices();
         }
+
+        public async Task<List<Blog>> GetAllPaginatedDatas(int page, int take = 2)
+        {
+            return await _blogRepository.GetAllPaginatedDatas(page, take);
+        }
+
+        public async Task<int> GetCount()
+        {
+            return await _blogRepository.GetCount();
+        }
+
+        public int GetPageCount(int count, int take)
+        {
+            return (int)Math.Ceiling((decimal)count / take);
+        }
     }
 }

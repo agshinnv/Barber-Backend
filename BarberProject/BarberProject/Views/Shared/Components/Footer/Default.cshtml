@@ -10,13 +10,12 @@
                         <h3>Contact</h3>
                         <div class="text">
                             <p>
-                                0665 Broadway NY, New York 10001
-                                United States of America
+                                @Model.Settings["Address"]
                             </p>
                         </div>
                         <div class="info">
-                            <p class="phone">855 100 4444</p>
-                            <p class="email">info@barber.com</p>
+                            <p class="phone">@Model.Settings["Phone"]</p>
+                            <p class="email">@Model.Settings["Email"]</p>
                         </div>
                         <div class="social">
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
