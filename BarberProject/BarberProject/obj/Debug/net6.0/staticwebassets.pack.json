@@ -2061,6 +2061,10 @@
       "PackagePath": "staticwebassets\\templates\\emailconfirmation.html"
     },
     {
+      "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\templates\\resetpasswordemail.html",
+      "PackagePath": "staticwebassets\\templates\\resetpasswordemail.html"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BarberProject.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

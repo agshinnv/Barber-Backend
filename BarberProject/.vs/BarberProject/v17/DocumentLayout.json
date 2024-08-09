@@ -3,22 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\controllers\\blogpostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\controllers\\blogpostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\views\\blogpost\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\views\\blogpost\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\areas\\admin\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\areas\\admin\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\views\\account\\verifyemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\views\\account\\verifyemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -30,69 +14,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CommentController.cs",
-              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\CommentController.cs",
-              "RelativeDocumentMoniker": "BarberProject\\Areas\\Admin\\Controllers\\CommentController.cs",
-              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\CommentController.cs",
-              "RelativeToolTip": "BarberProject\\Areas\\Admin\\Controllers\\CommentController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T23:16:32.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Views\\BlogPost\\Index.cshtml",
-              "RelativeDocumentMoniker": "BarberProject\\Views\\BlogPost\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Views\\BlogPost\\Index.cshtml",
-              "RelativeToolTip": "BarberProject\\Views\\BlogPost\\Index.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAFIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-08T23:14:52.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BlogPostController.cs",
-              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Controllers\\BlogPostController.cs",
-              "RelativeDocumentMoniker": "BarberProject\\Controllers\\BlogPostController.cs",
-              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Controllers\\BlogPostController.cs",
-              "RelativeToolTip": "BarberProject\\Controllers\\BlogPostController.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAYwEcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T23:14:48.79Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VerifyEmail.cshtml",
-              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Views\\Account\\VerifyEmail.cshtml",
-              "RelativeDocumentMoniker": "BarberProject\\Views\\Account\\VerifyEmail.cshtml",
-              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Views\\Account\\VerifyEmail.cshtml",
-              "RelativeToolTip": "BarberProject\\Views\\Account\\VerifyEmail.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-08T23:13:30.413Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "BarberProject\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Controllers\\AccountController.cs",
               "RelativeToolTip": "BarberProject\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAkwF0AAAAJAAAA",
+              "ViewState": "AQIAAKMAAAAAAAAAAAA2wL4AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-08T18:23:36.103Z",
               "EditorCaption": ""

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "REN+OodRLjbR9Q5QYMdzYtK3Jg10TP7s5pfdeGbKVHU=",
+  "Hash": "NFWSWReWtiAsEIC+qMTTCFPbr9nI9CD41Hq6ut3Slls=",
   "Source": "BarberProject",
   "BasePath": "_content/BarberProject",
   "Mode": "Default",
@@ -9800,6 +9800,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\templates\\emailconfirmation.html"
+    },
+    {
+      "Identity": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\templates\\resetpasswordemail.html",
+      "SourceId": "BarberProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\",
+      "BasePath": "_content/BarberProject",
+      "RelativePath": "templates/resetpasswordemail.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templates\\resetpasswordemail.html"
     }
   ]
 }
