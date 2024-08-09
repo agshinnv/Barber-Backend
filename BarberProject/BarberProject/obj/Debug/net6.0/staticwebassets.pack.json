@@ -1865,6 +1865,10 @@
       "PackagePath": "staticwebassets\\js\\blog.js"
     },
     {
+      "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\js\\blogpost.js",
+      "PackagePath": "staticwebassets\\js\\blogpost.js"
+    },
+    {
       "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\js\\contact.js",
       "PackagePath": "staticwebassets\\js\\contact.js"
     },

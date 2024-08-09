@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NFWSWReWtiAsEIC+qMTTCFPbr9nI9CD41Hq6ut3Slls=",
+  "Hash": "Q/cIgRQxeHlL2uJk4oNK+ssQKI5LFI1m500AHrvITUc=",
   "Source": "BarberProject",
   "BasePath": "_content/BarberProject",
   "Mode": "Default",
@@ -8869,6 +8869,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\blog.js"
+    },
+    {
+      "Identity": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\js\\blogpost.js",
+      "SourceId": "BarberProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\",
+      "BasePath": "_content/BarberProject",
+      "RelativePath": "js/blogpost.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\blogpost.js"
     },
     {
       "Identity": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\js\\contact.js",

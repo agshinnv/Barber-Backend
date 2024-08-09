@@ -83,6 +83,8 @@ builder.Services.AddScoped<ISubServiceService, SubServiceService>();
 builder.Services.AddScoped<ISubServiceRepository, SubServiceRepository>();
 builder.Services.AddScoped<ICommentService, CommentService>();
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
+builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 
 
 

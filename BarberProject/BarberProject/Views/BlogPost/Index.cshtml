@@ -14,7 +14,7 @@
 
 @section js {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="~/js/post-single.js"></script>
+    <script src="~/js/blogpost.js"></script>
 }
 
 
@@ -67,7 +67,7 @@
                         {
                             <div class="comment">
                                 <div class="user-image">
-                                    <img src="~/images/Post-single/customer-photo.jpg" alt="">
+                                    <img src="~/images/Team/muhittin-abi.jpg" alt="">
                                 </div>
                                 <div class="user-content">
                                     <h3>
@@ -79,8 +79,6 @@
                             </div>
                         }
                     }
-
-
                 </div>
                 <div class="col-md-5 offset-md-1">
                     <div class="booking-box">
@@ -101,16 +99,15 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <textarea name="message" id="message" cols="30" rows="4" placeholder="Comment *" required=""></textarea>
+                                        <textarea class="comment-text" cols="30" rows="4" placeholder="Comment *"></textarea>
                                     </div>
                                     <div class="col-md-12">
-                                        <button data-blogId="@Model.CommentData.BlogId" data-userId="@Model.CommentData.UserId" type="submit" class="make-appoint">
+                                        <button data-blogId="@Model.CommentData.BlogId" data-userId="@Model.CommentData.UserId" type="submit" class="make-appoint add-comment">
                                             Send Comment
                                         </button>
                                     </div>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>

@@ -65,7 +65,7 @@ namespace BarberProject.Controllers
 				return View(request);
 			}
 
-			await _userManager.AddToRoleAsync(newUser, nameof(Roles.SuperAdmin));
+			await _userManager.AddToRoleAsync(newUser, nameof(Roles.Member));
 
 			string token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
 			string url = Url.Action(nameof(ConfirmEmail), "Account", new { userId = newUser.Id, token }, Request.Scheme, Request.Host.ToString());
