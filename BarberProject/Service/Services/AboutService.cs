@@ -46,9 +46,11 @@ namespace Service.Services
             await _aboutRepository.Edit(existAbout);
         }
 
-        public async Task<IEnumerable<About>> GetAllAsync()
+        public async Task<About> GetAllAsync()
         {
-            return await _aboutRepository.GetAll();
+            var about = await _aboutRepository.GetAllWithImages();
+            return about;
+            
         }
 
         public async Task<About> GetByIdAsync(int id)

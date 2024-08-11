@@ -9,7 +9,7 @@ namespace Service.Services.Interfaces
 {
     public interface IAboutService
     {
-        Task<IEnumerable<About>> GetAllAsync();
+        Task<About> GetAllAsync();
         Task<About> GetByIdAsync(int id);
         Task Create(About about);
         Task EditAsync(int id, About about);

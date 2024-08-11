@@ -13,24 +13,35 @@
         <table class="table table-borderless table-striped table-earning">
             <thead>
                 <tr>
-                    <th>Service Name</th>
-                    <th>Service Image</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Icon Image</th>
+                    <th>Field</th>
+                    <th>Value</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td>Service Name</td>
                     <td>@Model.ServiceName</td>
+                </tr>
+                <tr>
+                    <td>Service Image</td>
                     <td><img src="~/images/@Model.ServiceImage" style="width:200px" /></td>
-                    <td>@Model.Description</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td style="white-space: normal;">@Model.Description</td>
+                </tr>
+                <tr>
+                    <td>Price</td>
                     <td>@Model.Price$</td>
+                </tr>
+                <tr>
+                    <td>Icon Image</td>
                     <td><img src="~/images/@Model.IconImage" style="width:85px" /></td>
                 </tr>
             </tbody>
         </table>
     </div>
+
 
     <a asp-action="Index" class="btn btn-danger">Back</a>
 

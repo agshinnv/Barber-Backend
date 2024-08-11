@@ -15,9 +15,9 @@ namespace Repository.Repositories
     {
         public AboutRepsitory(AppDbContext context) : base(context) { }
 
-        public async Task<IEnumerable<About>> GetAllWithImages()
+        public async Task<About> GetAllWithImages()
         {
-            return await _entities.IncludeMultiple<About>(m => m.AboutImages).ToListAsync();
+            return await _entities.IncludeMultiple<About>(m => m.AboutImages).FirstOrDefaultAsync();
         }
 
         public async Task<About> GetByIdWithImages(int id)

@@ -4,6 +4,7 @@
     ViewData["Title"] = "Detail";
 }
 
+
 <div class="container">
 
 
@@ -11,24 +12,33 @@
         <table class="table table-borderless table-striped table-earning">
             <thead>
                 <tr>
-                    <th>UpTitle</th>
-                    <th>MainTitle</th>
-                    <th>Description</th>
-                    <th>Image</th>
+                    <th>Field</th>
+                    <th>Value</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td>Up Title</td>
                     <td>@Model.UpTitle</td>
+                </tr>
+                <tr>
+                    <td>Main Title</td>
                     <td>@Model.MainTitle</td>
-                    <td>@Model.Description</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td style="white-space: normal;">@Model.Description</td>
+                </tr>
+                <tr>
+                    <td>Image</td>
                     <td><img src="~/images/@Model.Image" style="width:200px" /></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <a asp-action="Index" asp-controller="History" class="btn btn-danger">Back</a>
+
+    <a asp-action="Index" class="btn btn-danger">Back</a>
 
 </div>
 

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\areas\\admin\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\areas\\admin\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\views\\blogpost\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\views\\blogpost\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\controllers\\blogpostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\controllers\\blogpostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\viewmodels\\homevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\viewmodels\\homevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CommentController.cs",
-              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\CommentController.cs",
-              "RelativeDocumentMoniker": "BarberProject\\Areas\\Admin\\Controllers\\CommentController.cs",
-              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\CommentController.cs",
-              "RelativeToolTip": "BarberProject\\Areas\\Admin\\Controllers\\CommentController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAADgAAAA",
+              "DocumentIndex": 2,
+              "Title": "HomeVM.cs",
+              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\ViewModels\\HomeVM.cs",
+              "RelativeDocumentMoniker": "BarberProject\\ViewModels\\HomeVM.cs",
+              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\ViewModels\\HomeVM.cs",
+              "RelativeToolTip": "BarberProject\\ViewModels\\HomeVM.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T17:09:54.16Z",
+              "WhenOpened": "2024-08-11T13:28:41.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BarberProject\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BarberProject\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAsBAAAAAAAAAAAAAKQBAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-11T11:59:41.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Views\\BlogPost\\Index.cshtml",
-              "RelativeDocumentMoniker": "BarberProject\\Views\\BlogPost\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Views\\BlogPost\\Index.cshtml",
-              "RelativeToolTip": "BarberProject\\Views\\BlogPost\\Index.cshtml",
-              "ViewState": "AQIAADMAAAAAAAAAAAAjwEUAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-09T16:23:37.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BlogPostController.cs",
-              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Controllers\\BlogPostController.cs",
-              "RelativeDocumentMoniker": "BarberProject\\Controllers\\BlogPostController.cs",
-              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Controllers\\BlogPostController.cs",
-              "RelativeToolTip": "BarberProject\\Controllers\\BlogPostController.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAYwEQAAAAAAAAA",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "BarberProject\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "BarberProject\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAArwGcAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-09T16:22:54.967Z",
+              "WhenOpened": "2024-08-11T10:56:05.611Z",
               "EditorCaption": ""
             }
           ]

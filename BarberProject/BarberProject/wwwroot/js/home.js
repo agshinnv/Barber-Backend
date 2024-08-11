@@ -94,15 +94,15 @@ $(function() {
     
 
     //#region Scrollit    
-    $.scrollIt({
-        upKey: 1, // key code to navigate to the next section
-        downKey: 1, // key code to navigate to the previous section
-        easing: 'swing', // the easing function for animation
-        scrollTime: 600, // how long (in ms) the animation takes
-        activeClass: 'active', // class given to the active nav element
-        onPageChange: null, // function(pageIndex) that is called when page is changed
-        topOffset: -70 // offste (in px) for fixed top navigation
-    })
+    //$.scrollIt({
+    //    upKey: 1, // key code to navigate to the next section
+    //    downKey: 1, // key code to navigate to the previous section
+    //    easing: 'swing', // the easing function for animation
+    //    scrollTime: 600, // how long (in ms) the animation takes
+    //    activeClass: 'active', // class given to the active nav element
+    //    onPageChange: null, // function(pageIndex) that is called when page is changed
+    //    topOffset: -70 // offste (in px) for fixed top navigation
+    //})
     //#endregion
   
 
@@ -223,6 +223,7 @@ $(function() {
         margin: 30,
         mouseDrag: true,
         autoplay: true,
+        autoplayTimeout: 1000,
         dots: false,
         nav: false,
         navText: ["<span class='lnr ti-angle-left'></span>", "<span class='lnr ti-angle-right'></span>"],
@@ -240,6 +241,85 @@ $(function() {
         }
     });
     //#endregion
+
+
+
+    //region Subscribe
+
+    $(document).on('click', '.subscriber', function (e) {
+        e.preventDefault();
+        let subscriberEmail = $(".subscribe-input").val();
+        if (subscriberEmail.trim() == "") {
+            toastr["error"]("You can`t subscribe without email")
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            return;
+        }
+        $.ajax({
+            url: `Home/Subscribe`,
+            type: 'POST',
+            data: { subscriberEmail },
+            success: function (response) {
+                toastr["success"]("Thanks for your subscription")
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                $(".subscribe-input").val("");
+            },
+            error: function (response) {
+                toastr["error"]("Login to add product to basket")
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+            }
+        });
+    })
+
+
+    //endregion
 
 
 });

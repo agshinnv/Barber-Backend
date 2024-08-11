@@ -14,3 +14,4 @@ namespace Domain.Models
         public ICollection<BarberPricing> BarberPricings { get; set; }
     }
 }
+    

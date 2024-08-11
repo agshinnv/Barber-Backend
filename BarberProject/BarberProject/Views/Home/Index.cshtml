@@ -7,6 +7,14 @@
 
 
 
+@section js {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}
+
+@section css {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+}
+
 
 <section id="slider">
     <div class="barber-slider kenburns-section" id="kenburnsSliderContainer" data-overlay-dark="6">
@@ -34,17 +42,16 @@
             <div class="col-md-6">
                 <div class="title">
                     <h6>Since 2006</h6>
-                    <h3>Perukar Barber Shop</h3>
+                    <h3>@Model.About.Title</h3>
                 </div>
-                <p>Come experience a unique and edgy barbershop for all your hair and beard needs. Ravida haretra nuam enim mi obortis eset uctus enec accumsan eu justo alisuame amet auctor orci donec vitae vehicula risus.</p>
-                <p>Barber utate ons amet ravida haretra nuam the duru miss uctus the drana accumsan justo aliquam sit amet auctor orci done vitae risus duise nisan sapien silver on the accumsan id mauris apien.</p>
+                <p>@Model.About.Description</p>
                 <ul class="list-about list-unstyled">
                     <li>
                         <div class="list-icon">
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <div class="list-text">
-                            <p>We're professional and certified barbers</p>
+                            <p>@Model.About.Pro1</p>
                         </div>
                     </li>
                     <li>
@@ -52,7 +59,7 @@
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <div class="list-text">
-                            <p>We use quality products to make you look perfect</p>
+                            <p>@Model.About.Pro2</p>
                         </div>
                     </li>
                     <li>
@@ -60,17 +67,18 @@
                             <i class="fa-solid fa-check"></i>
                         </div>
                         <div class="list-text">
-                            <p>We care about our customers satisfaction</p>
+                            <p>@Model.About.Pro3</p>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="col-md-3">
-                <img src="~/images/About/1.jpg" alt="" class="first-image">
+                <img src="~/images/@Model.About.AboutImages.FirstOrDefault().Image" alt="" class="first-image">
             </div>
             <div class="col-md-3">
-                <img src="~/images/About/2.jpg" alt="" class="second-image">
+                <img src="~/images/@Model.About.AboutImages.Skip(1).Take(1).FirstOrDefault().Image" alt="" class="second-image">
             </div>
+
         </div>
     </div>
 </section>
@@ -78,33 +86,18 @@
 <section id="services">
     <div class="container-main">
         <div class="row">
-            <div class="col-md-4">
-                <div class="service-cart">
-                    <img src="~/icons/service-scissors.png" alt="">
-                    <div class="description">
-                        <h5>Cuts</h5>
-                        <p>Cuts ut nisl quam nestibulum drana odio elementum sceisue the can golden varius the dis monte.</p>
+            @foreach (var item in Model.Services.Skip(6).Take(3))
+            {
+                <div class="col-md-4">
+                    <div class="service-cart">
+                        <img src="~/images/@item.IconImage" alt="">
+                        <div class="description">
+                            <h5>@item.Title</h5>
+                            <p>@item.Description</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-cart">
-                    <img src="~/icons/service-trimmer.png" alt="">
-                    <div class="description">
-                        <h5>Fades</h5>
-                        <p>Fades ut nisl quam nestibulum drana odio elementum sceisue the can golden varius the dis monte.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-cart">
-                    <img src="~/icons/service-razor.png" alt="">
-                    <div class="description">
-                        <h5>Shaves</h5>
-                        <p>Shaves ut nisl quam nestibulum drana odio elementum sceisue the can golden varius the dis monte.</p>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -113,16 +106,16 @@
     <div class="container-main">
         <div class="row">
             <div class="col-md-5 main-image">
-                <img src="~/images/About/1.jpg" alt="">
+                <img src="~/images/@Model.History.Image" alt="">
             </div>
             <div class="col-md-7">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="title">
-                            <p class="experience">17 Year of Experience</p>
-                            <p class="title-desc">Making people look awesome since 2006</p>
+                            <p class="experience">@Model.History.UpTitle</p>
+                            <p class="title-desc">@Model.History.MainTitle</p>
                         </div>
-                        <p>Come experience a unique and edgy barbershop for all your hair and beard needs. Vulputate ons amet ravida haretra nuam the drana miss uctus enec accumsan justo aliquam sit amet auctor orci done vitae risus duise nunc sapien.</p>
+                        <p>@Model.History.Description</p>
                         <div class="signature">
                             <img src="~/images/About/signature.svg" alt="">
                             <div class="name-about">
@@ -148,66 +141,29 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="cart">
-                    <div class="cart-image">
-                        <img src="~/images/OurServicesCarts/1.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <div class="icon">
-                            <img src="~/icons/service-scissors.png" alt="">
+            @foreach (var item in Model.BarberServices.OrderBy(m => m.Id))
+            {
+                <div class="col-md-4">
+                    <div class="cart">
+                        <div class="cart-image">
+                            <img src="~/images/@item.ServiceImage" alt="">
                         </div>
-                        <h5>Hair Cut</h5>
-                        <div class="line"></div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="subcontent">Hair cut amet ravida haretra nuam the drana miss uctus enec accumsan.</div>
-                                <h6>$30</h6>
+                        <div class="content">
+                            <div class="icon">
+                                <img src="~/images/@item.IconImage" alt="">
+                            </div>
+                            <h5>@item.ServiceName</h5>
+                            <div class="line"></div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="subcontent">@item.ServiceDescription</div>
+                                    <h6>$@item.Price</h6>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <div class="cart-image">
-                        <img src="~/images/OurServicesCarts/2.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <div class="icon">
-                            <img src="~/icons/service-razor.png" alt="">
-                        </div>
-                        <h5>Beard Trim</h5>
-                        <div class="line"></div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="subcontent">Shaves ons amet ravida haretra nuam the drana miss uctus enec accumsan.</div>
-                                <h6>$20</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <div class="cart-image">
-                        <img src="~/images/OurServicesCarts/3.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <div class="icon">
-                            <img src="~/icons/washing.png" alt="">
-                        </div>
-                        <h5>Hair Cut</h5>
-                        <div class="line"></div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="subcontent">Hair cut amet ravida haretra nuam the drana miss uctus enec accumsan.</div>
-                                <h6>$30</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -220,57 +176,26 @@
                 <div class="content">
                     <div class="content-box">
                         <div class="owl-carousel owl-theme">
-                            <div class="item">
-                                <span class="star-color">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                                <p>Lorem dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the lemon sanleo nectan feugiat erat hendrerit necuis ve ante viventa miss sapien silver on the duiman lorem ipsum amet silver miss rana duru at finibus viverra neca the sene on satien.</p>
-                                <div class="info">
-                                    <div class="author-image"> <img src="~/images/Testimoials-Image/1.jpg" alt=""> </div>
-                                    <div class="author-desc">
-                                        <h6>Andreas Brown</h6>
-                                        <span>Customer review</span>
+                            @foreach (var item in Model.Comments)
+                            {
+                                <div class="item">
+                                    <span class="star-color">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <p>@item.CommentText</p>
+                                    <div class="info">
+                                        <div class="author-image"> <img src="~/images/Team/muhittin-abi.jpg" alt=""> </div>
+                                        <div class="author-desc">
+                                            <h6>@item.User.FullName</h6>
+                                            <span>@item.Blogs.BlogTitle</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <span class="star-color">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                                <p>Lorem dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the lemon sanleo nectan feugiat erat hendrerit necuis ve ante viventa miss sapien silver on the duiman lorem ipsum amet silver miss rana duru at finibus viverra neca the sene on satien.</p>
-                                <div class="info">
-                                    <div class="author-image"> <img src="~/images/Testimoials-Image/2.jpg" alt=""> </div>
-                                    <div class="author-desc">
-                                        <h6>Emily White</h6>
-                                        <span>Customer review</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <span class="star-color">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                                <p>Lorem dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the lemon sanleo nectan feugiat erat hendrerit necuis ve ante viventa miss sapien silver on the duiman lorem ipsum amet silver miss rana duru at finibus viverra neca the sene on satien.</p>
-                                <div class="info">
-                                    <div class="author-image"> <img src="~/images/Testimoials-Image/3.jpg" alt=""> </div>
-                                    <div class="author-desc">
-                                        <h6>Daniel Martin</h6>
-                                        <span>Customer review</span>
-                                    </div>
-                                </div>
-                            </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -290,60 +215,27 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="cart">
-                    <div class="cart-front" style="background-image: url('/images/Features/1.jpg');">
-                        <div class="front-content">
-                            <div class="cart-title">
-                                <h4>Groom's Shave</h4>
+            @foreach (var item in Model.Features)
+            {
+                <div class="col-md-4">
+                    <div class="cart">
+                        <div class="cart-front" style="background-image: url('/images/@item.Image');">
+                            <div class="front-content">
+                                <div class="cart-title">
+                                    <h4>@item.ServiceName</h4>
+                                </div>
                             </div>
+                            <div class="flip-overlay"></div>
                         </div>
-                        <div class="flip-overlay"></div>
-                    </div>
-                    <div class="cart-back">
-                        <div class="back-content ">
-                            <h4>Groom's Shave</h4>
-                            <p><i>Lorem nisl miss nestibulum nec odio duru the aucan ula orci varius natoque enatau manis dis arturient monte.</i></p> <a href="#0" class="appointment mt-15">Appointment<span></span></a>
+                        <div class="cart-back">
+                            <div class="back-content ">
+                                <h4>@item.ServiceName</h4>
+                                <p><i>@item.Description</i></p> <a href="#0" class="appointment mt-15">Appointment<span></span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <div class="cart-front" style="background-image: url('/images/Features/2.jpg');">
-                        <div class="front-content">
-                            <div class="cart-title">
-                                <h4>Kids Cuts</h4>
-                            </div>
-                        </div>
-                        <div class="flip-overlay"></div>
-                    </div>
-                    <div class="cart-back">
-                        <div class="back-content">
-                            <h4>Kids Cuts</h4>
-                            <p><i>Lorem nisl miss nestibulum nec odio duru the aucan ula orci varius natoque enatau manis dis arturient monte.</i></p> <a href="#0" class="appointment mt-15">Appointment<span></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <div class="cart-front" style="background-image: url('/images/Features/3.jpg');">
-                        <div class="front-content">
-                            <div class="cart-title">
-                                <h4>Creative Barbers</h4>
-                            </div>
-                        </div>
-                        <div class="flip-overlay"></div>
-                    </div>
-                    <div class="cart-back">
-                        <div class="back-content">
-                            <h4>Creative Barbers</h4>
-                            <p><i>Lorem nisl miss nestibulum nec odio duru the aucan ula orci varius natoque enatau manis dis arturient monte.</i></p> <a href="#0" class="appointment mt-15">Appointment<span></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -383,102 +275,21 @@
                     <h1>Barber Pricing</h1>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="price-list">
-                    <div class="item">
-                        <div class="headline">
-                            <div class="title">Wash and Cut</div>
-                            <div class="dots"></div>
-                            <div class="price">$20</div>
+            @foreach (var item in Model.BarberPricings.OrderBy(m => m.Id))
+            {
+                <div class="col-md-6">
+                    <div class="price-list">
+                        <div class="item">
+                            <div class="headline">
+                                <div class="title">@item.ServiceName</div>
+                                <div class="dots"></div>
+                                <div class="price">$@item.Price</div>
+                            </div>
+                            <p><i>@item.Description</i></p>
                         </div>
-                        <p><i>Lorem nestibulum sceisue can varius the dis monte.</i></p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="price-list">
-                    <div class="item">
-                        <div class="headline">
-                            <div class="title">Head Shave with Razor</div>
-                            <div class="dots"></div>
-                            <div class="price">$30</div>
-                        </div>
-                        <p><i>Lorem nestibulum sceisue can varius the dis monte.</i></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="price-list">
-                    <div class="item">
-                        <div class="headline">
-                            <div class="title">Long Hair</div>
-                            <div class="dots"></div>
-                            <div class="price">$45</div>
-                        </div>
-                        <p><i>Lorem nestibulum sceisue can varius the dis monte.</i></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="price-list">
-                    <div class="item">
-                        <div class="headline">
-                            <div class="title">Children Wash & Cut</div>
-                            <div class="dots"></div>
-                            <div class="price">$25</div>
-                        </div>
-                        <p><i>Lorem nestibulum sceisue can varius the dis monte.</i></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="price-list">
-                    <div class="item">
-                        <div class="headline">
-                            <div class="title">Wash and Style</div>
-                            <div class="dots"></div>
-                            <div class="price">$10</div>
-                        </div>
-                        <p><i>Lorem nestibulum sceisue can varius the dis monte.</i></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="price-list">
-                    <div class="item">
-                        <div class="headline">
-                            <div class="title">Short Beard Tidy</div>
-                            <div class="dots"></div>
-                            <div class="price">$25</div>
-                        </div>
-                        <p><i>Lorem nestibulum sceisue can varius the dis monte.</i></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="price-list">
-                    <div class="item">
-                        <div class="headline">
-                            <div class="title">Large beard trim</div>
-                            <div class="dots"></div>
-                            <div class="price">$25</div>
-                        </div>
-                        <p><i>Lorem nestibulum sceisue can varius the dis monte.</i></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="price-list">
-                    <div class="item">
-                        <div class="headline">
-                            <div class="title">Luxury Full Service</div>
-                            <div class="dots"></div>
-                            <div class="price">$60</div>
-                        </div>
-                        <p><i>Lorem nestibulum sceisue can varius the dis monte.</i></p>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -494,58 +305,22 @@
             </div>
             <div class="col-md-12">
                 <div class="owl-carousel owl-theme">
-                    <div class="team-card">
-                        <div class="team-image"><img src="~/images/Team/1.jpg"></div>
-                        <div class="team-content">
-                            <h3 class="team-title">Philip Brown<span>Barber</span></h3>
-                            <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
-                            <div class="social">
-                                <div class="network"> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a> <a href="#"><i class="fa-brands fa-facebook-f"></i></a> <a href="#"><i class="fa-brands fa-x-twitter"></i></a> <a href="#"><i class="fa-brands fa-instagram"></i></a> </div>
-                            </div> <a href="team-details.html" class="team-button">Team Details<span></span></a>
+                    @foreach (var item in Model.Employees)
+                    {
+                        <div class="team-card">
+                            <div class="team-image"><img src="~/images/@item.BarberImage"></div>
+                            <div class="team-content">
+                                <h3 class="team-title">@item.BarberName<span>@item.Position.Name</span></h3>
+                                <p class="team-text">@item.Description</p>
+                                <div class="social">
+                                    <div class="network"> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a> <a href="#"><i class="fa-brands fa-facebook-f"></i></a> <a href="#"><i class="fa-brands fa-x-twitter"></i></a> <a href="#"><i class="fa-brands fa-instagram"></i></a> </div>
+                                </div> <a asp-controller="EmployeeDetail" asp-action="Index" asp-route-id="@item.Id" class="team-button">Team Details<span></span></a>
+                            </div>
+                            <div class="name-box">
+                                <h3>@item.BarberName<span>@item.Position.Name</span></h3>
+                            </div>
                         </div>
-                        <div class="name-box">
-                            <h3>Philip Brown<span>Barber</span></h3>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-image"><img src="~/images/Team/2.jpg" alt="" class="w-100"></div>
-                        <div class="team-content">
-                            <h3 class="team-title">Stephen Martin<span>Stylist</span></h3>
-                            <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
-                            <div class="social">
-                                <div class="network"> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a> <a href="#"><i class="fa-brands fa-facebook-f"></i></a> <a href="#"><i class="fa-brands fa-x-twitter"></i></a> <a href="#"><i class="fa-brands fa-instagram"></i></a> </div>
-                            </div> <a href="team-details.html" class="team-button">Team Details<span></span></a>
-                        </div>
-                        <div class="name-box">
-                            <h3>Stephen Martin<span>Stylist</span></h3>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-image"><img src="~/images/Team/3.jpg" alt="" class="w-100"></div>
-                        <div class="team-content">
-                            <h3 class="team-title">Dennis Dan<span>Barber</span></h3>
-                            <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
-                            <div class="social">
-                                <div class="network"> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a> <a href="#"><i class="fa-brands fa-facebook-f"></i></a> <a href="#"><i class="fa-brands fa-x-twitter"></i></a> <a href="#"><i class="fa-brands fa-instagram"></i></a> </div>
-                            </div> <a href="team-details.html" class="team-button">Team Details<span></span></a>
-                        </div>
-                        <div class="name-box">
-                            <h3>Dennis Dan<span>Barber</span></h3>
-                        </div>
-                    </div>
-                    <div class="team-card">
-                        <div class="team-image"><img src="~/images/Team/4.jpg" alt="" class="w-100"></div>
-                        <div class="team-content">
-                            <h3 class="team-title">Helen Brown<span>Stylist</span></h3>
-                            <p class="team-text">Nulla quis efficitur lacus sulvinar suere ausue in eduis euro vesatien arcuman ontese auctor ac aleuam aretra.</p>
-                            <div class="social">
-                                <div class="network"> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a> <a href="#"><i class="fa-brands fa-facebook-f"></i></a> <a href="#"><i class="fa-brands fa-x-twitter"></i></a> <a href="#"><i class="fa-brands fa-instagram"></i></a> </div>
-                            </div> <a href="team-details.html" class="team-button">Team Details<span></span></a>
-                        </div>
-                        <div class="name-box">
-                            <h3>Helen Brown<span>Stylist</span></h3>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>
@@ -561,102 +336,25 @@
                     <h1>We Also Offer</h1>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/service-razor.png" alt="">
-                        </div>
-                        <h5>Moustache Trim</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
+            @foreach (var item in Model.Services.OrderBy(m => m.Id).Skip(3).Take(6))
+            {
+                <div class="col-md-4">
+                    <div class="cart">
+                        <a asp-controller="ServiceDetail" asp-action="Index" asp-route-id="@item.Id">
                             <div class="image">
-                                <img src="~/icons/service-razor.png" alt="">
+                                <img src="~/images/@item.IconImage" alt="">
                             </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/shaving-brush.png" alt="">
-                        </div>
-                        <h5>Face Shave</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/shaving-brush.png" alt="">
+                            <h5>@item.Title</h5>
+                            <p>@item.Description</p>
+                            <div class="shape">
+                                <div class="image">
+                                    <img src="~/images/@item.IconImage" alt="">
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/service-trimmer.png" alt="">
-                        </div>
-                        <h5>Beard Trim</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/service-trimmer.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/hair-cut.png" alt="">
-                        </div>
-                        <h5>Hair Cut</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/hair-cut.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/service-scissors.png" alt="">
-                        </div>
-                        <h5>Clipper Cut</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/service-scissors.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/soap.png" alt="">
-                        </div>
-                        <h5>Facial Massage</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/soap.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -674,77 +372,28 @@
             </div>
             <div class="col-md-12">
                 <div class="owl-carousel owl-theme">
-                    <div class="cart">
-                        <div class="cart-bottom">
-                            <img src="~/images/News&Blog/1.jpg" alt="">
-                            <div class="date">
-                                <a href="post.html"> <span>Dec</span> <i>29</i> </a>
+                    @foreach (var item in Model.Blogs)
+                    {
+                        <div class="cart">
+                            <div class="cart-bottom">
+                                <img src="~/images/@item.BlogImages.FirstOrDefault(m=>m.IsMain).Image" alt="">
+                                <div class="date">
+                                    <a>
+                                        <span>@item.CreatedDate.ToString("MMM")</span>
+                                        <i>@item.CreatedDate.ToString("dd")</i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cart-content">
+                                <span class="category">
+                                    <a>@item.Service.Title</a>
+                                </span>
+                                <h5>
+                                    <a asp-controller="BlogPost" asp-action="Index" asp-route-id="@item.Id">@item.BlogTitle</a>
+                                </h5>
                             </div>
                         </div>
-                        <div class="cart-content">
-                            <span class="category">
-                                <a href="blog.html">Hair Care</a>
-                            </span>
-                            <h5>
-                                <a href="post.html">Women's Hair Care Routine for Any Hair Type</a>
-                            </h5>
-                        </div>
-                    </div>
-                    <div class="cart">
-                        <div class="cart-bottom o-hidden">
-                            <img src="~/images/News&Blog/2.jpg" alt="">
-                        </div>
-                        <div class="cart-content">
-                            <span class="category">
-                                <a href="blog.html">Beard</a>
-                            </span>
-                            <h5><a href="post.html">Common Mistakes That Damage Your Beard</a></h5>
-                        </div>
-                    </div>
-                    <div class="cart">
-                        <div class="cart-bottom o-hidden">
-                            <img src="~/images/News&Blog/3.jpg" alt="">
-                        </div>
-                        <div class="cart-content">
-                            <span class="category">
-                                <a href="blog.html">Hairstyle</a>
-                            </span>
-                            <h5><a href="post.html">5 Most Iconic Men’s Hairstyles Of All Times</a></h5>
-                        </div>
-                    </div>
-                    <div class="cart">
-                        <div class="cart-bottom o-hidden">
-                            <img src="~/images/News&Blog/4.jpg" alt="">
-                        </div>
-                        <div class="cart-content">
-                            <span class="category">
-                                <a href="blog.html">Haircut</a>
-                            </span>
-                            <h5><a href="post.html">What Are The Secrets of The Haircut & Moustache Trim?</a></h5>
-                        </div>
-                    </div>
-                    <div class="cart">
-                        <div class="cart-bottom o-hidden">
-                            <img src="~/images/News&Blog/5.jpg" alt="">
-                        </div>
-                        <div class="cart-content">
-                            <span class="category">
-                                <a href="blog.html">Wedding</a>
-                            </span>
-                            <h5><a href="post.html">Best Tips for Groom Shaving for Your Wedding</a></h5>
-                        </div>
-                    </div>
-                    <div class="cart">
-                        <div class="cart-bottom o-hidden">
-                            <img src="~/images/News&Blog/6.jpg" alt="">
-                        </div>
-                        <div class="cart-content">
-                            <span class="category">
-                                <a href="blog.html">Blog</a>
-                            </span>
-                            <h5><a href="post.html">What We Need to Choose The Fashion Model?</a></h5>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>
@@ -762,14 +411,14 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </p>
-                <h5>We Are Best Barbers & Hair Cutting Salon at NYC.</h5>
+                <h5>@Model.Appointment.Title</h5>
                 <div class="reservation">
                     <div class="icon">
-                        <img src="~/icons/service-razor.png" alt="">
+                        <img src="~/images/@Model.Appointment.IconImage" alt="">
                     </div>
                     <div class="text">
                         <p>Appointment</p>
-                        <a href="">855 100 4444</a>
+                        <a>855 100 4444</a>
                     </div>
                 </div>
             </div>
@@ -853,41 +502,36 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="owl-carousel owl-theme">
-                    <div class="clients-logo">
-                        <a href="#0"><img src="~/images/Colleagues/1.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="~/images/Colleagues/2.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="~/images/Colleagues/3.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="~/images/Colleagues/4.png" alt=""></a>
-                    </div>
-                    <div class="clients-logo">
-                        <a href="#0"><img src="~/images/Colleagues/5.png" alt=""></a>
-                    </div>
+                    @foreach (var item in Model.Colleagues)
+                    {
+                        <div class="clients-logo">
+                            <a><img src="~/images/@item.Image" alt=""></a>
+                        </div>
+                    }
+
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<script>
-    $('#kenburnsSliderContainer').vegas({
-        slides: [
-    @foreach (var item in Model.Sliders)
-    {
-        @:{ src: '@Url.Content("~/images/slider/" + item.SliderImages)' },
-    }
-            ],
-        overlay: false,
-        transition: 'fade3',
-        animation: 'kenburnsUpRight',
-        transitionDuration: 1000,
-        delay: 10000,
-        animationDuration: 20000
-    });
-</script>
+@* <script>
+    // $(function () {
+    //     $('#kenburnsSliderContainer').vegas({
+    //         slides: [
+    // @foreach (var item in Model.Sliders)
+    // {
+    //     @:{ src: '@Url.Content("~/images/slider/" + item.SliderImages)' },
+    // }
+    //             ],
+    //         overlay: false,
+    //         transition: 'fade3',
+    //         animation: 'kenburnsUpRight',
+    //         transitionDuration: 1000,
+    //         delay: 10000,
+    //         animationDuration: 20000
+    //     });
+    // })
+
+</script> *@
 

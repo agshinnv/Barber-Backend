@@ -14,11 +14,11 @@
 
                 <div class="form-group">
                     <label class=" form-control-label">Enter about title</label>
-                    <input asp-for="AboutTitle" type="text" placeholder="Enter title..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <input asp-for="AboutTitle" type="text" placeholder="Enter title..." class="form-control  mb-2" autocomplete="off">
                     <span class="text-danger" asp-validation-for="AboutTitle"></span>
 
                     <label class=" form-control-label">Enter about description</label>
-                    <input asp-for="AboutDesc" type="text" placeholder="Enter description..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <input asp-for="AboutDesc" type="text" placeholder="Enter description..." class="form-control mb-2" autocomplete="off">
                     <span class="text-danger" asp-validation-for="AboutDesc"></span>
 
                     <label class=" form-control-label">Enter about pro1</label>
@@ -38,12 +38,12 @@
                     <span class="text-danger" asp-validation-for="AboutImages"></span>
 
                 </div>
-                <button type="submit" class="btn btn-primary btn-sm">
-                    Submit
-                </button>
-                <a type="reset" asp-action="Index" class="btn btn-danger btn-sm">
-                    Back
-                </a>
+                <div class="form-group mt-3">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-action="Index" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

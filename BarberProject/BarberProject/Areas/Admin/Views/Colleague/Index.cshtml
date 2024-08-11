@@ -5,7 +5,6 @@
 }
 
 
-
 <div class="container">
 
     <div class="create-category">
@@ -25,7 +24,7 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
+                    <tr style="background-color:grey; border-bottom:2px solid cyan">
                         <td><img src="~/images/@item.Image" style="width:200px" /></td>
                         <td>
                             <a class="btn btn-info text-white" asp-route-id="@item.Id" asp-action="Detail">Info</a>

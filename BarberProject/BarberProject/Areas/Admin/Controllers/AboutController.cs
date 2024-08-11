@@ -28,8 +28,15 @@ namespace BarberProject.Areas.Admin.Controllers
         {
             var datas = await _aboutService.GetAllAsync();
 
-            List<AboutVM> model = datas.Select(m => new AboutVM { Id = m.Id, AboutDesc = m.Description, AboutTitle = m.Title, 
-                                                                  AboutPro1 = m.Pro1, AboutPro2 = m.Pro2, AboutPro3 = m.Pro3 }).ToList();
+            AboutVM model = new()
+            {
+                Id = datas.Id,
+                AboutDesc = datas.Description,
+                AboutTitle = datas.Title,
+                AboutPro1 = datas.Pro1,
+                AboutPro2 = datas.Pro2,
+                AboutPro3 = datas.Pro3
+            };
 
             return View(model);
         }
@@ -49,7 +56,7 @@ namespace BarberProject.Areas.Admin.Controllers
                 return View();
             }
 
-                      
+
 
             foreach (var item in request.AboutImages)
             {
@@ -120,7 +127,7 @@ namespace BarberProject.Areas.Admin.Controllers
             {
                 AboutTitle = about.Title,
                 AboutDesc = about.Description,
-                AboutPro1 = about.Pro1, 
+                AboutPro1 = about.Pro1,
                 AboutPro2 = about.Pro2,
                 AboutPro3 = about.Pro3,
                 AboutImages = about.AboutImages.Select(m => new AboutImage { Image = m.Image }).ToList(),
@@ -177,7 +184,7 @@ namespace BarberProject.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
-            
+
             if (id is null) return BadRequest();
 
             var existAbout = await _aboutService.GetByIdAsync((int)id);
@@ -212,7 +219,7 @@ namespace BarberProject.Areas.Admin.Controllers
 
             if (!ModelState.IsValid)
             {
-                request.ExistImages = existAbout.AboutImages.Select(m=> new AboutEditImageVM { Id = m.Id,Name = m.Image,AboutId = m.AboutId}).ToList();
+                request.ExistImages = existAbout.AboutImages.Select(m => new AboutEditImageVM { Id = m.Id, Name = m.Image, AboutId = m.AboutId }).ToList();
                 return View(request);
             }
 
@@ -240,7 +247,7 @@ namespace BarberProject.Areas.Admin.Controllers
                 }
 
                 foreach (var item in request.NewAboutImages)
-                {                    
+                {
                     string fileName = Guid.NewGuid().ToString() + "-" + item.FileName;
 
                     string path = Path.Combine(_env.WebRootPath, "images", fileName);

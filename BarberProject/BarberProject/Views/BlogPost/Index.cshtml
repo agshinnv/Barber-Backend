@@ -19,12 +19,12 @@
 
 
 
-<section id="banner-header" style="background-image: url('/images/Post-single/bannerimage.jpg')">
+<section id="banner-header" style="background-image: url('/images/@Model.Blog.BlogImages.FirstOrDefault(m=>m.IsMain).Image')">
     <div class="container-main">
         <div class="row centering">
             <div class="cover"></div>
             <div class="col-md-8 caption">
-                <h2>Women's Hair Care Routine for Any Hair Type</h2>
+                <h2>@Model.Blog.Title</h2>
             </div>
         </div>
     </div>
