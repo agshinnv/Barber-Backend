@@ -47,5 +47,10 @@ namespace Service.Services
         {
             return await _subServiceRepository.GetByIdWithServices(id);
         }
+
+        public async Task<IEnumerable<SubService>> GetSubServicesByService(int id)
+        {
+            return await _subServiceRepository.GetSubServicesByService(id);
+        }
     }
 }

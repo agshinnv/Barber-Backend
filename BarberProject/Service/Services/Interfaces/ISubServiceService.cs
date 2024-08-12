@@ -11,6 +11,7 @@ namespace Service.Services.Interfaces
     {
         Task<IEnumerable<SubService>> GetAll();
         Task<SubService> GetById(int id);
+        Task<IEnumerable<SubService>> GetSubServicesByService(int id);
         Task Delete(SubService subService);
         Task Create(SubService subService);
         Task Edit(int id, SubService subService);

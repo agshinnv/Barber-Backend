@@ -1,4 +1,4 @@
-﻿@model List<ServiceVM>
+﻿@model ServicePageVM
 
 @{
     ViewData["Title"] = "Services";
@@ -34,150 +34,31 @@
 <section id="offering">
     <div class="container-main">
         <div class="row">
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/service-razor.png" alt="">
-                        </div>
-                        <h5>Moustache Trim</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/service-razor.png" alt="">
-                            </div>
-                        </div>
-                    </a>
+            <div class="col-md-12">
+                <div class="title">
+                    <p>Our Services</p>
+                    <h1>We Also Offer</h1>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/shaving-brush.png" alt="">
-                        </div>
-                        <h5>Face Shave</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
+            @foreach (var item in Model.Services.OrderBy(m => m.Id).Skip(3).Take(9))
+            {
+                <div class="col-md-4">
+                    <div class="cart">
+                        <a asp-controller="ServiceDetail" asp-action="Index" asp-route-id="@item.Id">
                             <div class="image">
-                                <img src="~/icons/shaving-brush.png" alt="">
+                                <img src="~/images/@item.IconImage" alt="">
                             </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/service-trimmer.png" alt="">
-                        </div>
-                        <h5>Beard Trim</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/service-trimmer.png" alt="">
+                            <h5>@item.Title</h5>
+                            <p>@item.Description</p>
+                            <div class="shape">
+                                <div class="image">
+                                    <img src="~/images/@item.IconImage" alt="">
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/hair-cut.png" alt="">
-                        </div>
-                        <h5>Hair Cut</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/hair-cut.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/service-scissors.png" alt="">
-                        </div>
-                        <h5>Clipper Cut</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/service-scissors.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/soap.png" alt="">
-                        </div>
-                        <h5>Facial Massage</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/soap.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/washing.png" alt="">
-                        </div>
-                        <h5>Hair Washing</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/washing.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/hair-dryer.png" alt="">
-                        </div>
-                        <h5>Hair Dryer</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/hair-dryer.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <a href="services-page.html">
-                        <div class="image">
-                            <img src="~/icons/hairdresser.png" alt="">
-                        </div>
-                        <h5>Coloring</h5>
-                        <p>Lorem vulputate massa ons amet ravida haretra nuam the drana miss uctus enec accumsan aliquam sit sapien.</p>
-                        <div class="shape">
-                            <div class="image">
-                                <img src="~/icons/hairdresser.png" alt="">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -193,60 +74,27 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="cart">
-                    <div class="cart-front" style="background-image: url('/images/Features/1.jpg');">
-                        <div class="front-content">
-                            <div class="cart-title">
-                                <h4>Groom's Shave</h4>
+            @foreach (var item in Model.Features)
+            {
+                <div class="col-md-4">
+                    <div class="cart">
+                        <div class="cart-front" style="background-image: url('/images/@item.Image');">
+                            <div class="front-content">
+                                <div class="cart-title">
+                                    <h4>@item.ServiceName</h4>
+                                </div>
                             </div>
+                            <div class="flip-overlay"></div>
                         </div>
-                        <div class="flip-overlay"></div>
-                    </div>
-                    <div class="cart-back">
-                        <div class="back-content ">
-                            <h4>Groom's Shave</h4>
-                            <p><i>Lorem nisl miss nestibulum nec odio duru the aucan ula orci varius natoque enatau manis dis arturient monte.</i></p> <a href="#0" class="appointment mt-15">Appointment<span></span></a>
+                        <div class="cart-back">
+                            <div class="back-content ">
+                                <h4>@item.ServiceName</h4>
+                                <p><i>@item.Description</i></p> <a href="#0" class="appointment mt-15">Appointment<span></span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <div class="cart-front" style="background-image: url('/images/Features/2.jpg');">
-                        <div class="front-content">
-                            <div class="cart-title">
-                                <h4>Kids Cuts</h4>
-                            </div>
-                        </div>
-                        <div class="flip-overlay"></div>
-                    </div>
-                    <div class="cart-back">
-                        <div class="back-content">
-                            <h4>Kids Cuts</h4>
-                            <p><i>Lorem nisl miss nestibulum nec odio duru the aucan ula orci varius natoque enatau manis dis arturient monte.</i></p> <a href="#0" class="appointment mt-15">Appointment<span></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cart">
-                    <div class="cart-front" style="background-image: url('/images/Features/3.jpg');">
-                        <div class="front-content">
-                            <div class="cart-title">
-                                <h4>Creative Barbers</h4>
-                            </div>
-                        </div>
-                        <div class="flip-overlay"></div>
-                    </div>
-                    <div class="cart-back">
-                        <div class="back-content">
-                            <h4>Creative Barbers</h4>
-                            <p><i>Lorem nisl miss nestibulum nec odio duru the aucan ula orci varius natoque enatau manis dis arturient monte.</i></p> <a href="team.html" class="appointment mt-15">Our Team<span></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
@@ -263,14 +111,14 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </p>
-                <h5>We Are Best Barbers & Hair Cutting Salon at NYC.</h5>
+                <h5>@Model.Appointment.Title</h5>
                 <div class="reservation">
                     <div class="icon">
-                        <img src="~/icons/service-razor.png" alt="">
+                        <img src="~/images/@Model.Appointment.IconImage" alt="">
                     </div>
                     <div class="text">
                         <p>Appointment</p>
-                        <a href="">855 100 4444</a>
+                        <a>855 100 4444</a>
                     </div>
                 </div>
             </div>
@@ -348,4 +196,5 @@
         </div>
     </div>
 </section>
+
 

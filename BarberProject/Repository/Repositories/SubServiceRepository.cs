@@ -19,5 +19,10 @@ namespace Repository.Repositories
             return await _entities.Include(m => m.Service).FirstOrDefaultAsync(m => m.Id == id);
         }
 
+        public async Task<IEnumerable<SubService>> GetSubServicesByService(int id)
+        {
+            return await _context.SubServices.Where(m => m.ServiceId == id).ToListAsync();
+        }
+
     }
 }

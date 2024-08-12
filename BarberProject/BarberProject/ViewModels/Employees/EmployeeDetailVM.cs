@@ -4,6 +4,7 @@ namespace BarberProject.ViewModels.Employees
 {
     public class EmployeeDetailVM
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string EmployeeImage { get; set; }
         public string Description { get; set; }

@@ -275,7 +275,7 @@
                     <h1>Barber Pricing</h1>
                 </div>
             </div>
-            @foreach (var item in Model.BarberPricings.OrderBy(m => m.Id))
+            @foreach (var item in Model.BarberPricings.OrderBy(m => m.Id).Take(8))
             {
                 <div class="col-md-6">
                     <div class="price-list">
@@ -314,7 +314,7 @@
                                 <p class="team-text">@item.Description</p>
                                 <div class="social">
                                     <div class="network"> <a href="#"><i class="fa-brands fa-linkedin-in"></i></a> <a href="#"><i class="fa-brands fa-facebook-f"></i></a> <a href="#"><i class="fa-brands fa-x-twitter"></i></a> <a href="#"><i class="fa-brands fa-instagram"></i></a> </div>
-                                </div> <a asp-controller="EmployeeDetail" asp-action="Index" asp-route-id="@item.Id" class="team-button">Team Details<span></span></a>
+                                </div> <a asp-controller="TeamDetail" asp-action="Index" asp-route-id="@item.Id" class="team-button">Team Details<span></span></a>
                             </div>
                             <div class="name-box">
                                 <h3>@item.BarberName<span>@item.Position.Name</span></h3>
@@ -397,6 +397,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
 
 <section id="appointment" style="background-image: url('/images/AppointmentImage.jpg');">
@@ -489,7 +490,6 @@
                                 </div>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>

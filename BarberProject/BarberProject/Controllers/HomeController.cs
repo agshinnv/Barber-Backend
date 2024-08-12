@@ -26,7 +26,7 @@ namespace BarberProject.Controllers
         private readonly IBarberPricingService _barberPricingService;
         private readonly IPositionService _positionService;
         private readonly ISettingService _settingService;
-        IColleagueService _colleagueService;
+        private readonly IColleagueService _colleagueService;
 
         public HomeController(ISliderService sliderService,
                               IAboutService aboutService,

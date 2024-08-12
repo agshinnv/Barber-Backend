@@ -10,5 +10,6 @@ namespace Repository.Repositories.Interfaces
     public interface ISubServiceRepository : IBaseRepository<SubService>
     {
         Task<SubService> GetByIdWithServices(int id);
+        Task<IEnumerable<SubService>> GetSubServicesByService(int id);
     }
 }

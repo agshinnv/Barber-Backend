@@ -1,0 +1,125 @@
+﻿@model TeamDetailPageVM
+
+@{
+    ViewData["Title"] = Model.Employee.Name;
+}
+
+
+
+@section css {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="~/sass/pages/Team-details/team-details.css" rel="stylesheet" />
+    <link href="~/css/themify-icons.css" rel="stylesheet" />
+}
+
+
+
+@section js {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/team-details.js"></script>
+}
+
+
+<section id="banner-header" style="background-image: url('/images/@Model.Employee.EmployeeImage')">
+    <div class="container-main">
+        <div class="row">
+            <div class="cover"></div>
+            <div class="col-md-12 caption">
+                <h5>About Me</h5>
+                <h1>@Model.Employee.Name</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="team-details">
+    <div class="container-main">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="image">
+                    <img src="~/images/@Model.Employee.EmployeeImage" alt="">
+                </div>
+                <div class="about">
+                    <h5>About Me</h5>
+                    <h1>@Model.Employee.Name</h1>
+                    <p>@Model.Employee.Specialty</p>
+                    <ul class="about-list">
+                        <li>
+                            <div class="about-list-icon">
+                                <span class="ti-check"></span>
+                            </div>
+                            <div class="about-list-text">
+                                <p>@Model.Employee.Skill1</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="about-list-icon">
+                                <span class="ti-check"></span>
+                            </div>
+                            <div class="about-list-text">
+                                <p>@Model.Employee.Skill2</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="tab-menu">
+                    <li class="item">
+                        <span class="nav-link active" data-tab="biography">Biography</span>
+                    </li>
+                    <li class="item">
+                        <span class="nav-link" data-tab="education">Education</span>
+                    </li>
+                    <li class="item">
+                        <span class="nav-link" data-tab="awards">Awards</span>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-panel active" id="biography">
+                        <p>@Model.Employee.Biography</p>
+                    </div>
+                    <div class="tab-panel" id="education">
+                        <p>@Model.Employee.Education</p>
+                    </div>
+                    <div class="tab-panel" id="awards">
+                        <p>@Model.Employee.Awards</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 offset-md-1">
+                <div class="back">
+                    <div class="desc">
+                        <h3>Contact Me</h3>
+                        <p>@Model.Employee.ContactDescription</p>
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <h6>Email Us Directly</h6>
+                        </div>
+                        <div class="item">
+                            <h5>@Model.Employee.Email</h5>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <h6>Call Us Directly</h6>
+                        </div>
+                        <div class="item">
+                            <h5>@Model.Employee.Number</h5>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <div class="social-icon">
+                                <a href="#"><i class="ti-facebook"></i></a>
+                                <a href="#"><i class="ti-twitter"></i></a>
+                                <a href="#"><i class="ti-instagram"></i></a>
+                                <a href="#"><i class="ti-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
