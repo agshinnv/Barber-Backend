@@ -11,6 +11,7 @@ using Service.Services.Interfaces;
 namespace BarberProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class BlogController : Controller
     {
         private readonly IBlogService _blogService;
@@ -38,6 +39,7 @@ namespace BarberProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create()
         {
             var services = await _serviceService.GetAll();
@@ -138,6 +140,7 @@ namespace BarberProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id is null) return BadRequest();

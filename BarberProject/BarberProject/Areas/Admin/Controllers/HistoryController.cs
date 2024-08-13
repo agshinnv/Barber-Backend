@@ -1,6 +1,7 @@
 ﻿using BarberProject.Helpers.Extentions;
 using BarberProject.ViewModels.Histories;
 using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Services.Interfaces;
 using System.Reflection;
@@ -8,6 +9,7 @@ using System.Reflection;
 namespace BarberProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class HistoryController : Controller
     {
         private readonly IHistoryService _historyService;
@@ -31,6 +33,7 @@ namespace BarberProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public IActionResult Create()
         {
             return View();
@@ -86,6 +89,7 @@ namespace BarberProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id is null) return BadRequest();

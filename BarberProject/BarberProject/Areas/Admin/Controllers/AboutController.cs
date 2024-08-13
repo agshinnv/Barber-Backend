@@ -2,6 +2,7 @@
 using BarberProject.ViewModels.Abouts;
 using BarberProject.ViewModels.Sliders;
 using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Services;
 using Service.Services.Interfaces;
@@ -10,6 +11,7 @@ using System.Reflection;
 namespace BarberProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class AboutController : Controller
     {
         private readonly IAboutService _aboutService;
@@ -42,6 +44,7 @@ namespace BarberProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public IActionResult Create()
         {
             return View();
@@ -139,6 +142,7 @@ namespace BarberProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id is null) return BadRequest();
@@ -182,6 +186,7 @@ namespace BarberProject.Areas.Admin.Controllers
 
 
         [HttpGet]
+
         public async Task<IActionResult> Edit(int? id)
         {
 

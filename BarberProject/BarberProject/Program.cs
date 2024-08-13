@@ -49,6 +49,8 @@ builder.Services.AddScoped<ISettingService, SettingService>();
 builder.Services.AddScoped<ISettingRepository, SettingRepository>();
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<ISliderRepository, SliderRepository>();
+builder.Services.AddScoped<ISliderImageService, SliderImageService>();
+builder.Services.AddScoped<ISliderImageRepository, SliderImageRepository>();
 builder.Services.AddScoped<IAboutService, AboutService>();
 builder.Services.AddScoped<IAboutRepository, AboutRepsitory>();
 builder.Services.AddScoped<IHistoryService, HistoryService>();

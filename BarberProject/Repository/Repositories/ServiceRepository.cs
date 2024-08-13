@@ -20,6 +20,11 @@ namespace Repository.Repositories
             return await _entities.IncludeMultiple<Service>(m => m.ServiceImages).ToListAsync();
         }
 
+        public async Task<IEnumerable<Service>> GetAllWithIncludes()
+        {
+            return await _entities.Include(m=>m.ServiceImages).Include(m=>m.SubServices).ToListAsync();
+        }
+
         public async Task<Service> GetByIdWithImages(int id)
         {
             return await _entities.Include(m => m.ServiceImages).FirstOrDefaultAsync(m => m.Id == id);

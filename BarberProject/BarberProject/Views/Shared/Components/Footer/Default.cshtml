@@ -30,36 +30,15 @@
                     <div class="work-time">
                         <h3>Work time</h3>
                         <ul>
-                            <li>
-                                <div class="days">Monday</div>
-                                <div class="dots"></div>
-                                <span>10:00 - 20:00</span>
-                            </li>
-                            <li>
-                                <div class="days">Tuesday</div>
-                                <div class="dots"></div>
-                                <span>10:00 - 20:00</span>
-                            </li>
-                            <li>
-                                <div class="days">Thursday</div>
-                                <div class="dots"></div>
-                                <span>10:00 - 20:00</span>
-                            </li>
-                            <li>
-                                <div class="days">Friday</div>
-                                <div class="dots"></div>
-                                <span>10:00 - 20:00</span>
-                            </li>
-                            <li>
-                                <div class="days">Saturday</div>
-                                <div class="dots"></div>
-                                <span>10:00 - 20:00</span>
-                            </li>
-                            <li>
-                                <div class="days">Weekend</div>
-                                <div class="dots"></div>
-                                <span>Closed</span>
-                            </li>
+                            @foreach (var item in Model.WorkTimes.OrderBy(m=>m.Id))
+                            {
+                                <li>
+                                    <div class="days">@item.WorkDay</div>
+                                    <div class="dots"></div>
+                                    <span>@item.WorkHour</span>
+                                </li>
+                            }
+
                         </ul>
                     </div>
                 </div>

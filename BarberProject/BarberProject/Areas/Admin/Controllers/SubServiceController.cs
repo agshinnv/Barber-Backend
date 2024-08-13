@@ -2,6 +2,7 @@
 using BarberProject.ViewModels.Employees;
 using BarberProject.ViewModels.SubServices;
 using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Service.Services;
@@ -10,6 +11,7 @@ using Service.Services.Interfaces;
 namespace BarberProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class SubServiceController : Controller
     {
         private readonly ISubServiceService _subServiceService;
@@ -34,6 +36,7 @@ namespace BarberProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create()
         {
             var services = await _serviceService.GetAll();
@@ -86,6 +89,7 @@ namespace BarberProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id is null) return BadRequest();

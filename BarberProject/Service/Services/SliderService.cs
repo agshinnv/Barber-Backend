@@ -26,10 +26,10 @@ namespace Service.Services
             await _sliderRepository.Delete(slider);
         }
 
-        public async Task DeleteImage(SliderImage image)
-        {
-            await _sliderRepository.DeleteImage(image);
-        }
+        //public async Task DeleteImage(SliderImage image)
+        //{
+        //    await _sliderRepository.DeleteImage(image);
+        //}
 
         public async Task EditAsync(int id, Slider slider)
         {
@@ -37,7 +37,7 @@ namespace Service.Services
 
             existSlider.SliderTitle = slider.SliderTitle;
             existSlider.SliderDescription = slider.SliderDescription;
-            existSlider.SliderImages = slider.SliderImages;
+            //existSlider.SliderImages = slider.SliderImages;
 
             await _sliderRepository.Edit(existSlider);
         }
@@ -49,9 +49,9 @@ namespace Service.Services
 
         public async Task<Slider> GetByIdAsync(int id)
         {
-            return await _sliderRepository.GetByIdWithImages(id);
+            return await _sliderRepository.GetById(id);
         }
 
-        
+
     }
 }

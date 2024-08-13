@@ -6,8 +6,7 @@ namespace BarberProject.ViewModels.Sliders
     {
         [Required]
         public string SliderTitle { get; set; }
+        [Required]
         public string SliderDescription { get; set; }
-        public List<SliderEditImageVM> ExistImages { get; set; }
-        public List<IFormFile> NewSliderImages { get; set; }
     }
 }

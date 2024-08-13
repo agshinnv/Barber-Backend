@@ -14,6 +14,5 @@ namespace Service.Services.Interfaces
         Task Create (Slider slider);
         Task EditAsync(int id, Slider slider);
         Task DeleteAsync(Slider slider);
-        Task DeleteImage(SliderImage image);
     }
 }

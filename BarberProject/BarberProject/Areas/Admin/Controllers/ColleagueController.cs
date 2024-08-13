@@ -1,6 +1,7 @@
 ﻿using BarberProject.Helpers.Extentions;
 using BarberProject.ViewModels.Colleagues;
 using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Org.BouncyCastle.Asn1.Ocsp;
 using Service.Services;
@@ -9,6 +10,7 @@ using Service.Services.Interfaces;
 namespace BarberProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class ColleagueController : Controller
     {
         private readonly IColleagueService _colleagueService;
@@ -33,6 +35,7 @@ namespace BarberProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public IActionResult Create()
         {
             return View();
@@ -85,6 +88,7 @@ namespace BarberProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id is null) return BadRequest();

@@ -33,32 +33,6 @@
                     <input asp-for="SliderDescription" class="form-control mb-4" placeholder="Slider description..." autocomplete="off">
                     <span class="text-danger" asp-validation-for="SliderDescription"></span>
 
-                    <label>Slider Images</label>
-                    <div class="slider-images" style="display:flex; gap:40px">
-                        @foreach (var item in Model.ExistImages)
-                        {
-                            <div class="edit-image" data-id="@item.Id" data-slider-id="@item.SliderId">
-                                <img src="~/images/@item.Name" />
-                                <div class="slider-action">
-                                    <ul style="list-style:none">
-                                        <li>
-                                            <a class="remove-image" style="cursor:pointer">
-                                                <i class="fa-solid fa-trash text-danger"></i>
-                                                <span class="tooltip-text">Remove image</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        }
-                        <div class="upload-container">
-                            <label class="upload-button">
-                                <input asp-for="NewSliderImages">
-                            </label>
-                        </div>
-                        <span class="text-danger d-block" asp-validation-for="NewSliderImages"></span>
-                    </div>
-
                 </div>
                 <div class="form-group mt-3">
                     <div class="col-sm-12">

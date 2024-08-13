@@ -2,6 +2,7 @@
 using BarberProject.ViewModels.Abouts;
 using BarberProject.ViewModels.Services;
 using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Services;
 using Service.Services.Interfaces;
@@ -9,6 +10,7 @@ using Service.Services.Interfaces;
 namespace BarberProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class ServiceController : Controller
     {
         private readonly IServiceService _serviceService;
@@ -33,6 +35,7 @@ namespace BarberProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public IActionResult Create()
         {
             return View();
@@ -139,6 +142,7 @@ namespace BarberProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id is null) return BadRequest();

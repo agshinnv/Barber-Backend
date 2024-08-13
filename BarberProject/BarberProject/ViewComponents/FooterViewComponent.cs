@@ -7,13 +7,18 @@ namespace BarberProject.ViewComponents
     public class FooterViewComponent : ViewComponent
     {
         private readonly ISettingService _settingService;
-        public FooterViewComponent(ISettingService settingService)
+        private readonly IWorkTimeService _workTimeService;
+        public FooterViewComponent(ISettingService settingService, 
+                                   IWorkTimeService workTimeService)
         {
             _settingService = settingService;
+            _workTimeService = workTimeService;
+
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var setting = await _settingService.GetAll();
+            var workTimes = await _workTimeService.GetAll();
 
             Dictionary<string, string> values = new();
 
@@ -25,6 +30,7 @@ namespace BarberProject.ViewComponents
             FooterVM response = new()
             {
                 Settings = values,
+                WorkTimes = workTimes
             };
 
 

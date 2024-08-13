@@ -12,7 +12,5 @@ namespace Domain.Models
         public string SliderTitle { get; set; }
         public string SliderDescription { get; set; }
 
-        public ICollection<SliderImage> SliderImages { get; set; }
-
     }
 }

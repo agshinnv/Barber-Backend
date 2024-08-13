@@ -2,6 +2,7 @@
 using BarberProject.ViewModels.Employees;
 using BarberProject.ViewModels.Positions;
 using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Service.Services;
@@ -10,6 +11,7 @@ using Service.Services.Interfaces;
 namespace BarberProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class EmployeeController : Controller
     {
         private readonly IEmployeeService _employeeService;
@@ -36,6 +38,7 @@ namespace BarberProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create()
         {
             var positions = await _positionService.GetAll();
@@ -124,6 +127,7 @@ namespace BarberProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id is null) return BadRequest();

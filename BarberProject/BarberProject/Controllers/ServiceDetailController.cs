@@ -33,16 +33,8 @@ namespace BarberProject.Controllers
 
             if (existService is null) return NotFound();
 
-            ServiceDetailVM service = new()
-            {
-                Title = existService.Title,
-                Description = existService.Description,
-                IconImage = existService.IconImage,
-                ServiceImages = existService.ServiceImages.Select(m => new ServiceImage { Image = m.Image }).ToList(),
-            };
 
             IEnumerable<Domain.Models.Service> services = await _serviceService.GetAll();
-            IEnumerable<SubService> subServices = await _subServiceService.GetSubServicesByService(existService.Id);
 
 
             //SubServiceVM subServiceData = new()
@@ -54,9 +46,7 @@ namespace BarberProject.Controllers
 
             ServiceDetailPageVM model = new()
             {
-                Service = service,
                 Services = services.ToList(),
-                SubServices = subServices.ToList(),
             };
 
 

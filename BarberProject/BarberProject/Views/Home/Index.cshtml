@@ -9,10 +9,34 @@
 
 @section js {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('#kenburnsSliderContainer').vegas({
+                slides: [
+        @foreach (var item in Model.SliderImages)
+        {
+            @:{ src: "/images/@item.Image" },
+        }
+                        ],
+                overlay: false,
+                transition: 'fade2',
+                animation: 'kenburnsUpRight',
+                transitionDuration: 1000,
+                delay: 10000,
+                animationDuration: 20000
+            });
+        });
+
+
+    </script>
 }
+
+
 
 @section css {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="~/js/home.js"></script>
 }
 
 
@@ -24,9 +48,9 @@
                 <div class="container-main">
                     <div class="row">
                         <div class="texting col-md-8 text-center">
-                            <h6>Stay sharp, Look good</h6>
-                            <h1>NYC'S FAVOURITE BARBER SHOP.</h1>
-                            <h6>Broadway St, NYC. Appointment: 855 100 4444</h6>
+                            <h6>@Model.Sliders.FirstOrDefault().SliderTitle</h6>
+                            <h1>@Model.Sliders.FirstOrDefault().SliderDescription</h1>
+                            <h6>@Model.Settings["Address"]</h6>
                             <a href="#" class="appointment">Make Appointment<span></span></a>
                         </div>
                     </div>
@@ -419,7 +443,7 @@
                     </div>
                     <div class="text">
                         <p>Appointment</p>
-                        <a>855 100 4444</a>
+                        <a>@Model.Settings["Phone"]</a>
                     </div>
                 </div>
             </div>
@@ -515,23 +539,8 @@
     </div>
 </section>
 
-@* <script>
-    // $(function () {
-    //     $('#kenburnsSliderContainer').vegas({
-    //         slides: [
-    // @foreach (var item in Model.Sliders)
-    // {
-    //     @:{ src: '@Url.Content("~/images/slider/" + item.SliderImages)' },
-    // }
-    //             ],
-    //         overlay: false,
-    //         transition: 'fade3',
-    //         animation: 'kenburnsUpRight',
-    //         transitionDuration: 1000,
-    //         delay: 10000,
-    //         animationDuration: 20000
-    //     });
-    // })
 
-</script> *@
+
+
+
 

@@ -46,7 +46,7 @@ namespace Service.Services
 
         public async Task<IEnumerable<Domain.Models.Service>> GetAll()
         {
-            return await _serviceRepository.GetAll();
+            return await _serviceRepository.GetAllWithIncludes();
         }
 
         public async Task<Domain.Models.Service> GetById(int id)

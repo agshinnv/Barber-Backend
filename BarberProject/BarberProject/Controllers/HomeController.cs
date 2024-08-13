@@ -10,6 +10,7 @@ namespace BarberProject.Controllers
     public class HomeController : Controller
     {
         private readonly ISliderService _sliderService;
+        private readonly ISliderImageService _sliderImageService;
         private readonly IAboutService _aboutService;
         private readonly IHistoryService _historyService;
         private readonly IHttpContextAccessor _accessor;
@@ -27,6 +28,7 @@ namespace BarberProject.Controllers
         private readonly IPositionService _positionService;
         private readonly ISettingService _settingService;
         private readonly IColleagueService _colleagueService;
+        private readonly IWorkTimeService _workTimeService;
 
         public HomeController(ISliderService sliderService,
                               IAboutService aboutService,
@@ -45,7 +47,9 @@ namespace BarberProject.Controllers
                               IBarberPricingService barberPricingService,
                               IPositionService positionService,
                               ISettingService settingService,
-                              IColleagueService colleagueService)
+                              IColleagueService colleagueService,
+                              IWorkTimeService workTimeService,
+                              ISliderImageService sliderImageService)
         {
             _sliderService = sliderService;
             _aboutService = aboutService;
@@ -65,6 +69,8 @@ namespace BarberProject.Controllers
             _positionService = positionService;
             _settingService = settingService;
             _colleagueService = colleagueService;
+            _workTimeService = workTimeService;
+            _sliderImageService = sliderImageService;
         }
         
         public async Task<IActionResult> Index()
@@ -82,8 +88,17 @@ namespace BarberProject.Controllers
             var comments = await _commentService.GetAll();
             var barberPricings = await _barberPricingService.GetAll();
             var positions = await _positionService.GetAll();
-            //var settings = await _settingService.GetAll();
+            var settings = await _settingService.GetAll();
             var colleagues = await _colleagueService.GetAll();
+            var workTimes = await _workTimeService.GetAll();
+            var sliderImages = await _sliderImageService.GetAll();
+
+            Dictionary<string, string> values = new();
+
+            foreach (KeyValuePair<int, Dictionary<string, string>> item in settings)
+            {
+                values.Add(item.Value["Key"], item.Value["Value"]);
+            }
 
             HomeVM model = new()
             {
@@ -100,8 +115,10 @@ namespace BarberProject.Controllers
                 Comments = comments,
                 BarberPricings = barberPricings,
                 Positions = positions,
-                //Settings = settings
+                Settings = values,
                 Colleagues = colleagues,
+                WorkTimes = workTimes,
+                SliderImages = sliderImages,
             };
 
             return View(model);

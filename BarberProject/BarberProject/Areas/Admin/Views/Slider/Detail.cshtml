@@ -22,16 +22,6 @@
         </table>
     </div>
 
-    <div class="product-images justify-content-center">
-        @foreach (var item in Model.SliderImages)
-        {
-            <div class="edit-image bg-light" style="width:400px;height:200px;">
-                <img src="~/images/@item.Image"  />
-            </div>
-            <br />
-        }
-    </div>
-
     <a asp-action="Index" asp-controller="Slider" class="btn btn-danger">Back</a>
 
 </div>

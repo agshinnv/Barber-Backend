@@ -3,6 +3,7 @@ using BarberProject.ViewModels.Colleagues;
 using BarberProject.ViewModels.Positions;
 using BarberProject.ViewModels.PricingCategories;
 using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Services;
 using Service.Services.Interfaces;
@@ -10,6 +11,7 @@ using Service.Services.Interfaces;
 namespace BarberProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "SuperAdmin, Admin")]
     public class PricingCategoryController : Controller
     {
         private readonly IPricingCategoryService _pricingCategoryService;
@@ -34,6 +36,7 @@ namespace BarberProject.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Create()
         {
             return View();
@@ -71,6 +74,7 @@ namespace BarberProject.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id is null) return BadRequest();

@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BarberProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class DashboardController : Controller
+	[Authorize(Roles = "SuperAdmin, Admin")]
+	public class DashboardController : Controller
     {
         public IActionResult Index()
         {

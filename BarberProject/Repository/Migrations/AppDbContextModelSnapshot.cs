@@ -628,15 +628,10 @@ namespace Repository.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SliderId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("SoftDeleted")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("SliderId");
 
                     b.ToTable("SliderImages");
                 });
@@ -925,17 +920,6 @@ namespace Repository.Migrations
                     b.Navigation("Service");
                 });
 
-            modelBuilder.Entity("Domain.Models.SliderImage", b =>
-                {
-                    b.HasOne("Domain.Models.Slider", "Slider")
-                        .WithMany("SliderImages")
-                        .HasForeignKey("SliderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Slider");
-                });
-
             modelBuilder.Entity("Domain.Models.SubService", b =>
                 {
                     b.HasOne("Domain.Models.Service", "Service")
@@ -1032,11 +1016,6 @@ namespace Repository.Migrations
                     b.Navigation("ServiceImages");
 
                     b.Navigation("SubServices");
-                });
-
-            modelBuilder.Entity("Domain.Models.Slider", b =>
-                {
-                    b.Navigation("SliderImages");
                 });
 #pragma warning restore 612, 618
         }

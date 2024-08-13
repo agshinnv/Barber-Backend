@@ -6,6 +6,7 @@ namespace BarberProject.ViewModels
     public class HomeVM
     {
         public IEnumerable<Slider> Sliders { get; set; }
+        public IEnumerable<SliderImage> SliderImages { get; set; }
         public About About { get; set; }
         public History History { get; set; }
         public IEnumerable<Blog> Blogs { get; set; }
@@ -18,8 +19,9 @@ namespace BarberProject.ViewModels
         public IEnumerable<Comment> Comments { get; set; }
         public IEnumerable<BarberPricing> BarberPricings { get; set; }
         public IEnumerable<Position> Positions { get; set; }
-        //public Dictionary<string, string> Settings { get; set; }
+        public Dictionary<string, string> Settings { get; set; }
         public IEnumerable<Colleague> Colleagues { get; set; }
+        public IEnumerable<WorkTime> WorkTimes { get; set; }
 
     }
 }
