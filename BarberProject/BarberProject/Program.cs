@@ -1,5 +1,6 @@
 using BarberProject.Helpers;
 using Domain.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repository.Data;
@@ -7,6 +8,7 @@ using Repository.Repositories;
 using Repository.Repositories.Interfaces;
 using Service.Services;
 using Service.Services.Interfaces;
+using static System.Net.Mime.MediaTypeNames;
 using BarberService = Service.Services.BarberService;
 
 
@@ -96,12 +98,25 @@ var app = builder.Build();
 
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
+{
+    DeveloperExceptionPageOptions developerExceptionPageOptions = new DeveloperExceptionPageOptions();
+    developerExceptionPageOptions.SourceCodeLineCount = 1;
+    app.UseDeveloperExceptionPage(developerExceptionPageOptions);
+
+    //app.UseExceptionHandler("/Home/Error");
+    //// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    //app.UseHsts();
+}
+else
 {
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+
+app.UseStatusCodePagesWithReExecute("/StatusCodeError/{0}");
 
 app.UseAuthentication();
 app.UseHttpsRedirection();

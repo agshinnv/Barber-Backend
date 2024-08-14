@@ -130,5 +130,18 @@ namespace BarberProject.Controllers
             await _subscriberService.Create(new Subscriber { SubscriberEmail = subscriberEmail });
             return Ok();
         }
+
+        [Route("/StatusCodeError/{statusCode}")]
+        public IActionResult Error(int statusCode)
+        {
+            if(statusCode == 404)
+            {
+                ViewBag.ErrorMessage = "Sorry We Can't Find That Page!";
+            }
+
+            return View("Error");
+
+        }
+
     }
 }
