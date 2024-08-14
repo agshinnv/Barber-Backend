@@ -1,9 +1,9 @@
 ﻿@model ServiceDetailPageVM
 
-@* @{
+@{
     ViewData["Title"] = Model.Service.Title;
 }
- *@
+
 
 
 @section css {
@@ -21,32 +21,205 @@
 
 
 
-<section id="banner-header" style="background-image: url()">
+<section id="banner-header" style="background-image: url('/images/@Model.Service.ServiceImages.FirstOrDefault().Image')">
     <div class="container-main">
         <div class="row">
             <div class="cover"></div>
             <div class="col-md-12 caption">
                 <h5>Services Page</h5>
-                @* <h1>@Model.Service.Title</h1> *@
+                <h1>Services</h1>
             </div>
         </div>
     </div>
 </section>
 
+
+
+@* <section id="pricing">
+    <div class="container-main">
+        <div class="row">
+            <div class="col-md-7">
+                <div id="haircut" class="service-detail">
+                    <div class="title">
+                        <h5>Services</h5>
+                        <h2>Haircut</h2>
+                    </div>
+                    <p>Haircut drana lorem ipsum amet navida haretra nuam enim mi in the obortis esetena silver enes accumsan miss alisuame amet auctor orci donec vitae vehicula risus duise nun sapien accumsan in the mauris speain rutrum asiquam on the miss.</p>
+                    <p>Barber enim mi obortis eset uctus enec accumsan eu usto alisuame amet auctor orci golden vitae ehica risus duise nun sapien accumsan id mauris rutrum nie spaien.</p>
+                    <div class="list-service">
+                        <div class="item">
+                            <div class="content">
+                                <h5>Haircut</h5>
+                                <div class="dots"></div>
+                                <div class="price">$20</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-service">
+                        <div class="item">
+                            <div class="content">
+                                <h5>Wash and Cut</h5>
+                                <div class="dots"></div>
+                                <div class="price">$30</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-service">
+                        <div class="item">
+                            <div class="content">
+                                <h5>Long Hair</h5>
+                                <div class="dots"></div>
+                                <div class="price">$25</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-service">
+                        <div class="item">
+                            <div class="content">
+                                <h5>Children Wash & Cut</h5>
+                                <div class="dots"></div>
+                                <div class="price">$25</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-service">
+                        <div class="item">
+                            <div class="content">
+                                <h5>Wash and Style</h5>
+                                <div class="dots"></div>
+                                <div class="price">$10</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 image">
+                            <a href="~/images/Services-page/1.jpg" class="img-zoom">
+                                <div class="box">
+                                    <div class="box-image">
+                                        <img src="~/images/Services-page/1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 image">
+                            <a href="~/images/Services-page/2.jpg" class="img-zoom">
+                                <div class="box">
+                                    <div class="box-image">
+                                        <img src="~/images/Services-page/2.jpg" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 image">
+                            <a href="~/images/Services-page/3.jpg" class="img-zoom">
+                                <div class="box">
+                                    <div class="box-image">
+                                        <img src="~/images/Services-page/3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 image">
+                            <a href="~/images/Services-page/4.jpg" class="img-zoom">
+                                <div class="box">
+                                    <div class="box-image">
+                                        <img src="~/images/Services-page/4.jpg" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 image">
+                            <a href="~/images/Services-page/5.jpg" class="img-zoom">
+                                <div class="box">
+                                    <div class="box-image">
+                                        <img src="~/images/Services-page/5.jpg" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 image">
+                            <a href="~/images/Services-page/6.jpg" class="img-zoom">
+                                <div class="box">
+                                    <div class="box-image">
+                                        <img src="~/images/Services-page/6.jpg" alt="">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="moustache-trim" class="service-detail d-none">Details about Moustache Trim</div>
+                <div id="face-shave" class="service-detail d-none">Details about Face Shave</div>
+                <div id="beard-trim" class="service-detail d-none">Details about Beard Trim</div>
+                <div id="clipper-cut" class="service-detail d-none">Details about Clipper Cut</div>
+                <div id="facial-massage" class="service-detail d-none">Details about Facial & Massage</div>
+                <div id="hair-washing" class="service-detail d-none">Details about Hair Washing</div>
+                <div id="hair-dryer" class="service-detail d-none">Details about Hair Dryer</div>
+                <div id="coloring" class="service-detail d-none">Details about Coloring</div>
+            </div>
+            <div class="col-md-4 offset-md-1">
+                <aside class="sidebar">
+                    <div class="sidebar-services">
+                        <div class="inner">
+                            <div class="title">
+                                <h4>All Services</h4>
+                            </div>
+                            <ul id="service-list">
+                                <li class="active">
+                                    <a href="#haircut">Haircut</a>
+                                </li>
+                                <li>
+                                    <a href="#moustache-trim">Moustache Trim</a>
+                                </li>
+                                <li>
+                                    <a href="#face-shave">Face Shave</a>
+                                </li>
+                                <li>
+                                    <a href="#beard-trim">Beard Trim</a>
+                                </li>
+                                <li>
+                                    <a href="#clipper-cut">Clipper Cut</a>
+                                </li>
+                                <li>
+                                    <a href="#facial-massage">Facial & Massage</a>
+                                </li>
+                                <li>
+                                    <a href="#hair-washing">Hair Washing</a>
+                                </li>
+                                <li>
+                                    <a href="#hair-dryer">Hair Dryer</a>
+                                </li>
+                                <li>
+                                    <a href="#coloring">Coloring</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section> *@
+
+
+
+
+
+
 <section id="pricing">
     <div class="container-main">
         <div class="row">
             <div class="col-md-7">
-                @foreach (var item in Model.Services)
+                @for (int i = 0; i < Model.Services.Count; i++)
                 {
-                    <div id="@item.Id" class="service-detail">
+                    <div id="@Model.Services[i].Id" class="service-detail @(Model.Services[i].Id == Model.Id ? "" : "d-none")">
                         <div class="title">
                             <h5>Services</h5>
-                            <h2>@item.Title</h2>
+                            <h2>@Model.Services[i].Title</h2>
                         </div>
-                        <p>@item.Description</p>
+                        <p>@Model.Services[i].Description</p>
                         <div class="list-service">
-                            @foreach (var subitem in item.SubServices)
+                            @foreach (var subitem in Model.Services[i].SubServices)
                             {
                                 <div class="item">
                                     <div class="content">
@@ -60,7 +233,7 @@
                         </div>
 
                         <div class="row">
-                            @foreach (var image in item.ServiceImages)
+                            @foreach (var image in Model.Services[i].ServiceImages)
                             {
                                 <div class="col-md-4 image">
                                     <a href="~/images/@image.Image" class="img-zoom">
@@ -72,8 +245,6 @@
                                     </a>
                                 </div>
                             }
-
-
 
                         </div>
                     </div>
@@ -87,10 +258,10 @@
                                 <h4>All Services</h4>
                             </div>
                             <ul id="service-list">
-                                @foreach (var item in Model.Services)
+                                @for (int i = 0; i < Model.Services.Count; i++)
                                 {
-                                    <li class=>
-                                        <a href="#@item.Id">@item.Title</a>
+                                    <li class="@(Model.Services[i].Id == Model.Id ? "active" :"")">
+                                        <a href="#@Model.Services[i].Id">@Model.Services[i].Title</a>
                                     </li>
                                 }
                             </ul>

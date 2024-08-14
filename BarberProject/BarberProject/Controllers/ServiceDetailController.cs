@@ -36,6 +36,14 @@ namespace BarberProject.Controllers
 
             IEnumerable<Domain.Models.Service> services = await _serviceService.GetAll();
 
+            ServiceDetailVM service = new()
+            {
+                Title = existService.Title,
+                Description = existService.Description,
+                IconImage = existService.IconImage,
+                ServiceImages = existService.ServiceImages.Select(m => new ServiceImage { Image = m.Image }).ToList(),
+            };
+
 
             //SubServiceVM subServiceData = new()
             //{
@@ -47,6 +55,8 @@ namespace BarberProject.Controllers
             ServiceDetailPageVM model = new()
             {
                 Services = services.ToList(),
+                Service = service,
+                Id = (int)id
             };
 
 
