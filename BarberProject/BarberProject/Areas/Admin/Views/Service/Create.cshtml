@@ -15,15 +15,18 @@
 
                 <div class="form-group">
 
-                    <input asp-for="Title" type="text" placeholder="Enter title..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <input asp-for="Title" type="text" placeholder="Enter title..." class="form-control  mb-2" autocomplete="off">
                     <span class="text-danger" asp-validation-for="Title"></span>
 
                     <label class=" form-control-label">Upload service icon image</label>
                     <input asp-for="IconImage" type="file" class="form-control mb-2" multiple>
                     <span class="text-danger" asp-validation-for="IconImage"></span>
 
-                    <input asp-for="Description" type="text" placeholder="Enter description..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <input asp-for="Description" type="text" placeholder="Enter description..." class="form-control  mb-2" autocomplete="off">
                     <span class="text-danger" asp-validation-for="Description"></span>
+
+                    <input asp-for="Content" type="text" placeholder="Enter content..." class="form-control  mb-2" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Content"></span>
 
                     <label class=" form-control-label">Upload service images</label>
                     <input asp-for="ServiceImages" type="file" class="form-control mb-2" multiple>

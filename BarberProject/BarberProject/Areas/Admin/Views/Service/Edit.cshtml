@@ -25,12 +25,16 @@
             <form asp-action="Edit" method="post" class="mt-4" enctype="multipart/form-data">
                 <div class="form-group">
                     <label class=" form-control-label">Enter service title</label>
-                    <input asp-for="Title" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <input asp-for="Title" type="text" placeholder="Enter here..." class="form-control  mb-2" autocomplete="off">
                     <span class="text-danger" asp-validation-for="Title"></span>
 
                     <label class=" form-control-label">Enter service description</label>
-                    <input asp-for="Description" type="text" placeholder="Enter here..." class="form-control  mb-2" maxlength="100" autocomplete="off">
+                    <input asp-for="Description" type="text" placeholder="Enter here..." class="form-control  mb-2" autocomplete="off">
                     <span class="text-danger" asp-validation-for="Description"></span>
+
+                    <label class=" form-control-label">Enter service content</label>
+                    <input asp-for="Content" type="text" placeholder="Enter here..." class="form-control  mb-2" autocomplete="off">
+                    <span class="text-danger" asp-validation-for="Content"></span>
 
                     <label class=" form-control-label">Upload new icon image</label>
                     <div>

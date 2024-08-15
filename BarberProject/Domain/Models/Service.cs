@@ -12,6 +12,7 @@ namespace Domain.Models
         public string IconImage { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+        public string Content { get; set; }
         public ICollection<ServiceImage> ServiceImages { get; set; }
         public ICollection<SubService> SubServices { get; set; }
         public ICollection<Blog> Blogs { get; set; }

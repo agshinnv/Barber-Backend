@@ -9,6 +9,7 @@ namespace BarberProject.ViewModels.Services
         public string Title { get; set; }
         [Required]
         public string Description { get; set; }
+        public string Content { get; set; }
         public List<ServiceEditImageVM> ExistServiceImages { get; set; }
         public List<IFormFile> NewServiceImages { get; set; }
         public string ExistIconImage { get; set; }

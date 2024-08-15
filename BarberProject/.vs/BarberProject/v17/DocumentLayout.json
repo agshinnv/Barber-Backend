@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\views\\servicedetail\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\views\\servicedetail\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\controllers\\servicedetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\controllers\\servicedetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|c:\\users\\agshin\\desktop\\barber project-back\\barberproject\\barberproject\\areas\\admin\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFD9EFA3-50F4-4FC8-9038-F5CB49322056}|BarberProject\\BarberProject.csproj|solutionrelative:barberproject\\areas\\admin\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Views\\ServiceDetail\\Index.cshtml",
+              "RelativeDocumentMoniker": "BarberProject\\Views\\ServiceDetail\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Views\\ServiceDetail\\Index.cshtml",
+              "RelativeToolTip": "BarberProject\\Views\\ServiceDetail\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-15T11:34:33.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "BarberProject\\Areas\\Admin\\Controllers\\ServiceController.cs",
+              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Areas\\Admin\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "BarberProject\\Areas\\Admin\\Controllers\\ServiceController.cs",
+              "ViewState": "AQIAAKcAAAAAAAAAAAAswMAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T09:53:56.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceDetailController.cs",
+              "DocumentMoniker": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Controllers\\ServiceDetailController.cs",
+              "RelativeDocumentMoniker": "BarberProject\\Controllers\\ServiceDetailController.cs",
+              "ToolTip": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\Controllers\\ServiceDetailController.cs",
+              "RelativeToolTip": "BarberProject\\Controllers\\ServiceDetailController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T09:44:41.545Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -13,5 +13,7 @@ namespace BarberProject.ViewModels.Services
         public string Description { get; set; }
         [Required]
         public IFormFile IconImage { get; set; }
+        [Required]
+        public string Content { get; set; }
     }
 }

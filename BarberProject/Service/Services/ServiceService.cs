@@ -39,6 +39,7 @@ namespace Service.Services
             existService.Title = service.Title;
             existService.Description = service.Description;
             existService.IconImage = service.IconImage;
+            existService.Content = service.Content;
             existService.ServiceImages = service.ServiceImages;
 
             await _serviceRepository.Edit(existService);

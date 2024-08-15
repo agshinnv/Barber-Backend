@@ -110,6 +110,7 @@ namespace BarberProject.Areas.Admin.Controllers
                 Title = request.Title,
                 Description = request.Description,
                 IconImage = iconFileName,
+                Content = request.Content,
                 ServiceImages = images.Select(m => new ServiceImage { Image = m.Image }).ToList(),
             };
 
@@ -133,6 +134,7 @@ namespace BarberProject.Areas.Admin.Controllers
                 Title = service.Title,
                 Description = service.Description,
                 IconImage = service.IconImage,
+                Content = service.Content,
                 ServiceImages = service.ServiceImages.Select(m => new ServiceImage { Image = m.Image }).ToList(),
             };
 
@@ -199,6 +201,7 @@ namespace BarberProject.Areas.Admin.Controllers
             {
                 Title = existService.Title,
                 Description = existService.Description,
+                Content = existService.Content,
                 ExistIconImage = existService.IconImage,
                 ExistServiceImages = existService.ServiceImages.Select(m => new ServiceEditImageVM { Id = m.Id, Name = m.Image, ServiceId = m.ServiceId }).ToList(),
             };
@@ -300,6 +303,7 @@ namespace BarberProject.Areas.Admin.Controllers
                 ServiceImages = images,
                 Title = request.Title,
                 Description = request.Description,
+                Content = request.Content,
                 IconImage = request.ExistIconImage
             });
 

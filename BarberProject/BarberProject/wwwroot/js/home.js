@@ -58,37 +58,17 @@ $(function() {
 
 
 
-    //#region Slider
-    // $('#kenburnsSliderContainer').vegas({
-    //     slides: [{
-    //         src: "assets/images/slider/1.jpg"
-    //     }, {
-    //         src: "assets/images/slider/2.jpg"
-    //     }, {
-    //         src: "assets/images/slider/3.jpg"
-    //     }, {
-    //         src: "assets/images/slider/4.jpg"
-    //     }],
-    //     overlay: false,
-    //     transition: 'fade3',
-    //     animation: 'kenburnsUpRight',
-    //     transitionDuration: 1000,
-    //     delay: 10000,
-    //     animationDuration: 20000
-    // });
-    //#endregion
-
 
     //#region HeaderScroll
     $(window).on("scroll", function () {
         var bodyScroll = $(this).scrollTop(),
-          navbar = $(".navbar");
+            navbar = $(".navbar");
         if (bodyScroll > 100) {
-          navbar.addClass("nav-scroll");
+            navbar.addClass("nav-scroll");
         } else {
-          navbar.removeClass("nav-scroll");
+            navbar.removeClass("nav-scroll");
         }
-      })
+    });
     //#endregion
 
     
@@ -296,7 +276,7 @@ $(function() {
                 $(".subscribe-input").val("");
             },
             error: function (response) {
-                toastr["error"]("Login to add product to basket")
+                toastr["error"]("You must Login for subscription")
                 toastr.options = {
                     "closeButton": false,
                     "debug": false,

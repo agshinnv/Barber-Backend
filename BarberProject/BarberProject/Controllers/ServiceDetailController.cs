@@ -45,13 +45,6 @@ namespace BarberProject.Controllers
             };
 
 
-            //SubServiceVM subServiceData = new()
-            //{
-            //    Id = existService.Id,
-            //    SubServiceName = existService.Title,
-            //    SubServicePrice = existService.
-            //};
-
             ServiceDetailPageVM model = new()
             {
                 Services = services.ToList(),
