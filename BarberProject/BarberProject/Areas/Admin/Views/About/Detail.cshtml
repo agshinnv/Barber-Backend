@@ -4,6 +4,8 @@
     ViewData["Title"] = "Detail";
 }
 
+
+
 <div class="container">
 
 
@@ -11,36 +13,60 @@
         <table class="table table-borderless table-striped table-earning">
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Pro1</th>
-                    <th>Pro2</th>
-                    <th>Pro3</th>
+                    <th>Field</th>
+                    <th>Value</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td>Title</td>
                     <td>@Model.AboutTitle</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
                     <td>@Model.AboutDesc</td>
+                </tr>
+                <tr>
+                    <td>Pro1</td>
                     <td>@Model.AboutPro1</td>
+                </tr>
+                <tr>
+                    <td>Pro2</td>
                     <td>@Model.AboutPro2</td>
+                </tr>
+                <tr>
+                    <td>Pro3</td>
                     <td>@Model.AboutPro3</td>
+                </tr>
+                <tr>
+                    <td>Image</td>
+                    <td>
+                        <div class="product-images justify-content-center">
+                            @foreach (var item in Model.AboutImages)
+                            {
+                                <div class="edit-image bg-light" style="width:200px;">
+                                    <img src="~/images/@item.Image" />
+                                </div>
+                                <br />
+                            }
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="product-images justify-content-center">
-        @foreach (var item in Model.AboutImages)
-        {
-            <div class="edit-image bg-light" style="width:400px;height:200px;">
-                <img src="~/images/@item.Image" />
-            </div>
-            <br />
-        }
-    </div>
-    
 
-    <a asp-action="Index" asp-controller="About" class="btn btn-danger">Back</a>
+
+    <a asp-action="Index" class="btn btn-danger">Back</a>
 
 </div>
+
+
+
+
+
+
+
+
+
 
