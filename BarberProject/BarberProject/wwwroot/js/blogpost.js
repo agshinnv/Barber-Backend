@@ -1,13 +1,12 @@
 ﻿
-
 $(function () {
     $(document).on('click', '.add-comment', function (e) {
         e.preventDefault();
         let blogId = parseInt($(this).attr("data-blogId"));
         let userId = $(this).attr("data-userId");
         let comment = $(".comment-text").val();
-        if (comment.trim() == "") {
-            toastr["error"]("Comment can`t leave empty")
+        if (comment.trim() === "") {
+            toastr["error"]("Comment can't be empty");
             toastr.options = {
                 "closeButton": false,
                 "debug": false,
@@ -24,7 +23,7 @@ $(function () {
                 "hideEasing": "linear",
                 "showMethod": "fadeIn",
                 "hideMethod": "fadeOut"
-            }
+            };
             return;
         }
 
@@ -33,7 +32,7 @@ $(function () {
             data: { userId, blogId, comment },
             type: 'POST',
             success: function (response) {
-                toastr["success"]("Comment posted")
+                toastr["success"]("Comment posted");
                 toastr.options = {
                     "closeButton": false,
                     "debug": false,
@@ -50,11 +49,30 @@ $(function () {
                     "hideEasing": "linear",
                     "showMethod": "fadeIn",
                     "hideMethod": "fadeOut"
-                }
+                };
+
+                console.log(response)
                 $(".comment-text").val("");
+
+
+                let newCommentHtml = `
+                    <div class="comment">
+                        <div class="user-image">
+                            <img src="/images/Team/muhittin-abi.jpg" alt="">
+                        </div>
+                        <div class="user-content">
+                            <h3>
+                                ${response.userFullName}
+                                <span>${response.createDate}</span>
+                            </h3>
+                            <p>${response.textComment}</p>
+                        </div>
+                    </div>`;
+
+                $('.post-comment .comments-list').append(newCommentHtml);
             },
             error: function (response) {
-                toastr["error"]("Login to add comment")
+                toastr["error"]("Login to add comment");
                 toastr.options = {
                     "closeButton": false,
                     "debug": false,
@@ -71,8 +89,8 @@ $(function () {
                     "hideEasing": "linear",
                     "showMethod": "fadeIn",
                     "hideMethod": "fadeOut"
-                }
+                };
             }
         });
-    })
-})
+    });
+});

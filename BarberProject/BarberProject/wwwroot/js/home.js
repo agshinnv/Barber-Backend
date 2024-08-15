@@ -302,12 +302,14 @@ $(function() {
     //endregion
 
     $(".nav-link").on("click", function (e) {
-        
-        $(".nav-link").removeClass("active").css("color", "");
 
-        
-        $(this).addClass("active").css("color", "red");
+        $(".nav-link").removeClass("active");
+
+
+        $(this).addClass("active");
     });
+
+
 
 
 });

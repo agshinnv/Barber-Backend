@@ -45,16 +45,12 @@
                             <img src="~/images/@item.Image" alt="">
                         </div>
                     }
-
-                    @*                     <div class="col-md-6">
-                    <img src="~/images/Post-single/post2.jpg" alt="">
-                    </div> *@
                 </div>
             </div>
         </div>
         <div class="post-comment">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 comments-list">
                     @if (Model.BlogComments.ToList().Count() == 0)
                     {
                         <div class="alert alert-primary" role="alert">

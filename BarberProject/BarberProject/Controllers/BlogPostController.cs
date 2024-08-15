@@ -71,6 +71,7 @@ namespace BarberProject.Controllers
 
         }
 
+
         [HttpPost]
         public async Task<IActionResult> AddComment(string userId, int blogId, string comment)
         {
@@ -79,8 +80,24 @@ namespace BarberProject.Controllers
                 return Problem();
             }
 
-            await _commentService.Create(new Comment { BlogId = blogId, UserId = userId, CommentText = comment });
-            return Ok();
+            var newComment = new Comment
+            {
+                BlogId = blogId,
+                UserId = userId,
+                CommentText = comment,
+                CreateDate = DateTime.Now
+            };
+
+            await _commentService.Create(newComment);
+
+            var commentData = new
+            {
+                UserFullName = User.Identity.Name,
+                CreateDate = newComment.CreateDate,
+                TextComment = newComment.CommentText
+            };
+
+            return Json(commentData);
         }
     }
 }
