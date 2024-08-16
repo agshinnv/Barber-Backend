@@ -1387,6 +1387,20 @@ body {
   margin: 0;
 }
 
+@media screen and (max-width: 991px) {
+  #appointment .left-side {
+    visibility: hidden;
+  }
+  #history .main-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #about .first-image, #about .second-image {
+    width: 100%;
+    height: auto;
+  }
+}
 @media screen and (max-width: 768px) {
   .history img {
     margin-bottom: 90px;

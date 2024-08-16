@@ -132,24 +132,13 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="select-area">
-                                        <select name="" id="">
-                                            <option value="">Services</option>
-                                            <option value="">Hair Styling</option>
-                                            <option value="">Face Mask</option>
-                                            <option value="">Shaving</option>
-                                            <option value="">Beard Triming</option>
-                                            <option value="">Hair Wash</option>
+                                        <select asp-for="ServiceId" asp-items="@ViewBag.serviceList">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="select-area">
-                                        <select name="" id="">
-                                            <option value="">Choose Barber</option>
-                                            <option value="">Philip</option>
-                                            <option value="">Stephen</option>
-                                            <option value="">Dennis</option>
-                                            <option value="">Helen</option>
+                                        <select asp-for="EmployeeId" asp-items="@ViewBag.employeeList">
                                         </select>
                                     </div>
                                 </div>

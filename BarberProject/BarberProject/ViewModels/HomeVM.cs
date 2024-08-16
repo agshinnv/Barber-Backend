@@ -1,4 +1,5 @@
-﻿using Domain.Models;
+﻿using BarberProject.ViewModels.Users;
+using Domain.Models;
 using Service.Services;
 
 namespace BarberProject.ViewModels
@@ -22,6 +23,10 @@ namespace BarberProject.ViewModels
         public Dictionary<string, string> Settings { get; set; }
         public IEnumerable<Colleague> Colleagues { get; set; }
         public IEnumerable<WorkTime> WorkTimes { get; set; }
+        public IEnumerable<AppUser> Users { get; set; }
+        public UserVM UserData { get; set; }
+        public int ServiceId { get; set; }
+        public int EmployeeId { get; set; }
 
     }
 }

@@ -12,9 +12,14 @@ $(function() {
         }, 500); // 1000ms for the animation duration
     });
 
-    $(".navbar-toggler").click(function(){
-        $(".navbar-nav").removeClass("d-none")
+    $(".navbar-toggler").click(function () {
+
         $("#navbarCollapse").toggleClass("show");
+
+        $(this).toggleClass("collapsed");
+
+        var isExpanded = $(this).attr("aria-expanded") === "true";
+        $(this).attr("aria-expanded", !isExpanded);
     });
 
     //#region Preloader

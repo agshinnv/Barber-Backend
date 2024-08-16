@@ -428,7 +428,7 @@
     <div class="container-main">
         <div class="row">
             <div class="cover"></div>
-            <div class="col-md-5">
+            <div class="col-md-5 left-side">
                 <p>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -457,7 +457,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-area">
-                                        <input type="text" placeholder="Name">
+                                        <input value="@Model.UserData.FullName" type="text" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -478,32 +478,25 @@
                                             <option value="">11:00 am</option>
                                             <option value="">12:00 am</option>
                                             <option value="">14:00 am</option>
+                                            <option value="">15:00 am</option>
                                             <option value="">16:00 am</option>
+                                            <option value="">17:00 am</option>
                                             <option value="">18:00 am</option>
-                                            <option value="">20:00 am</option>
+                                            <option value="">19:00 am</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="select-area">
-                                        <select name="" id="">
-                                            <option value="">Services</option>
-                                            <option value="">Hair Styling</option>
-                                            <option value="">Face Mask</option>
-                                            <option value="">Shaving</option>
-                                            <option value="">Beard Triming</option>
-                                            <option value="">Hair Wash</option>
+                                        <select asp-for="ServiceId" asp-items="@ViewBag.serviceList">
+
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="select-area">
-                                        <select name="" id="">
-                                            <option value="">Choose Barber</option>
-                                            <option value="">Philip</option>
-                                            <option value="">Stephen</option>
-                                            <option value="">Dennis</option>
-                                            <option value="">Helen</option>
+                                        <select asp-for="EmployeeId" asp-items="@ViewBag.employeeList">
+
                                         </select>
                                     </div>
                                 </div>

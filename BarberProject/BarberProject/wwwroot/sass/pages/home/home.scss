@@ -182,6 +182,13 @@ body {
   height: 100px;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  .navbar-toggler-icon {
+    background-image: none;
+}
+.navbar-toggler-icon,
+.navbar .icon-bar {
+    color: #FFF;
+}
   .navbar-menu-icon {
     color: #fff;
   }
@@ -2358,6 +2365,36 @@ body {
   }
 }
 
+@media screen and (max-width: 991px) {
+  #appointment{
+    .left-side{
+      visibility: hidden;
+    }
+  }
+  #history{
+    .main-image{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  #about{
+    .first-image, .second-image{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .booking-box {
+      margin-bottom: 90px;
+      padding: 35px 20px;
+      margin-left: -48px;
+      margin-top: 60px;
+  }
+}
+
 
 #colleagues {
   background: #91765a;
@@ -2584,6 +2621,8 @@ body {
 
 
 
+
+
 @media screen and (max-width: 768px) {
   .history {
     img{
@@ -2633,3 +2672,150 @@ body {
     line-height: 40px;
   }
 }
+
+@media screen and (min-width: 992px) {
+  .navbar .dropdown-menu {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transform: translateY(20px);
+      transform: translateY(20px);
+      width: 200px;
+      padding: 15px;
+      border-radius: 0;
+      border: 0;
+      background-color: #14100c;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+  }
+  .navbar .dropdown-menu .dropdown-menu {
+      left: calc(100% + 5px);
+      top: -10px;
+      right: auto;
+      min-width: 200px;
+      transform: translateY(0);
+  }
+  .navbar .dropdown:hover > .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+  }    
+}
+
+
+
+
+@media screen and (max-width: 991px) {
+  .navbar {
+      padding-left: 0px;
+      padding-right: 0px;
+      background: transparent;
+      padding-top: 0px;
+      padding-bottom: 0px;
+  }
+  .nav-scroll {
+      background: #14100c;
+  }
+  .logo-wrapper {
+      float: left;
+      padding: 19px 0 19px 15px;
+  }
+  .nav-scroll .logo-wrapper {
+      padding: 17px 15px;
+      background-color: transparent;
+  }
+  .nav-scroll .logo-img {
+      width: 110px;
+  }
+  .navbar .logo {
+      text-align: left;
+      margin-left: 0px;
+  }
+  .nav-scroll .logo {}
+  .logo-img {
+      margin-bottom: 0px;
+      width: 120px;
+  }
+  .navbar button {
+      margin-right: 0px;
+      outline: none !important;
+      background: transparent;
+      margin-top: 15px;
+      border: none;
+  }
+  .navbar button:hover {
+      background: transparent;
+  }
+  .navbar button:active,
+  .navbar button:focus,
+  .navbar button:hover {
+      background: transparent;
+      outline: none;
+      color: transparent !important;
+  }
+  .navbar .container {
+      max-width: 100%;
+      padding: 0;
+  }
+  .navbar .nav-link {
+      margin: 0px auto !important;
+  }
+  .navbar .navbar-nav .nav-link {
+      color: #fff;
+  }
+  .nav-scroll .navbar-collapse .nav-link {
+      color: #fff !important;
+  }
+  .nav-scroll .navbar-collapse .active {
+      color: #91765a !important;
+  }   
+  .navbar .dropdown-menu .dropdown-item {
+      padding: 0 15px;
+      font-size: 15px;
+      line-height: 40px;
+  }
+  .navbar .dropdown-menu .dropdown-item.dropdown-toggle {
+      font-weight: 500;
+  }
+  .navbar .dropdown-submenu .dropdown-toggle::after {
+      right: 15px;
+      font-size: 13px;
+  }
+  .navbar .dropdown-submenu:hover > .dropdown-toggle::after {
+      transform: rotate(0deg);
+  }
+  .navbar .dropdown-submenu .dropdown-toggle.show::after {
+      transform: rotate(90deg);
+  }
+  .navbar .dropdown-menu {
+      border: none;
+      padding: 0;
+      border-radius: 0;
+      margin: 0;
+      background: #14100c;
+  }
+  .navbar .dropdown-submenu .dropdown-menu {
+      margin: 0;
+      padding: 0 0 0 20px;
+  }
+  
+  .navbar .dropdown-menu li a {
+      padding: 0 15px;
+  }
+  
+  .navbar .navbar-nav .nav-link {
+      padding-right: 0px;
+      padding-left: 0px;
+  }
+
+  .navbar .navbar-collapse {
+      max-height: 450px;
+      overflow: auto;
+      background: #14100c;
+      text-align: left;
+      padding: 20px;
+  }
+}
+
+
+

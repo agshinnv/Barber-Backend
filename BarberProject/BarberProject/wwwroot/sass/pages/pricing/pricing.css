@@ -2448,6 +2448,41 @@ body {
   margin: 0;
 }
 
+@media screen and (max-width: 991px) {
+  #appointment {
+    height: auto;
+  }
+  #appointment .left-side {
+    visibility: hidden;
+  }
+  #appointment .booking-box {
+    margin-bottom: 90px;
+    padding: 35px 20px;
+    margin-left: -48px;
+  }
+  #history .main-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #about .first-image, #about .second-image {
+    width: 100%;
+    height: auto;
+  }
+  #barber-pricing .image {
+    width: 100%;
+    height: auto;
+  }
+  #barber-pricing .shaves {
+    margin-top: -250px;
+  }
+  #barber-pricing .beard {
+    bottom: 740px;
+  }
+  #barber-pricing .beard-content {
+    margin-top: 350px;
+  }
+}
 @media screen and (max-width: 768px) {
   .history img {
     margin-bottom: 90px;

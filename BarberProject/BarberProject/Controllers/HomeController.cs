@@ -1,7 +1,9 @@
 ﻿using BarberProject.ViewModels;
+using BarberProject.ViewModels.Users;
 using Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Service.Services;
 using Service.Services.Interfaces;
 
@@ -29,6 +31,7 @@ namespace BarberProject.Controllers
         private readonly ISettingService _settingService;
         private readonly IColleagueService _colleagueService;
         private readonly IWorkTimeService _workTimeService;
+        private readonly IAccountService _accountService;
 
         public HomeController(ISliderService sliderService,
                               IAboutService aboutService,
@@ -49,7 +52,8 @@ namespace BarberProject.Controllers
                               ISettingService settingService,
                               IColleagueService colleagueService,
                               IWorkTimeService workTimeService,
-                              ISliderImageService sliderImageService)
+                              ISliderImageService sliderImageService,
+                              IAccountService accountService)
         {
             _sliderService = sliderService;
             _aboutService = aboutService;
@@ -71,8 +75,9 @@ namespace BarberProject.Controllers
             _colleagueService = colleagueService;
             _workTimeService = workTimeService;
             _sliderImageService = sliderImageService;
+            _accountService = accountService;
         }
-        
+
         public async Task<IActionResult> Index()
         {
             var sliders = await _sliderService.GetAllAsync();
@@ -92,6 +97,7 @@ namespace BarberProject.Controllers
             var colleagues = await _colleagueService.GetAll();
             var workTimes = await _workTimeService.GetAll();
             var sliderImages = await _sliderImageService.GetAll();
+            var accounts = await _accountService.GetAll();
 
             Dictionary<string, string> values = new();
 
@@ -100,6 +106,28 @@ namespace BarberProject.Controllers
                 values.Add(item.Value["Key"], item.Value["Value"]);
             }
 
+            AppUser user = new();
+            if (User.Identity.IsAuthenticated)
+            {
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
+
+            UserVM userData = new()
+            {
+                FullName = user.FullName,
+            };
+
+            var serviceLists = await _serviceService.GetAll();
+
+            ViewBag.serviceList = new SelectList(serviceLists, "Id", "Title");
+
+
+
+            var employeeLists = await _employeeService.GetAll();
+
+            ViewBag.employeeList = new SelectList(employeeLists, "Id", "BarberName");
+
+            
             HomeVM model = new()
             {
                 Sliders = sliders,
@@ -119,7 +147,11 @@ namespace BarberProject.Controllers
                 Colleagues = colleagues,
                 WorkTimes = workTimes,
                 SliderImages = sliderImages,
+                Users = accounts,
+                UserData = userData,
             };
+
+            
 
             return View(model);
         }

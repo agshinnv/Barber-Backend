@@ -2706,6 +2706,51 @@ body {
   }
 }
 
+@media screen and (max-width: 991px) {
+  #appointment{
+    height: auto;
+    .left-side{
+      visibility: hidden;
+    }
+    .booking-box {
+      margin-bottom: 90px;
+      padding: 35px 20px;
+      margin-left: -48px;
+  }
+  }
+  #history{
+    .main-image{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  #about{
+    .first-image, .second-image{
+      width: 100%;
+      height: auto;
+    }
+  }
+  #barber-pricing{
+    .image{
+      width: 100%;
+      height: auto;
+    }
+    .shaves{
+      margin-top: -250px;
+    }
+    .beard{
+      bottom: 740px;
+    }
+    .beard-content{
+      margin-top: 350px;
+    }
+    
+  }
+}
+
+
+
 @media screen and (max-width: 768px) {
   .history {
     img {

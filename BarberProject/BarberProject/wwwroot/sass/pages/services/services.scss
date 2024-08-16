@@ -2617,7 +2617,33 @@
   
   
   
-  
+  @media screen and (max-width: 991px) {
+    #appointment{
+      height: auto;
+      .left-side{
+        visibility: hidden;
+      }
+      .booking-box {
+        margin-bottom: 90px;
+        padding: 35px 20px;
+        margin-left: -48px;
+        margin-top: 60px;
+    }
+    }
+    #history{
+      .main-image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    #about{
+      .first-image, .second-image{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
   
   
   
