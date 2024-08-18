@@ -31,35 +31,27 @@
     </div>
 </section>
 
-<section id="offering">
+
+<section id="searching">
     <div class="container-main">
         <div class="row">
             <div class="col-md-12">
-                <div class="title">
-                    <p>Our Services</p>
-                    <h1>We Also Offer</h1>
-                </div>
-            </div>
-            @foreach (var item in Model.Services.OrderBy(m => m.Id).Skip(3).Take(9))
-            {
-                <div class="col-md-4">
-                    <div class="cart">
-                        <a asp-controller="ServiceDetail" asp-action="Index" asp-route-id="@item.Id">
-                            <div class="image">
-                                <img src="~/images/@item.IconImage" alt="">
-                            </div>
-                            <h5>@item.Title</h5>
-                            <p>@item.Description</p>
-                            <div class="shape">
-                                <div class="image">
-                                    <img src="~/images/@item.IconImage" alt="">
-                                </div>
-                            </div>
-                        </a>
+                <div class="search-sidebar">
+                    <div class="search">
+                        <form>
+                            <input type="text" name="search" placeholder="Search ..." autocomplete="off">
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
                     </div>
                 </div>
-            }
+            </div>
         </div>
+    </div>
+</section>
+
+<section id="offering">
+    <div class="container-main search-area">
+        <partial name="_ServicePartial" model="Model" />
     </div>
 </section>
 
@@ -162,14 +154,12 @@
                                 <div class="col-md-6">
                                     <div class="select-area">
                                         <select asp-for="ServiceId" asp-items="@ViewBag.serviceList">
-
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="select-area">
                                         <select asp-for="EmployeeId" asp-items="@ViewBag.employeeList">
-
                                         </select>
                                     </div>
                                 </div>

@@ -238,6 +238,29 @@ $(function() {
     //#endregion
 
 
+    //#region Searching
+
+    $(document).on("keyup", ".search input", function () {
+        const value = $(this).val().trim();
+
+
+        $("#offering .search-area .cart ").slice(0).remove();
+
+        $.ajax({
+            type: "GET",
+            url: `Services/Search`,
+            data: {searchText:value},
+            success: function (res) {
+                console.log(res);
+                $(".search-area").html(res);
+            }
+        });
+    });
+
+
+
+    //#endregion
+
 });
 
 

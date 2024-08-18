@@ -1,0 +1,41 @@
+﻿@model ServicePageVM
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="title">
+            <p>Our Services</p>
+            <h1>We Also Offer</h1>
+        </div>
+    </div>
+    @if (Model.Services.Count() != 0)
+    {
+        @foreach (var item in Model.Services)
+        {
+            <div class="col-md-4">
+                <div class="cart">
+                    <a asp-controller="ServiceDetail" asp-action="Index" asp-route-id="@item.Id">
+                        <div class="image">
+                            <img src="~/images/@item.IconImage" alt="">
+                        </div>
+                        <h5>@item.Title</h5>
+                        <p>@item.Description</p>
+                        <div class="shape">
+                            <div class="image">
+                                <img src="~/images/@item.IconImage" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+
+    }
+    else
+    {
+        <div class="container" style="padding-top:200px;padding-bottom:200px">
+            <div class="alert alert-danger text-center" role="alert">
+                Oops, We do not have such a service now
+            </div>
+        </div>
+    }
+</div>

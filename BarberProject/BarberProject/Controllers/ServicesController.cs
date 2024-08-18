@@ -1,4 +1,5 @@
 ﻿using BarberProject.ViewModels;
+using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Service.Services;
@@ -13,8 +14,8 @@ namespace BarberProject.Controllers
         private readonly IAppointmentService _appointmentService;
         private readonly IEmployeeService _employeeService;
 
-        public ServicesController(IServiceService serviceService, 
-                                  IFeatureService featureService, 
+        public ServicesController(IServiceService serviceService,
+                                  IFeatureService featureService,
                                   IAppointmentService appointmentService,
                                   IEmployeeService employeeService)
         {
@@ -49,13 +50,31 @@ namespace BarberProject.Controllers
 
             ServicePageVM model = new()
             {
-                Services = services,
+                Services = services.Skip(3).Take(6).ToList(),
                 Features = features,
                 Appointment = appointments.FirstOrDefault(),
             };
 
 
             return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Search(string searchText)
+        {
+            IEnumerable<Domain.Models.Service> services = await _serviceService.GetAll();
+            if (searchText is not null)
+            {
+                services = services.Where(m => m.Title.ToLower().Contains(searchText.Trim().ToLower())).ToList();
+            }
+            else
+            {
+                services = services.Skip(3).Take(6).ToList();
+            }
+
+            ServicePageVM model = new() { Services = services };
+
+            return PartialView("_ServicePartial", model);
         }
     }
 }

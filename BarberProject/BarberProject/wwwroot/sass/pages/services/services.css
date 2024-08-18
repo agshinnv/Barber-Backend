@@ -1756,7 +1756,7 @@ body {
 }
 
 #offering {
-  margin-top: 150px;
+  margin-top: 90px;
 }
 #offering .title {
   margin-bottom: 45ps;
@@ -2361,6 +2361,105 @@ body {
   margin: 0;
 }
 
+#searching .search-sidebar {
+  position: relative;
+  display: block;
+  padding: 0;
+  background: #222;
+  border-radius: 33px;
+  margin-top: 24px;
+  z-index: 9;
+  float: right;
+  width: 100%;
+}
+
+#searching .search-sidebar .search {
+  position: relative;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+
+#searching .search-sidebar .search form {
+  position: relative;
+}
+
+#searching .search-sidebar .search form input {
+  width: 100%;
+  padding: 19.5px 15px;
+  border: 0;
+  background: #222;
+  margin-bottom: 0;
+  border: none;
+  color: white;
+  border-radius: 50px;
+  border: none;
+}
+
+#searching .search-sidebar .search form button i {
+  transition: all 0.7s;
+}
+
+#searching .search-sidebar .search form button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: #F6EEE7;
+  color: #1b1b1b;
+  border: 0;
+  cursor: pointer;
+  border-radius: 100%;
+  outline: none;
+  transform: rotate(0);
+  transition: all 0.7s linear;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+
+#searching .search-sidebar .item {
+  padding: 30px;
+}
+
+#searching .search-sidebar .item h5 {
+  color: #fff;
+  font-size: 17px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 0 0 15px 0;
+}
+
+#searching .search-sidebar label {
+  color: white;
+}
+
+#searching .search-sidebar .item .cars-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+#searching .search-sidebar .item span {
+  color: #999;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#searching .search-sidebar .item .cars-group div {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #f5b754;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 @media screen and (max-width: 991px) {
   #appointment {
     height: auto;
@@ -2379,7 +2478,8 @@ body {
     align-items: center;
     justify-content: center;
   }
-  #about .first-image, #about .second-image {
+  #about .first-image,
+  #about .second-image {
     width: 100%;
     height: auto;
   }
