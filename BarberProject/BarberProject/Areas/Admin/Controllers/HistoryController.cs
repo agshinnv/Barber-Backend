@@ -126,15 +126,16 @@ namespace BarberProject.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, HistoryEditVM request)
         {
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
 
             if (id is null) return BadRequest();
             var existHistory = await _historyService.GetById((int)id);
             if (existHistory is null) return NotFound();
 
+            if (!ModelState.IsValid)
+            {
+                request.ExistImage = existHistory.Image;
+                return View(request);
+            }
             if (request.NewImage is not null)
             {
                 if (!request.NewImage.CheckFileType("image/"))

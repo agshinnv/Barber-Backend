@@ -10,10 +10,13 @@ namespace BarberProject.ViewModels.Employees
         public IFormFile EmployeeImage { get; set; }
         [Required]
         public string Description { get; set; }
+        [Required]
         public string Specialty { get; set; }
         public string SocialIcon { get; set; }
+        [Required]
         public string Skill1 { get; set; }
         public string Skill2 { get; set; }
+        [Required]
         public string Biography { get; set; }
         public string Education { get; set; }
         public string Awards { get; set; }

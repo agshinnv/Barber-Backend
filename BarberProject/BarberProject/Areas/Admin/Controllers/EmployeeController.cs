@@ -191,7 +191,12 @@ namespace BarberProject.Areas.Admin.Controllers
 
             if (existEmployee is null) return NotFound();
 
-            if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid)
+            {
+                request.ExistImage = existEmployee.BarberImage;
+                return View(request);
+
+			}
 
             if (request.NewImage is not null)
             {

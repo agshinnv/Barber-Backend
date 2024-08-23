@@ -161,7 +161,6 @@ namespace BarberProject.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, BarberServiceEditVM request)
         {
-            if (!ModelState.IsValid) return View();
 
             if (id is null) return BadRequest();
             var existBarberService = await _barberService.GetById((int)id);
@@ -169,6 +168,7 @@ namespace BarberProject.Areas.Admin.Controllers
             request.ExistServiceImage = existBarberService.ServiceImage;
             request.ExistIconImage = existBarberService.IconImage;
 
+            if (!ModelState.IsValid) return View(request);
 
             if (request.NewServiceImage is not null)
             {

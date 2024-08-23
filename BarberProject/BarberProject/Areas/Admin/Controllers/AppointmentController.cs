@@ -121,11 +121,16 @@ namespace BarberProject.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, AppointmentEditVM request)
         {
-            if(!ModelState.IsValid) return View();
 
             if (id is null) return BadRequest();
             var existAppointment = await _appointmentService.GetById((int)id);
             if (existAppointment is null) return NotFound();
+
+            if(!ModelState.IsValid)
+            {
+                request.ExistIconImage = existAppointment.IconImage;
+                return View(request);
+			}
 
             if (request.NewIconImage is not null)
             {

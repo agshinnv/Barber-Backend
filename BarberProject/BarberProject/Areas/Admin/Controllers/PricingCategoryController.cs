@@ -108,12 +108,16 @@ namespace BarberProject.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int? id, PricingCategoryEditVM request)
         {
-            if (!ModelState.IsValid) return View();
 
             if (id is null) return BadRequest();
             var existPricingCategory = await _pricingCategoryService.GetById((int)id);
             if (existPricingCategory is null) return NotFound();
 
+            if (!ModelState.IsValid)
+            {
+                request.ExistImage = existPricingCategory.Image;
+                return View(request);
+			}
 
             if (request.NewImage is not null)
             {

@@ -41,8 +41,10 @@ namespace BarberProject.Areas.Admin.Controllers
 					Email = user.Email,
 					FullName = user.FullName,
 					UserName = user.UserName,
-					Roles = rolesStr
-				});
+					Roles = rolesStr,
+                    UserId = user.Id,
+                    UserRoles = roles.ToList()
+                });
 			}
 			return View(userRoles);
 		}
@@ -68,5 +70,47 @@ namespace BarberProject.Areas.Admin.Controllers
 			await _userManager.AddToRoleAsync(user, role.ToString());
 			return RedirectToAction("Index");
 		}
-	}
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> RemoveRole(RemoveRoleVM request)
+		{
+			var user = await _userManager.FindByIdAsync(request.UserId);
+
+			if (user is null)
+			{
+				return NotFound();
+			}
+
+			var userRoles = await _userManager.GetRolesAsync(user);
+
+			if (userRoles.Count <= 1)
+			{
+				TempData["Error"] = "Cannot remove the last remaining role";
+				return RedirectToAction("Index");
+			}
+
+			var role = await _roleManager.FindByNameAsync(request.RoleName);
+
+			if (role != null)
+			{
+				await _userManager.RemoveFromRoleAsync(user, request.RoleName);
+			}
+
+			return RedirectToAction(nameof(Index));
+		}
+
+        [HttpGet]
+        public async Task<IActionResult> GetRoleCount(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user is null)
+            {
+                return Json(new { roleCount = 0 });
+            }
+
+            var roles = await _userManager.GetRolesAsync(user);
+            return Json(new { roleCount = roles.Count });
+        }
+    }
 }

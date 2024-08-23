@@ -2305,6 +2305,10 @@
       "PackagePath": "staticwebassets\\js\\pricing.js"
     },
     {
+      "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\js\\role.js",
+      "PackagePath": "staticwebassets\\js\\role.js"
+    },
+    {
       "Id": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\BarberProject\\wwwroot\\js\\services-page.js",
       "PackagePath": "staticwebassets\\js\\services-page.js"
     },
