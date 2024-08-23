@@ -1,5 +1,3 @@
-
-
 $(function() {
 
     $('.appointment').click(function(event) {
@@ -315,6 +313,117 @@ $(function() {
     });
 
 
+    let startDate = null;
+    let startTime = null;
+
+    // Date and Time input selectors
+    let dateInput = $('input[type="date"]');
+    let timeInput = $('input[type="time"]');
+
+    // Set minimum date to today
+    let today = new Date().toISOString().split('T')[0];
+    dateInput.attr('min', today);
+
+    // Form submission handling
+    $(document).on('click', '.make-appoint', function (e) {
+        e.preventDefault();
+
+        // Get form data
+        let employeeId = $(".employees").val();
+        let serviceId = $(".services").val();
+        let phone = $(".phone").val();
+        let fullname = $(".fullname").val();
+
+        // Get the date and time inputs separately
+        startDate = dateInput.val();  // The selected date
+        startTime = timeInput.val();  // The selected time
+
+        // Validate inputs
+        if (!startDate || !startTime || phone.trim() == "" || fullname.trim() == "") {
+            toastr["error"]("Please fill all inputs including Date and Time");
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            };
+            return;
+        }
+
+        $.ajax({
+            url: 'Home/AddReservation',
+            type: 'POST',
+            data: { employeeId, serviceId, date: startDate, time: startTime },
+            success: function (response) {
+                toastr["success"]("Thanks for your reservation");
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-center",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
+            },
+            error: function (response) {
+                toastr["error"]("response.responseJSON.detail");
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": false,
+                    "positionClass": "toast-top-center",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
+            }
+        });
+    });
+
+    // Disable time before current time when today's date is selected
+    dateInput.on('change', function () {
+        let selectedDate = $(this).val();
+        let currentDate = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+
+        if (selectedDate === currentDate) {
+            // Get current time and set as minimum time
+            let now = new Date();
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            timeInput.attr('min', `${hours}:${minutes}`);
+        } else {
+            // Reset minimum time for future dates
+            timeInput.attr('min', '00:00');
+        }
+    });
 
 
 });

@@ -1,0 +1,47 @@
+﻿
+@model List<ReservationVM>
+
+
+@{
+    ViewData["Title"] = "About Page";
+}
+
+<div class="container">
+    <div class="table-responsive table--no-card m-b-30">
+        <table class="table table-borderless table-striped table-earning">
+            <thead>
+                <tr>
+                    <th>User fullname</th>
+                    <th>Employee name</th>
+                    <th>Order status</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@item.Username</td>
+                    <td>@item.EmployeeName</td>
+                    <td>@item.OrderStatus</td>
+                    <td>
+                        <a class="btn btn-info text-white" asp-route-id="@item.Id" asp-action="Detail">Info</a>
+
+                        @if (User.IsInRole("SuperAdmin") && item.OrderStatus == "Pending")
+                            {
+                                <a class="btn btn-success text-white" asp-route-id="@item.Id" asp-action="Accept">Accept</a>
+                                <a class="btn btn-danger text-white" asp-route-id="@item.Id" asp-action="Reject">Reject</a>
+
+                            }
+                    </td>
+                </tr>
+                    
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

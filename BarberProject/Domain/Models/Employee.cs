@@ -24,5 +24,6 @@ namespace Domain.Models
         public string Number { get; set; }
         public int PositionId { get; set; }
         public Position Position { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }
     }
 }

@@ -16,5 +16,7 @@ namespace Domain.Models
         public ICollection<ServiceImage> ServiceImages { get; set; }
         public ICollection<SubService> SubServices { get; set; }
         public ICollection<Blog> Blogs { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }
+
     }
 }

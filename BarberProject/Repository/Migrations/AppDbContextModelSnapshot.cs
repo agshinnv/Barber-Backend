@@ -50,7 +50,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Abouts");
+                    b.ToTable("Abouts", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.AboutImage", b =>
@@ -74,7 +74,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("AboutId");
 
-                    b.ToTable("AboutImages");
+                    b.ToTable("AboutImages", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.Appointment", b =>
@@ -96,7 +96,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Appointments");
+                    b.ToTable("Appointments", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.AppUser", b =>
@@ -194,7 +194,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("PricingCategoryId");
 
-                    b.ToTable("BarberPricings");
+                    b.ToTable("BarberPricings", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.BarberService", b =>
@@ -225,7 +225,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BarberServices");
+                    b.ToTable("BarberServices", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.Blog", b =>
@@ -258,7 +258,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("ServiceId");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Blogs", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.BlogImage", b =>
@@ -285,7 +285,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("BlogId");
 
-                    b.ToTable("BlogImages");
+                    b.ToTable("BlogImages", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.Colleague", b =>
@@ -304,7 +304,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Colleagues");
+                    b.ToTable("Colleagues", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.Comment", b =>
@@ -336,7 +336,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.ComplaintSuggest", b =>
@@ -367,7 +367,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ComplaintSuggests");
+                    b.ToTable("ComplaintSuggests", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.Employee", b =>
@@ -427,7 +427,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("PositionId");
 
-                    b.ToTable("Employees");
+                    b.ToTable("Employees", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.Feature", b =>
@@ -452,7 +452,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Features");
+                    b.ToTable("Features", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.History", b =>
@@ -480,7 +480,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Histories");
+                    b.ToTable("Histories", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.Position", b =>
@@ -499,7 +499,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Positions");
+                    b.ToTable("Positions", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.PricingCategory", b =>
@@ -521,7 +521,47 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PricingCategories");
+                    b.ToTable("PricingCategories", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Models.Reservation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OrderStatus")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SoftDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.HasIndex("ServiceId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Reservations", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.Service", b =>
@@ -549,7 +589,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Services");
+                    b.ToTable("Services", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.ServiceImage", b =>
@@ -573,7 +613,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("ServiceId");
 
-                    b.ToTable("ServiceImages");
+                    b.ToTable("ServiceImages", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.Setting", b =>
@@ -595,7 +635,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.Slider", b =>
@@ -617,7 +657,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders");
+                    b.ToTable("Sliders", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.SliderImage", b =>
@@ -636,7 +676,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SliderImages");
+                    b.ToTable("SliderImages", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.Subscriber", b =>
@@ -655,7 +695,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Subscribers");
+                    b.ToTable("Subscribers", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.SubService", b =>
@@ -682,7 +722,7 @@ namespace Repository.Migrations
 
                     b.HasIndex("ServiceId");
 
-                    b.ToTable("SubServices");
+                    b.ToTable("SubServices", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.WorkTime", b =>
@@ -704,7 +744,7 @@ namespace Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("WorkTimes");
+                    b.ToTable("WorkTimes", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -912,6 +952,31 @@ namespace Repository.Migrations
                     b.Navigation("Position");
                 });
 
+            modelBuilder.Entity("Domain.Models.Reservation", b =>
+                {
+                    b.HasOne("Domain.Models.Employee", "Employee")
+                        .WithMany("Reservations")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Models.Service", "Service")
+                        .WithMany("Reservations")
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Models.AppUser", "User")
+                        .WithMany("Reservations")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("Service");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Domain.Models.ServiceImage", b =>
                 {
                     b.HasOne("Domain.Models.Service", "Service")
@@ -993,6 +1058,8 @@ namespace Repository.Migrations
             modelBuilder.Entity("Domain.Models.AppUser", b =>
                 {
                     b.Navigation("Comments");
+
+                    b.Navigation("Reservations");
                 });
 
             modelBuilder.Entity("Domain.Models.Blog", b =>
@@ -1000,6 +1067,11 @@ namespace Repository.Migrations
                     b.Navigation("BlogImages");
 
                     b.Navigation("Comments");
+                });
+
+            modelBuilder.Entity("Domain.Models.Employee", b =>
+                {
+                    b.Navigation("Reservations");
                 });
 
             modelBuilder.Entity("Domain.Models.Position", b =>
@@ -1015,6 +1087,8 @@ namespace Repository.Migrations
             modelBuilder.Entity("Domain.Models.Service", b =>
                 {
                     b.Navigation("Blogs");
+
+                    b.Navigation("Reservations");
 
                     b.Navigation("ServiceImages");
 

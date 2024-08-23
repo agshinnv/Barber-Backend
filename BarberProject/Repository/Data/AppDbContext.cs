@@ -35,6 +35,7 @@ namespace Repository.Data
         public DbSet<Subscriber> Subscribers { get; set; }
         public DbSet<SubService> SubServices { get; set; }
         public DbSet<WorkTime> WorkTimes { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
 
 
 

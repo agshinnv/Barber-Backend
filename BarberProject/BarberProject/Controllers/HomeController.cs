@@ -1,4 +1,5 @@
 ﻿using BarberProject.ViewModels;
+using BarberProject.ViewModels.Reservation;
 using BarberProject.ViewModels.Users;
 using Domain.Models;
 using Microsoft.AspNetCore.Identity;
@@ -32,6 +33,7 @@ namespace BarberProject.Controllers
         private readonly IColleagueService _colleagueService;
         private readonly IWorkTimeService _workTimeService;
         private readonly IAccountService _accountService;
+        private readonly IReservationService _reservationService;
 
         public HomeController(ISliderService sliderService,
                               IAboutService aboutService,
@@ -53,7 +55,8 @@ namespace BarberProject.Controllers
                               IColleagueService colleagueService,
                               IWorkTimeService workTimeService,
                               ISliderImageService sliderImageService,
-                              IAccountService accountService)
+                              IAccountService accountService,
+                              IReservationService reservationService)
         {
             _sliderService = sliderService;
             _aboutService = aboutService;
@@ -76,6 +79,7 @@ namespace BarberProject.Controllers
             _workTimeService = workTimeService;
             _sliderImageService = sliderImageService;
             _accountService = accountService;
+            _reservationService = reservationService;
         }
 
         public async Task<IActionResult> Index()
@@ -160,6 +164,44 @@ namespace BarberProject.Controllers
         public async Task<IActionResult> Subscribe(string subscriberEmail)
         {
             await _subscriberService.Create(new Subscriber { SubscriberEmail = subscriberEmail });
+            return Ok();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> AddReservation(OrderVM request)
+        {
+            var employee = await _employeeService.GetById(request.EmployeeId);
+            var date = Convert.ToDateTime(request.Date);
+            var time = request.Time;
+
+            if (User.Identity.IsAuthenticated)
+            {
+                AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+                if (request is not null)
+                {
+
+                    Reservation reservation = new()
+                    {
+                        EmployeeId = request.EmployeeId,
+                        ServiceId = request.ServiceId,
+                        Date = date,
+                        Time = Convert.ToDateTime(time),
+                        UserId = user.Id,
+
+                    };
+
+                    await _reservationService.Create(reservation);
+                }
+                else
+                {
+                    return RedirectToAction("Login", "Account");
+                }
+            }
+
+            if (employee is null) return NotFound();
+
             return Ok();
         }
 
