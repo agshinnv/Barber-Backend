@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Service\\Service.csproj": {}
+    "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Service\\Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Domain\\Domain.csproj": {
+    "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Agshin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Agshin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -95,14 +95,14 @@
         }
       }
     },
-    "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Repository\\Repository.csproj": {
+    "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\Agshin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Agshin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -120,8 +120,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Domain\\Domain.csproj"
+              "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Domain\\Domain.csproj"
               }
             }
           }
@@ -190,14 +190,14 @@
         }
       }
     },
-    "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Service\\Service.csproj": {
+    "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Service\\Service.csproj",
+        "projectPath": "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\Agshin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Service\\obj\\",
+        "outputPath": "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Agshin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -215,8 +215,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Repository\\Repository.csproj"
+              "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Repository\\Repository.csproj"
               }
             }
           }

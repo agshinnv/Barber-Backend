@@ -316,9 +316,14 @@ $(function() {
     let startDate = null;
     let startTime = null;
 
+
+
     // Date and Time input selectors
     let dateInput = $('input[type="date"]');
     let timeInput = $('input[type="time"]');
+
+    // Set step attribute to 3600 seconds (1 hour) to limit time selection to full hours
+    timeInput.attr('step', '3600');
 
     // Set minimum date to today
     let today = new Date().toISOString().split('T')[0];
@@ -424,6 +429,23 @@ $(function() {
             timeInput.attr('min', '00:00');
         }
     });
+
+    // Adjust the time input to allow only hours (setting minutes to 00)
+    timeInput.on('change', function () {
+        let timeValue = $(this).val();  // Get the selected time (hh:mm)
+
+        if (timeValue) {
+            // Split the time value into hours and minutes
+            let [hours, minutes] = timeValue.split(':');
+
+            // Set the minutes to '00'
+            let newTimeValue = `${hours}:00`;
+
+            // Update the input field with the new time (hours:00)
+            $(this).val(newTimeValue);
+        }
+    });
+
 
 
 });

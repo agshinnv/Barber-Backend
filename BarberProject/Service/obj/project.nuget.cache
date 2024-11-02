@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ub1SzxGAOiM=",
+  "dgSpecHash": "YR5B6IuF0Fw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Agshin\\Desktop\\Barber Project-Back\\BarberProject\\Service\\Service.csproj",
+  "projectFilePath": "C:\\Users\\Agshin\\Desktop\\Project - BarberShop\\Barber Project-Back\\BarberProject\\Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Agshin\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
     "C:\\Users\\Agshin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

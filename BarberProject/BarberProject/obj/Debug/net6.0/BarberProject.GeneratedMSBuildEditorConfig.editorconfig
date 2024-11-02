@@ -9,383 +9,387 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BarberProject
 build_property.RootNamespace = BarberProject
-build_property.ProjectDir = C:\Users\Agshin\Desktop\Barber Project-Back\BarberProject\BarberProject\
+build_property.ProjectDir = C:\Users\Agshin\Desktop\Project - BarberShop\Barber Project-Back\BarberProject\BarberProject\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Agshin\Desktop\Barber Project-Back\BarberProject\BarberProject
+build_property.MSBuildProjectDirectory = C:\Users\Agshin\Desktop\Project - BarberShop\Barber Project-Back\BarberProject\BarberProject
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/About/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/About/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/About/Detail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/About/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/About/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/About/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/About/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Appointment/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Appointment/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBwb2ludG1lbnRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Appointment/Detail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Appointment/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBwb2ludG1lbnRcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Appointment/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Appointment/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBwb2ludG1lbnRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Appointment/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Appointment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBwb2ludG1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberPricing/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberPricing/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFyYmVyUHJpY2luZ1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberPricing/Detail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberPricing/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFyYmVyUHJpY2luZ1xEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberPricing/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberPricing/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFyYmVyUHJpY2luZ1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberPricing/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberPricing/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFyYmVyUHJpY2luZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberService/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberService/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFyYmVyU2VydmljZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberService/Detail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberService/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFyYmVyU2VydmljZVxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberService/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberService/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFyYmVyU2VydmljZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberService/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/BarberService/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFyYmVyU2VydmljZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Blog/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Blog/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Blog/Detail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Blog/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Blog/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Blog/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Blog/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Colleague/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Colleague/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sbGVhZ3VlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Colleague/Detail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Colleague/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sbGVhZ3VlXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Colleague/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Colleague/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sbGVhZ3VlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Colleague/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Colleague/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29sbGVhZ3VlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Comment/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Comment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/ComplaintSuggest/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/ComplaintSuggest/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tcGxhaW50U3VnZ2VzdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Dashboard/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Employee/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Employee/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Employee/Detail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Employee/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Employee/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Employee/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Employee/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Feature/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Feature/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmVhdHVyZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Feature/Detail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Feature/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmVhdHVyZVxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Feature/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Feature/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmVhdHVyZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Feature/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Feature/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRmVhdHVyZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/History/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/History/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGlzdG9yeVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/History/Detail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/History/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGlzdG9yeVxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/History/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/History/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGlzdG9yeVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/History/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/History/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGlzdG9yeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Position/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Position/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zaXRpb25cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Position/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Position/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zaXRpb25cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Position/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Position/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUG9zaXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/PricingCategory/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/PricingCategory/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJpY2luZ0NhdGVnb3J5XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/PricingCategory/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/PricingCategory/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJpY2luZ0NhdGVnb3J5XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/PricingCategory/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/PricingCategory/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJpY2luZ0NhdGVnb3J5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Reservation/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Reservation/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzZXJ2YXRpb25cRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Reservation/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVzZXJ2YXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Service/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Service/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Service/Detail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Service/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZVxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Service/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Service/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Service/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Service/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2VydmljZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Setting/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Setting/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2V0dGluZ1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Setting/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Setting/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2V0dGluZ1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Setting/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Setting/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2V0dGluZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/SliderImage/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/SliderImage/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVySW1hZ2VcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/SliderImage/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/SliderImage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVySW1hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Slider/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Slider/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Slider/Detail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Slider/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVyXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Slider/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Slider/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Slider/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Slider/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Subscriber/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/Subscriber/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3Vic2NyaWJlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/SubService/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/SubService/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViU2VydmljZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/SubService/Detail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/SubService/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViU2VydmljZVxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/SubService/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/SubService/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViU2VydmljZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/SubService/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/SubService/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3ViU2VydmljZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/User/AddRole.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/User/AddRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxBZGRSb2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/User/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/WorkTime/Create.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/WorkTime/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV29ya1RpbWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/WorkTime/Edit.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/WorkTime/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV29ya1RpbWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/WorkTime/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/WorkTime/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV29ya1RpbWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/About/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Account/ForgotPassword.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Account/ResetPassword.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Account/SignIn.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Account/SignIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduSW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Account/SignUp.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Account/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Account/VerifyEmail.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Account/VerifyEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWZXJpZnlFbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/BlogPost/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/BlogPost/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1Bvc3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Blog/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Contact/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Home/Error.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Home/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Home/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Pricing/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Pricing/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpY2luZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/ServiceDetail/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/ServiceDetail/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZURldGFpbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Services/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Services/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Shared/Components/Footer/Default.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Shared/Components/Footer/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vdGVyXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Shared/Components/Header/Default.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Shared/Components/Header/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGVhZGVyXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Shared/_Layout.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/Shared/_ServicePartial.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/Shared/_ServicePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZXJ2aWNlUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/TeamDetail/Index.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/TeamDetail/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbURldGFpbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/_ViewImports.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agshin/Desktop/Barber Project-Back/BarberProject/BarberProject/Views/_ViewStart.cshtml]
+[C:/Users/Agshin/Desktop/Project - BarberShop/Barber Project-Back/BarberProject/BarberProject/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -9,6 +9,7 @@
 
 @section js {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
 
         $(document).ready(function () {
@@ -18,7 +19,7 @@
         {
             @:{ src: "/images/@item.Image" },
         }
-                        ],
+                                ],
                 overlay: false,
                 transition: 'fade2',
                 animation: 'kenburnsUpRight',
@@ -27,8 +28,7 @@
                 animationDuration: 20000
             });
         });
-
-
+                       
     </script>
 }
 
@@ -477,21 +477,29 @@
                                 <div class="col-md-6">
                                     <div class="select-area">
                                         <select class="services" asp-for="ServiceId" asp-items="@ViewBag.serviceList">
-
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="select-area">
                                         <select class="employees" asp-for="EmployeeId" asp-items="@ViewBag.employeeList">
-
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <button type="submit" class="make-appoint">
-                                        Make appointment
-                                    </button>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <button type="submit" class="make-appoint">
+                                            Make appointment
+                                        </button>
+
+                                    }
+                                    else
+                                    {
+                                        <a type="submit" class="make-appointment" asp-controller="Account" asp-action="SignIn" style="display:block; text-align:center; text-decoration:none;">
+                                            Login for reservation
+                                        </a>
+                                    }
                                 </div>
                             </div>
                         </form>

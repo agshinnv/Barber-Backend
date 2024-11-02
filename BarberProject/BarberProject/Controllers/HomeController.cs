@@ -1,6 +1,7 @@
 ﻿using BarberProject.ViewModels;
 using BarberProject.ViewModels.Reservation;
 using BarberProject.ViewModels.Users;
+using Domain.Helpers.Enums;
 using Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -102,6 +103,7 @@ namespace BarberProject.Controllers
             var workTimes = await _workTimeService.GetAll();
             var sliderImages = await _sliderImageService.GetAll();
             var accounts = await _accountService.GetAll();
+            var reservDates = await _reservationService.GetAll();
 
             Dictionary<string, string> values = new();
 
@@ -153,6 +155,7 @@ namespace BarberProject.Controllers
                 SliderImages = sliderImages,
                 Users = accounts,
                 UserData = userData,
+                ReservDates = reservDates.Where(m => m.OrderStatus == OrderStatus.Accepted).Select(m => new ReservDatesVM { Date = m.Date.ToString("yyyy,MM,dd"), Time = m.Time.ToString("hh:mm tt") }).ToList()
             };
 
             

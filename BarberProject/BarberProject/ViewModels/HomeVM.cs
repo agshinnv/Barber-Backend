@@ -24,6 +24,7 @@ namespace BarberProject.ViewModels
         public IEnumerable<Colleague> Colleagues { get; set; }
         public IEnumerable<WorkTime> WorkTimes { get; set; }
         public IEnumerable<AppUser> Users { get; set; }
+        public IEnumerable<ReservDatesVM> ReservDates { get; set; }
         public UserVM UserData { get; set; }
         public int ServiceId { get; set; }
         public int EmployeeId { get; set; }

@@ -10,5 +10,6 @@ namespace Repository.Repositories.Interfaces
     public interface IReservationRepository : IBaseRepository<Reservation>
     {
         Task<List<Reservation>> GetAllWithIncludes();
+        Task<Reservation> GetByIdWithIncludes(int id);
     }
 }

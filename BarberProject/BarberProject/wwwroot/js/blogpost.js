@@ -32,6 +32,7 @@ $(function () {
             data: { userId, blogId, comment },
             type: 'POST',
             success: function (response) {
+                $(".alert-primary").addClass("d-none");
                 toastr["success"]("Comment posted");
                 toastr.options = {
                     "closeButton": false,

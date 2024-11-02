@@ -12,6 +12,8 @@ namespace Service.Services.Interfaces
         Task Create(Reservation rez);
         Task<List<Reservation>> GetAll();
         Task<Reservation> GetById(int id);
+        Task Delete(Reservation rez);
         Task Edit(int id, Reservation rez);
+        Task<Reservation> GetByIdWithIncludes(int id);
     }
 }

@@ -1,0 +1,47 @@
+﻿@model ReservationDetailVM
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container">
+
+
+    <div class="table-responsive table--no-card m-b-30">
+        <table class="table table-borderless table-striped table-earning">
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>User Fullname</td>
+                    <td>@Model.Username</td>
+                </tr>
+                <tr>
+                    <td>Service name</td>
+                    <td>@Model.ServiceName</td>
+                </tr>
+                <tr>
+                    <td>Order status</td>
+                    <td>@Model.OrderStatus</td>
+                </tr>
+                <tr>
+                    <td>Barber name</td>
+                    <td>@Model.EmployeeName</td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td>@Model.Time</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <a asp-action="Index" class="btn btn-danger">Back</a>
+
+</div>
+

@@ -93,7 +93,7 @@ namespace BarberProject.Controllers
             var commentData = new
             {
                 UserFullName = User.Identity.Name,
-                CreateDate = newComment.CreateDate,
+                CreateDate = newComment.CreateDate.ToString("MM.dd.yyyy HH:mm"),
                 TextComment = newComment.CommentText
             };
 

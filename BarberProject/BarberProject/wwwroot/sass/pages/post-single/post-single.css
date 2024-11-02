@@ -571,7 +571,7 @@ body {
   border: none;
   color: #14100c !important;
 }
-#post .post-comment .booking-box .booking-area form .make-appoint {
+#post .post-comment .booking-box .booking-area form .make-appointment {
   display: inline-block;
   height: auto;
   padding: 15px 25px;
@@ -588,7 +588,7 @@ body {
   letter-spacing: 1px;
   border: none;
 }
-#post .post-comment .booking-box .booking-area form .make-appoint:hover {
+#post .post-comment .booking-box .booking-area form .make-appointment:hover {
   background: #91765a;
   color: #fff;
 }

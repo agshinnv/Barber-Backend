@@ -491,7 +491,7 @@ body {
   border: none;
   color: #14100c !important;
 }
-#contact .booking-box .booking-area form .make-appoint {
+#contact .booking-box .booking-area form .make-appointment {
   font-family: OutFit, sans-serif;
   width: 100%;
   text-transform: uppercase;
@@ -505,7 +505,7 @@ body {
   transition: all 0.3s ease-out;
   font-weight: 800;
 }
-#contact .booking-box .booking-area form .make-appoint:hover {
+#contact .booking-box .booking-area form .make-appointment:hover {
   background: #fff;
   color: #14100c;
 }

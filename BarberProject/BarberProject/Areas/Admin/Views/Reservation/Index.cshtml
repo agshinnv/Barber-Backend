@@ -20,25 +20,27 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                <tr>
-                    <td>@item.Username</td>
-                    <td>@item.EmployeeName</td>
-                    <td>@item.OrderStatus</td>
-                    <td>
-                        <a class="btn btn-info text-white" asp-route-id="@item.Id" asp-action="Detail">Info</a>
-
-                        @if (User.IsInRole("SuperAdmin") && item.OrderStatus == "Pending")
+                    <tr>
+                        <td>@item.Username</td>
+                        <td>@item.EmployeeName</td>
+                        <td>@item.OrderStatus</td>
+                        <td>
+                            <a class="btn btn-info text-white" asp-route-id="@item.Id" asp-action="Detail">Info</a>
+                            @if (User.IsInRole("SuperAdmin"))
                             {
-                                <a class="btn btn-success text-white" asp-route-id="@item.Id" asp-action="Accept">Accept</a>
-                                <a class="btn btn-danger text-white" asp-route-id="@item.Id" asp-action="Reject">Reject</a>
-
+                                <form asp-action="Delete" asp-route-id="@item.Id" class="d-inline" method="post">
+                                    <button type="submit" class="btn btn-danger text-white">Delete</button>
+                                </form>
                             }
-                    </td>
-                </tr>
-                    
+
+                            @if (User.IsInRole("SuperAdmin") && item.OrderStatus == "Pending")
+                                {
+                                    <a class="btn btn-success text-white" asp-route-id="@item.Id" asp-action="Accept">Accept</a>
+                                    <a class="btn btn-danger text-white" asp-route-id="@item.Id" asp-action="Reject">Reject</a>
+                                }
+                        </td>
+                    </tr>                   
                 }
-
-
             </tbody>
         </table>
     </div>

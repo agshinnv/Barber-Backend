@@ -20,5 +20,10 @@ namespace Repository.Repositories
         {
             return await _entities.Include(m=>m.Service).Include(m=>m.User).Include(m=>m.Employee).ToListAsync();
         }
+
+        public async Task<Reservation> GetByIdWithIncludes(int id)
+        {
+            return await _entities.Include(m => m.Service).Include(m => m.User).Include(m => m.Employee).FirstOrDefaultAsync(m=>m.Id == id);
+        }
     }
 }

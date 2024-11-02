@@ -22,6 +22,11 @@ namespace Service.Services
             await _reservationRepo.Create(rez);
         }
 
+        public async Task Delete(Reservation rez)
+        {
+            await _reservationRepo.Delete(rez);
+        }
+
         public async Task Edit(int id, Reservation rez)
         {
             var existRez = await _reservationRepo.GetById(id);
@@ -39,6 +44,12 @@ namespace Service.Services
         public async Task<Reservation> GetById(int id)
         {
             return await _reservationRepo.GetById(id);
+        }
+
+        public async Task<Reservation> GetByIdWithIncludes(int id)
+        {
+            return await _reservationRepo.GetByIdWithIncludes(id);
+
         }
     }
 }
